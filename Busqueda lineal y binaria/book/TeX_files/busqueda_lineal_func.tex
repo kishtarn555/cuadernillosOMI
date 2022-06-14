@@ -1,0 +1,200 @@
+\section* {Búsqueda lineal con función de validación}
+\addcontentsline{toc}{section}{Búsqueda lineal con función de validación}
+\markboth{Búsqueda lineal con validación}{Búsqueda lineal con validación}
+
+Hasta ahorita hemos visto problemas donde revisar si un candidato era la respuesta o no bastaba con un simple condicional, pero este no siempre es el caso.
+
+Varías veces, para revisar si un valor es solución a nuestro problema, vamos a tener que necesitar un poco más de código e ideas. Veamos un problema de este estilo.
+
+\section*{Ejemplo 1.3}
+\addcontentsline{toc}{section}{Ejemplo 1.3}
+
+\subsection*{Descripción}
+Karel tiene \(N\) listones de distintas longitudes enteras. Karel quiere hacer pulseras con ellos, por lo que tomará cada uno de los listones y los cortará para que las pulseras usen segmentos del mismo tamaño.
+
+A Karel le gustan los enteros, entonces la longitud de los segmentos también ha de serla. Además, Karel no quiere que sobre listón sin usar ¿Cuántos diferentes tamaños de segmento se pueden elegir?
+
+\subsection*{Entrada}
+Un entero \(N\), indicando la cantidad de listones
+En la siguiente línea, \(N\) enteros indicando las longitudes de los listones. Llamemos \(A[i]\) a la longitud del listón \(i\).
+
+\subsection*{Salida}
+La cantidad de opciones para el tamaño de los segmentos
+
+\subsection*{Caso ejemplo}
+\begin{casebox3}
+		\ecase{
+			5 \\ 
+			10 30 20}
+			{3}
+			{Las longitudes pueden ser 1, 2 y 5}
+\end{casebox3}	
+\subsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N \leq 100\)
+	\item \(1\leq A[i] \leq 5000\)
+\end{plimits}
+
+\subsection*{Código}
+Encontremos con búsqueda lineal todos los tamaños de segmento que cumplen y contemos cuantos son.
+
+Primero veamos que los tamaños de listón deben estar entre 1 y 5000. Más concreto, entre \(1\) y \(min (A[1],A[2],\cdots ,A[N])\). Esto es porque el tamaño del segmento debe ser entero, debe ser por lo menos 1 (ya que un segmento de tamaño 0 o menor no tiene sentido para este problema) y no puede ser más largo que el listón más corto.
+
+Ya hemos visto como se ve una búsqueda lineal y la que usaremos en este caso sería:
+
+\begin{lstlisting}
+cin >> N;
+for (int i=0; i< N; i++) {
+	cin >> A[i];
+}
+
+int minA=A[0];
+for (int i=1; i < N; i++) {
+	minA=min(minA, A[i]); /* encuentra el liston mas
+	pequeno. */
+}
+respuesta = 0;
+for (int s =1; s <= minA; s++) {
+	if (es s es un tamano de segmento valido) {
+		respuesta++;
+	}
+}
+cout << respuesta
+
+\end{lstlisting}
+
+Pero el reto ahora es el chequeo de “es s es un segmento de tamaño valido”.
+
+Para esto necesitamos un poco más de trabajo. Veamos un solo listón. Si queremos cortarlo en segmentos de tamaño s sin que sobre, ¿qué tiene que cumplir s con relación al listón? Así es, que es, que s divida a la longitud del listón. Y podemos ver que s tiene que cumplir esto para todos los listones
+
+Entonces, para ver que s sea una opción válida, hay que ver que s divida a todos los enteros en la lista de listones.
+
+Para lograr esto, creemos una función booleana que se encargue de validar s.
+\begin{lstlisting}
+bool validar (int s) {
+	bool respuesta = true;
+	for (int i=0; i< N; i++) {
+		if (A[i]%s!=0){
+			respuesta = false;
+			break;
+		}
+	}
+	return respuesta;
+}
+\end{lstlisting}
+
+Entonces con esta función obtenemos que el código de la búsqueda lineal ahora es:
+\begin{lstlisting}
+respuesta = 0;
+for (int s =1; s <= minA; s++) {
+	if (validar(s)) {
+		respuesta++;
+	}
+}
+cout << respuesta
+
+\end{lstlisting}
+
+Y con esto logramos completar el problema.
+
+\subsection*{Complejidad}
+La búsqueda lineal la hacemos sobre el valor de A, pero, además, por cada iteración de la búsqueda lineal, hacemos un ciclo que revisa la condición para que s sea contada.
+
+Entonces, la complejidad nos queda como:   \(O(Busqueda\times Validar)=O(AN)\).
+
+Como \(A\leq 5000\) y \(N\leq 100\). Nos queda que \(AN\leq 5\times 10^5\), lo cual corre en menos de un segundo.
+
+\section*{Conclusión}
+\addcontentsline{toc}{section}{Conclusión}
+Habrá veces que en la búsqueda tengamos que hacer código para validar cada contacto que encontremos, y la complejidad de la validación se meterá como un factor a la complejidad de la búsqueda.  
+
+Con esto obtenemos un algoritmo con complejidad \(O(Busqueda\times Validar)\).
+\newpage
+\section*{Problemas de práctica}
+\addcontentsline{toc}{section}{Problemas de práctica}
+
+\label{bicicleta}
+\paragraph{Problema 1.6}  Karel ha comprado una bicicleta eléctrica con la que planea completar un recorrido. El recorrido se puede ver como \(N\) colinas en línea recta tal que la \(i\)-ésima colina tiene altura \(h_i\). Karel comienza en la colina hasta la izquierda y quiere terminar en la ultima colina de hasta la derecha.
+
+Cuando Karel sube un metro gasta \(1\) unidad de energía, mientras que bajar un metro recupera \(1\) unidad de altura. Si Karel en algún momento necesita subir, pero su batería tiene 0 de energía, Karel se quedará atorado y no terminará el recorrido.
+
+Por suerte al inicio hay una estación de recarga donde Karel puede recargar su bicicleta. Como nota, la batería tiene capacidad \(R\) y jamás podrá almacena más energía que \(R\).
+
+Actualmente Karel tiene \(0\) de energía, Determina cuál es la menor cantidad de energía que es necesaria recargar al inicio para completar el recorrido. O determina si es imposible hacer el recorrido con la bicicleta de Karel.
+
+\subsubsection*{Entrada}
+La primera línea tiene dos enteros, el valor de \(N\) y \(R\).
+
+En la siguiente línea vienen \(N\), enteros separados por espacios, siendo la altura de las colinas de izquierda a derecha. Recuerda que Karel comienza en la primera colina y quiera terminar en la última.
+\subsubsection*{Salida}
+Un entero, representando la menor cantidad de energía necesaria para completar el recorrido. Si Karel no puede completar el recorrido, imprime \(-1\).
+
+\subsubsection*{Casos ejemplo}
+\begin{casebox3}	
+	\ecase{
+		6 8\\
+		4 6 3 5 7 
+	}
+	{3}
+	{
+		Karel inicia con 3 de energía, moverse de   \\
+		la primera a la segunda colina le toma 2,  \\
+		ahora tiene 1.\\
+		Luego avanza y se recarga 3,\\
+		ahora tiene 4.\\
+		Después continua y se consume 2, ahora tiene 2. \\
+		Vuelve a avanzar quedándose con 0 de energía. \\		
+		Pero luego avanza y se recarga a 5. \\
+		Finalmente avanza para termina con 5. \\
+	}
+	\ecase{
+		5 6\\
+		1 10 1 2 0
+	}
+	{-1}
+	{}
+	\hline
+\end{casebox3}	
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(2\leq N, R \leq 5000\)
+	\item \(0\leq h_i\leq 5000\)
+\end{plimits}
+
+Fuente: OMIS online 2022.
+
+Enlace: [TODO]
+
+\problembreak
+
+\paragraph{Problema 1.7} Un número capicúa es aquel que no cambia cuando se escribe al revés, por ejemplo \(34143\) y \(1221\) son capicúa, pero \(145\) no lo es porque \(145\neq 541\). Tampoco \(30\) es capicúa.
+
+Determina cuantos números son capicúas entre \(L\) y \(R\).
+
+\subsubsection*{Ejemplo}
+Para \(L=1\) y \(R=50\) la respuesta es 13.
+
+\subsubsection*{Límites}
+\(1 \leq 1  \leq L \leq R \leq 10^5 \)
+
+\problembreak
+
+\paragraph{Problema 1.8} Dado \(L\) y \(R\), encuentra cuantos números primos\footnote{Un número es primo si y solo si tiene exactamente dos divisores positivos, el \(1\) y el mismo.} hay entre \(L\) y \(R\), incluyendo \(L\) y \(R\).
+ 
+
+\subsubsection*{Entrada}
+Dos enteros \(L\) y \(R\).
+\subsubsection*{Salida}
+La cantidad de números primos en el rango.
+\subsubsection{Caso ejemplo}
+\begin{casebox3}
+	\ecase{1 7}{4}{Los primos contados son \(2,3,5\) y \(7\)}	
+\end{casebox3}
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq L \leq R \leq 10^5\)
+\end{plimits}
+
+Enlace: [TODO]

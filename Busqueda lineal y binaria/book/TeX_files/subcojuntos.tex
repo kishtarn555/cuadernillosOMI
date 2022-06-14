@@ -1,0 +1,357 @@
+\chapter*{Subconjuntos}
+\addcontentsline{toc}{section}{Subconjuntos}
+\markboth{Subconjuntos}{Subconjuntos}
+
+Antes de aprender a buscar subconjuntos, comencemos definiendo que son. Una vez sepamos que son, veremos como resolver problemas con ellos.
+
+\section*{Definición de conjuntos y subconjuntos}
+\addcontentsline{toc}{subsection}{Definición}
+Un conjunto no es nada mas que una colección de objetos. Por ejemplo, si alguien trae en su mochila un plátano, manzana y naranja, este puede decir que trae un conjunto de frutas compuesto por un plátano, manzana y naranja.
+
+En matemáticas e informática, nosotros estamos trabajando todo el rato con los conjuntos. Ya sean el conjunto de datos de entrada, o los números enteros, tener noción de conjuntos es un requerimiento para el éxito en la olimpiada.
+
+Veamos un poco de notación. Para escribir el conjunto A de números esta conformado por el 3, 5 y 9 escribimos lo siguiente:
+\[A=\{3,5,9\}\]
+
+TODO: CORREGIR ESTO
+\newpage
+\section*{Buscar subconjuntos}
+\addcontentsline{toc}{subsection}{Buscar subconjuntos y ejemplo 2.2.1}
+
+Veamos como hacer para visitar todos los subconjuntos, lo cuál será necesario para problemas donde nos preguntan por ellos.
+
+Para esto, primero aprendamos a resolver el problema que trata de mostrar los subconjuntos:
+
+\subsection*{Ejemplo 2.2.1}
+
+Karel tiene un conjunto formado por las primeras \(N\) letras del alfabeto. Ahora Karel que imprimas todos los subconjuntos, uno por cada línea. Puedes imprimirlos en cualquier orden.
+
+Cada subconjunto es representado por las letras en el de la A a la Z. El subconjunto vacío será representado por un asterisco '*'.
+\subsection*{Entrada}
+Un entero \(N\), indicando cuantas letras hay en el conjunto.
+\subsection*{Salida}
+Todos los subconjuntos
+
+\subsection*{Ejemplos}
+
+\begin{casebox2}
+
+	\scase{2}{
+		AB\\
+		A \\
+		B\\
+		*
+	}
+	\hline
+\end{casebox2}
+
+\begin{casebox2}
+	\scase{3}
+	{
+		ABC \\
+		AB \\
+		AC\\
+		A\\
+		BC\\
+		B\\
+		C\\
+		* \\
+	}
+\hline
+\end{casebox2}
+
+\subsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N \leq 20 \)
+\end{plimits}
+
+\subsection*{Solución, iterar por subconjuntos}
+Entonces, podemos resolver el problema si obtenemos todos los subconjuntos posibles. Para esto, haremos un algoritmo que construya todos los posibles subconjuntos.
+
+Esto se puede hacer de dos formas principales, una iterativa y otra recursiva. Comencemos viendo la forma con recursión.
+
+\subsection* {Subconjuntos usando recursión}
+
+Digamos que \(S(conjunto)\) sean todos los subconjuntos del \(conjunto\). Por ejemplo:
+\[S(\{A,B,C\})=\{\{A,B,C\},\{A,B\},	\{A,C\},\{A\},\{B,C\},	\{B\},\{C\},	\emptyset\} \]
+
+O usando la misma notación que la salida del problema (la que usaremos a partir de aquí):
+
+\[S(ABC)=\{ABC, AB, AC, A, BC, B, C, * \}\]
+
+Veamos un poco como se comporta S, por ejemplo para \(N = 4\), en total tenemos 16 subconjuntos los cuales podemos dividir en dos mitades con 8 cada una, los que tienen la A y los que no tienen la A.
+
+
+
+\begin{center}
+	\includegraphics[scale=0.15]{subconjuntos1}
+\end{center}
+
+Ahora veamos que para los dos grupos, tenemos todos los 8 subconjuntos para \(BCD\), y lo único que los diferencia es si tienen \(A\) al inicio o no. Si supiéramos cuales son esos subconjuntos para las ultimas 3 letras, podríamos perfectamente construir \(S(ABCD)\), 
+
+En concreto, podemos ver que \(S(ABCD) \) es igual a \(S(BCD)\) con \(A\) al inicio y \(S(BCD)\) sin nada extra. 
+
+Si lo quieres ver en formula sería similar a \(S(ABCD)=A\rightarrow S(BCD) \cup S(BCD)\), donde \(A\rightarrow S(BCD)\) significa agregar \(A\) a todos los subconjuntos en \(S(BCD)\).
+
+Y podemos hacer lo mismo, ver que \(S(BCD)\) es otra vez: los subconjuntos de \(CD\) con B y sin B.
+
+Y de aquí obtenemos nuestro comportamiento recursivo.
+
+Ahora que vemos la recursión, veamos una forma de implementar todo esto para resolver el problema.
+
+Crearemos un metodo construyeSubconjuntos(int pos, int previo) que constuya los subconjuntos usando las letras desde pos hasta \(N-1\).
+\pagebreak
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+int N;
+char subconjunto[25];
+
+// pos implica que letra estamos eligiendo si esta o no A=0, B=1, C=2, ...
+// para N=6, pos = 2, es equivalente a  S(CDEF)
+// previo indica cuantas letras se han agregaron a la construccion.
+void construyeSubconjuntos(int pos, int previo) {
+	if (pos == N) {
+		//Ya no hay mas letras que decidir
+		//imprime el subconjunto construido.
+		if (previo==0) {
+			cout <<"*\n";
+		} else {
+			cout << subconjunto<<"\n"; 
+		}
+		return;
+	}
+	//agrega la letra pos a la construccion
+	subconjunto[previo]=pos+'A'; 
+	construyeSubconjuntos(pos+1, previo+1); 
+	
+	// Quita la letra pos de la construccion
+	subconjunto[previo]='\0'; 
+	construyeSubconjuntos(pos+1, previo); 
+	
+}
+
+int main () {
+	cin >> N;
+	construyeSubconjuntos(0,0);
+	return 0;
+}
+\end{lstlisting}
+
+
+De forma que el árbol de la recursión para construyeSubconjuntos(0,0) con \(N=2\) se ve:
+
+\begin{center}
+	\includegraphics[scale=0.15]{AB}
+\end{center}
+
+Un consejo para entender el código es simular la ejecución del programa paso a paso a mano en papel. Esto es útil cualquier otro algoritmo u técnica nueva.
+
+\subsection*{Complejidad}
+Una vez comprendido esto, pasemos a utilizar esto para resolver problemas.
+\section*{Ejemplo 2.2.2}
+\addcontentsline{toc}{subsection}{Ejemplo 2.2.2}
+
+Fernando ha llegado a la ferretería con su objetivo frecuente de comprar \(K\) tornillos.  Sin embargo, la ferretería no siempre vende cajas con exactamente \(K\) tornillos dentro.
+
+La ferretería tiene \(N\) cajas diferentes en venta, cada uno con \(C_i\) tornillos dentro.
+
+Fernando quiere comprar unas cuantas cajas y obtener \textbf{exactamente} \(K\) tornillos. Por fortuna, esta vez trajo una bolsa y podrá comprar cuantas cajas le sea necesario.
+
+Conociendo las cajas que venden en la Ferretería, determina si Fernando puede comprar los \(K\).
+
+\subsection*{Entrada}
+Dos enteros \(N\) y \(K\), la cantidad de cajas en la Ferretería y cuantos tornillos quiere Fernando.
+
+En la siguiente línea vendrán la cantidad de tornillos en cada caja, los valores \(C_i\), separados por espacios.
+
+\subsection*{Salida}
+Debes imprimir "SI" en caso de que Fernando pueda comprar exactamente \(K\) tornillos. Caso contrario, imprime "NO".
+
+\subsection*{Ejemplos}
+\begin{casebox3}
+	\ecase{
+		5 10\\
+		2 4 5 3 9	
+	}
+	{SI}
+	{
+		Compra la primera, tercera\\
+		y cuarta caja.
+	}
+	\ecase{
+		5 12\\
+		4 5 2 11 3	
+	}
+	{NO}
+	{}
+\end{casebox3}
+\subsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N\leq 20 \)
+	\item \(1\leq C_i\leq 10^9 \)
+	\item \(1\leq K\leq 10^9 \)
+\end{plimits}
+
+\subsection*{Solución}
+
+Como siempre, resumamos el problema en menos palabras. En corto, nos preguntan si existe un subconjunto de cajas tal que la suma de sus valores sea exactamente \(K\).
+
+Y como es propio de todos los subtemas de búsqueda completa, veamos todas las posibles soluciones, es decir todos los subconjuntos, hasta que encontremos el que cumpla la condición o nos quedemos sin opciones.
+
+Como ya vimos la forma de iterar por todos los subconjuntos en el ejemplo 3.1, utilicemos esas ideas para resolver este problema.
+
+Lo que podemos hacer es ir construyendo todos los subconjuntos, esta vez en vez de representarlos como una cadena, lo representaremos como su suma. Esto en código se ve:
+\newpage
+\begin{lstlisting}
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int Cajas[25];
+int N;
+long long K;
+// Aqui, llevamos la suma del subconjunto construido
+void buscaSubconjunto(int pos, long long suma) {
+	if (pos==N) {
+		if (suma == K) {
+			/* Encontramos un subconjunto con suma K.
+			Imprimmos SI y terminemos el programa */
+			cout << "SI";
+			exit(0);
+		}
+		return;
+	}
+	buscaSubconjunto(pos+1, suma+Cajas[pos]);//Incluyamos pos en el subconjunto
+	buscaSubconjunto(pos+1, suma);//Excluyamos pos del subconjunto	
+}
+
+int main () {
+	ios_base::sync_with_stdio(0); cin.tie(0);
+	cin >> N >>K;
+	for (int i=0; i < N; i++) {
+		cin >> Cajas[i];
+	}
+	buscaSubconjunto(0,0);
+	//Si llegamos aqui es porque nunca encontramos la respuesta.
+	cout << "NO";
+	return 0;
+}
+\end{lstlisting}
+
+\newpage
+\section*{Problemas de práctica}
+\addcontentsline{toc}{subsection}{Problemas de práctica}
+\paragraph{Problema 2.2.1} Warel se infiltro en una joyería con una mochila de capacidad \(W\).
+
+En esta joyería hay \(N\) diamantes, cada uno tiene un valor de \(v_i\) y un peso de \(w_i\).
+
+Warel puede robar cuantos diamantes quiera, pero el peso total de lo que se lleve no puede exceder a la capacidad de su mochila.
+
+Determina la máxima cantidad de valor que Warel puede robar.
+
+\subsubsection*{Entrada}
+En la primera línea viene el valor de \(N\) y \(W\).
+
+En la segunda línea vendrán los valores de los diamantes.
+
+En la tercera y última línea vendrán los pesos de los diamantes.
+\subsubsection*{Salida}
+La máxima suma de valor que Warel puede robar.
+
+\subsubsection*{Caso Ejemplo} 
+\begin{casebox3}
+	\ecase{
+		5 6\\
+		8 3 6 1 3\\
+		5 1 3 2 6
+	}
+	{10}
+	{
+		Toma el segundo, tercer y cuarto diamante. \\
+		Tendrás valor de \(10=3+6+1\) \\
+		con peso \(6=1+3+2\)
+	}
+\end{casebox3}
+
+\subsubsection*{Límites}
+
+\begin{plimits}
+	\item \(1\leq N\leq 20 \)
+	\item \(1\leq W\leq 10^9 \)
+	\item \(1\leq v_i, w_i\leq 10^9 \)
+\end{plimits}
+
+Enlace: [TODO]
+
+\problembreak
+
+\paragraph{Problema 2.2.2} Imprime todos los números binarios de \(N\) bits. 
+
+Imprime los números de menor a mayor y agrega 0s a la izquierda para que todos los números tengan la cantidad correcta de bits.
+
+\subsubsection*{Ejemplo}
+\begin{casebox2}
+	\scase{3}
+	{
+		000 \\
+	  	001 \\
+	  	010 \\
+	  	011 \\
+	  	100 \\
+	  	101 \\
+	  	110 \\
+	  	111 \\
+	}
+	\hline
+\end{casebox2}
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N \leq 20\)
+\end{plimits}
+
+\problembreak
+
+\paragraph{Problema 2.2.3}  Un día encuentras una maquina que te permite invertir horizontalmente o verticalmente una matriz cuantas veces quieras. 
+
+Invertir verticalmente significa intercambiar la primera y ultima fila, la segunda y penúltima fila, la tercera y antepenúltima fila, etc. Mientras que invertir horizontalmente es lo mismo, pero intercambias las columnas en vez de las filas.
+
+Se te dan dos matrices \(A\) y \(B\), ambas de tamaño \(N\times M\). Determina si la maquina te permite convertir la matriz \(A\) en la matriz \(B\).
+
+\subsubsection*{Entrada}
+Los valores de \(N\) y \(M\).
+
+Las siguientes \(N\) filas tendrán \(M\) enteros cada una. Siendo la matriz \(A\).
+
+Y otra vez seguirán \(N\) filas con \(M\) enteros cada una. Los valores de la matriz \(B\). 
+
+\subsubsection*{Salida}
+Imprime "SI" en caso de que la matriz \(A\) pueda convertirse en la matriz \(B\).
+
+\subsubsection*{Ejemplos}
+\begin{casebox2}
+	\scase{
+		2 3\\
+		1 2 3\\ 
+		4 5 6\\
+		6 5 4\\
+		3 2 1
+	}
+	{SI}	
+	\scase {
+		2 2\\	
+		1 2\\
+		3 1\\
+		2 3\\
+		1 1
+	} {NO}
+\end{casebox2}
+
+\subsubsection*{Límites}
+
+\begin{plimits}
+	\item \(1\leq N,M\leq 500 \)
+	\item \(1\leq A_{ij}, B_{ij}\leq 10^9 \)
+\end{plimits}
+
+Enlace: [TODO]

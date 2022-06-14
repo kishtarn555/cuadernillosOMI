@@ -1,0 +1,121 @@
+\documentclass[b5paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[]{geometry}
+\usepackage{amsmath}
+\graphicspath{ {resources/images} }
+\usepackage{multirow}
+\usepackage{makecell}
+
+\usepackage[skip=10pt]{parskip}
+
+\usepackage{listings}
+\usepackage{color}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{pink}{rgb}{0.87,0.59,0.7}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=l,
+	language=C++,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{pink},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+%CASES FORMATTING
+\renewcommand\theadfont{\bfseries}
+
+\newenvironment{casebox2}{	
+	\begin{tabular}{|l|l|}	
+		\hline
+		\thead{Entrada} & \thead{Salida} \\
+		\hline
+}{	
+	\end{tabular}	
+}
+
+\newenvironment{casebox3}{
+	\begin{tabular}{|l|l|l|}
+		\hline		
+		\thead{Entrada} & \thead{Salida}& \thead{Expliación} \\
+		\hline
+}{	
+	\end{tabular}	
+}
+
+
+\newcommand{\scase}[2]{
+\makecell[tl]{#1}&\makecell[tl]{#2} \\
+\hline
+}
+\newcommand{\ecase}[3]{
+\makecell[tl]{#1}&\makecell[tl]{#2}&\makecell[tl]{#3} \\
+\hline
+}
+% LIMIT LIST FORMATTING
+\newenvironment{plimits}{\begin{itemize}
+	\setlength{\parskip}{0.75pt}			
+}{
+\end{itemize}
+}
+% LINK COMMANDS
+\newcommand{\omegalink}[1]{\small{www.omegaup.com/arena/problem/#1}}
+\newcommand{\codeforceslink}[2]{\small{www.codeforces.com/problemset/problem/#1/#2}}
+\newcommand{\codeforces}{Fuente: codeforces.com}
+
+% FORMAT COMMANDS
+
+\newcommand{\problembreak}{
+\vspace{-\baselineskip}
+\hrulefill
+\vspace{-\baselineskip}
+}
+
+\begin{document}
+
+\author{Héctor Fernando Ricárdez Lara}
+\title{Búsquedas}
+\date{}
+
+
+\frontmatter
+\maketitle
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+
+\mainmatter
+\include{./TeX_files/busquedas}
+
+\include{./TeX_files/busqueda_lineal}
+\include{./TeX_files/busqueda_lineal_func}
+
+\include{./TeX_files/busqueda_completa}
+\include{./TeX_files/iterar_pares}
+\include{./TeX_files/subcojuntos}
+
+\include{./TeX_files/busqueda_binaria}
+
+\include{./TeX_files/busqueda_dfs}
+
+\include{./TeX_files/busqueda_bfs}
+
+\include{./TeX_files/problemas}
+
+\backmatter
+% bibliography, glossary and index would go here.
+
+\end{document}
