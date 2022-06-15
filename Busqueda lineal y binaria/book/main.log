@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.7)  13 JUN 2022 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.7)  13 JUN 2022 23:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,41 +581,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 482--483
 File: resources/images/mapasOMI2020.png Graphic file (type png)
 <use resources/images/mapasOMI2020.png>
 Package pdftex.def Info: resources/images/mapasOMI2020.png  used on input line 
-30.
+32.
 (pdftex.def)             Requested size: 253.94954pt x 165.61925pt.
 
-Overfull \hbox (11.32051pt too wide) in paragraph at lines 42--76
+Overfull \hbox (11.32051pt too wide) in paragraph at lines 44--78
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--76
+Underfull \hbox (badness 10000) in paragraph at lines 44--78
 
  []
 
+[66 <./resources/images/mapasOMI2020.png (PNG copy)>] [67] [68] [69]
 
-Underfull \vbox (badness 2762) has occurred while \output is active []
-
- [66 <./resources/images/mapasOMI2020.png (PNG copy)>] [67] [68]) [69] [70
-
+LaTeX Warning: Reference `interactivos' on page 70 undefined on input line 174.
 
 
-] (main.aux
-(TeX_files/busquedas.aux) (TeX_files/busqueda_lineal.aux)
-(TeX_files/busqueda_lineal_func.aux) (TeX_files/busqueda_completa.aux)
-(TeX_files/iterar_pares.aux) (TeX_files/subcojuntos.aux)
-(TeX_files/busqueda_binaria.aux) (TeX_files/busqueda_dfs.aux)
-(TeX_files/busqueda_bfs.aux) (TeX_files/problemas.aux))
+[70]) [71] [72
+
+
+
+] (main.aux (TeX_files/busquedas.aux)
+(TeX_files/busqueda_lineal.aux) (TeX_files/busqueda_lineal_func.aux)
+(TeX_files/busqueda_completa.aux) (TeX_files/iterar_pares.aux)
+(TeX_files/subcojuntos.aux) (TeX_files/busqueda_binaria.aux)
+(TeX_files/busqueda_dfs.aux) (TeX_files/busqueda_bfs.aux)
+(TeX_files/problemas.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6114 strings out of 478614
- 103395 string characters out of 2843123
+ 6115 strings out of 478614
+ 103410 string characters out of 2843123
  635069 words of memory out of 3000000
- 24122 multiletter control sequences out of 15000+600000
- 480039 words of font info for 66 fonts, out of 8000000 for 9000
+ 24123 multiletter control sequences out of 15000+600000
+ 480347 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,62p,712b,1645s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -639,9 +641,9 @@ onts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Ferna/AppData/Local/Programs
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ferna/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Fe
 rna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (74 pages, 614273 bytes).
+Output written on main.pdf (76 pages, 619637 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
+ 358 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
