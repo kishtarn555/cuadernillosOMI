@@ -1,17 +1,17 @@
-\documentclass[b5paper,12pt]{book}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{setspace}
-\usepackage[]{geometry}
-\usepackage{amsmath}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{omi}[2014/08/21 OMI package]
+\RequirePackage{graphicx}
+\RequirePackage{setspace}
+\RequirePackage[]{geometry}
+\RequirePackage{amsmath}
 \graphicspath{ {resources/images} }
-\usepackage{multirow}
-\usepackage{makecell}
+\RequirePackage{multirow}
+\RequirePackage{makecell}
 
-\usepackage[skip=10pt]{parskip}
+\RequirePackage[skip=10pt]{parskip}
 
-\usepackage{listings}
-\usepackage{color}
+\RequirePackage{listings}
+\RequirePackage{color}
 
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -44,7 +44,7 @@
 		\hline
 		\thead{Entrada} & \thead{Salida} \\
 		\hline
-}{	
+	}{	
 	\end{tabular}	
 }
 
@@ -53,24 +53,24 @@
 		\hline		
 		\thead{Entrada} & \thead{Salida}& \thead{Expliación} \\
 		\hline
-}{	
+	}{	
 	\end{tabular}	
 }
 
 
 \newcommand{\scase}[2]{
-\makecell[tl]{#1}&\makecell[tl]{#2} \\
-\hline
+	\makecell[tl]{#1}&\makecell[tl]{#2} \\
+	\hline
 }
 \newcommand{\ecase}[3]{
-\makecell[tl]{#1}&\makecell[tl]{#2}&\makecell[tl]{#3} \\
-\hline
+	\makecell[tl]{#1}&\makecell[tl]{#2}&\makecell[tl]{#3} \\
+	\hline
 }
 % LIMIT LIST FORMATTING
 \newenvironment{plimits}{\begin{itemize}
-	\setlength{\parskip}{0.75pt}			
-}{
-\end{itemize}
+		\setlength{\parskip}{0.75pt}			
+	}{
+	\end{itemize}
 }
 % LINK COMMANDS
 \newcommand{\omegalink}[1]{\small{www.omegaup.com/arena/problem/#1}}
@@ -80,42 +80,7 @@
 % FORMAT COMMANDS
 
 \newcommand{\problembreak}{
-\vspace{-\baselineskip}
-\hrulefill
-\vspace{-\baselineskip}
+	\vspace{-\baselineskip}
+	\hrulefill
+	\vspace{-\baselineskip}
 }
-
-\begin{document}
-
-\author{Héctor Fernando Ricárdez Lara}
-\title{Búsquedas}
-\date{}
-
-
-\frontmatter
-\maketitle
-\renewcommand{\contentsname}{Índice}
-\tableofcontents
-
-\mainmatter
-\include{./TeX_files/busquedas}
-
-\include{./TeX_files/busqueda_lineal}
-\include{./TeX_files/busqueda_lineal_func}
-
-\include{./TeX_files/busqueda_completa}
-\include{./TeX_files/iterar_pares}
-\include{./TeX_files/subcojuntos}
-
-\include{./TeX_files/busqueda_binaria}
-
-\include{./TeX_files/busqueda_dfs}
-
-\include{./TeX_files/busqueda_bfs}
-
-\include{./TeX_files/problemas}
-
-\backmatter
-% bibliography, glossary and index would go here.
-
-\end{document}
