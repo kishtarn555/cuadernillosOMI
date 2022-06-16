@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.7)  14 JUN 2022 22:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.15)  16 JUN 2022 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -29,12 +29,6 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
-(../commons/omi.sty
-
-LaTeX Warning: You have requested package `../commons/omi',
-               but the package provides `omi'.
-
-Package: omi 2014/08/21 OMI package
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -215,53 +209,56 @@ Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
-) (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+)
+\c@problemcount=\count286
+ (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-))
+)
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
+\l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box56
 ) (main.aux (TeX_files/busquedas.aux) (TeX_files/busqueda_lineal.aux)
 (TeX_files/busqueda_lineal_func.aux) (TeX_files/busqueda_completa.aux)
 (TeX_files/iterar_pares.aux) (TeX_files/subcojuntos.aux)
-(TeX_files/busqueda_binaria.aux) (TeX_files/busqueda_dfs.aux)
-(TeX_files/busqueda_bfs.aux) (TeX_files/problemas.aux))
+(TeX_files/exhaustiva.aux) (TeX_files/busqueda_binaria.aux)
+(TeX_files/busqueda_dfs.aux) (TeX_files/busqueda_bfs.aux)
+(TeX_files/problemas.aux) (TeX_files/extra.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
+\scratchcounter=\count288
 \scratchdimen=\dimen166
 \scratchbox=\box57
-\nofMPsegments=\count288
-\nofMParguments=\count289
+\nofMPsegments=\count289
+\nofMParguments=\count290
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count290
+\MPscratchCnt=\count291
 \MPscratchDim=\dimen167
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
 \everyMPtoPDFconversion=\toks29
 )
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -308,7 +305,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count293
+\c@lstlisting=\count294
 [1
 
 
@@ -363,16 +360,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 [12]
-Overfull \hbox (22.08pt too wide) in paragraph at lines 133--158
+Overfull \hbox (22.08pt too wide) in paragraph at lines 132--157
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--158
+Underfull \hbox (badness 10000) in paragraph at lines 132--157
 
  []
 
 [13]
+Overfull \hbox (2.00807pt too wide) in paragraph at lines 170--171
+ \OT1/cmr/bx/n/12 Prob-lema 1.2.2[] \OT1/cmr/m/n/12 Un n^^Sumero capic^^Sua es 
+aquel que no cam-bia cuando
+ []
+
+
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
  [14])
@@ -432,55 +435,100 @@ Package pdftex.def Info: resources/images/terrenos2.png  used on input line 228
 
 
 
-] [29] [30]
-Overfull \hbox (8.06819pt too wide) detected at line 76
-\OML/cmm/m/it/12 S\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 A; B; C\O
-MS/cmsy/m/n/12 g\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 ff\OML/cmm/m/it/12 A; B; C
-\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 A; B\OM
-S/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 A; C\OMS/c
-msy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 A\OMS/cmsy/m/
-n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 B; C\OMS/cmsy/m/n/1
-2 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 B\OMS/cmsy/m/n/12 g\OM
-L/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 C\OMS/cmsy/m/n/12 g\OML/cmm/
-m/it/12 ; \OMS/cmsy/m/n/12 ;g
- []
-
-[31]
+] [29] [30] [31]
 <resources/images/subconjuntos1.png, id=134, 1339.25343pt x 919.93687pt>
 File: resources/images/subconjuntos1.png Graphic file (type png)
 <use resources/images/subconjuntos1.png>
 Package pdftex.def Info: resources/images/subconjuntos1.png  used on input line
- 87.
+ 88.
 (pdftex.def)             Requested size: 200.87935pt x 137.98457pt.
 
-Overfull \hbox (10.20012pt too wide) in paragraph at lines 94--95
+Overfull \hbox (10.20012pt too wide) in paragraph at lines 95--96
 []\OT1/cmr/m/n/12 Si lo quieres ver en for-mula ser^^S^^Pa sim-i-lar a $\OML/cm
 m/m/it/12 S\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ABCD\OT1/cmr/m/n/12 ) = \OML/cmm/m
 /it/12 A \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 S\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
  BCD\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 [
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32 <./resources/images/subconjuntos1.png>]
+[32 <./resources/images/subconjuntos1.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-<resources/images/AB.png, id=143, 1882.03125pt x 770.88pt>
-File: resources/images/AB.png Graphic file (type png)
-<use resources/images/AB.png>
-Package pdftex.def Info: resources/images/AB.png  used on input line 145.
-(pdftex.def)             Requested size: 282.29251pt x 115.627pt.
-
-[34 <./resources/images/AB.png>] [35] [36] [37] [38] [39]) [40]
-\openout2 = `./TeX_files/busqueda_binaria.aux'.
-
-
-(TeX_files/busqueda_binaria.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41
+ [34]
+<resources/images/AB.png, id=146, 1882.03125pt x 770.88pt>
+File: resources/images/AB.png Graphic file (type png)
+<use resources/images/AB.png>
+Package pdftex.def Info: resources/images/AB.png  used on input line 146.
+(pdftex.def)             Requested size: 282.29251pt x 115.627pt.
+
+[35 <./resources/images/AB.png>] [36] [37] [38] [39] [40]) [41]
+\openout2 = `./TeX_files/exhaustiva.aux'.
+
+
+(TeX_files/exhaustiva.tex [42
+
+
+
+
+]
+<resources/images/decisiones.png, id=173, 1355.0625pt x 451.6875pt>
+File: resources/images/decisiones.png Graphic file (type png)
+<use resources/images/decisiones.png>
+Package pdftex.def Info: resources/images/decisiones.png  used on input line 11
+.
+(pdftex.def)             Requested size: 271.00769pt x 90.33589pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43 <./resources/images/decisiones.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+[45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+Overfull \hbox (1.46828pt too wide) in paragraph at lines 131--132
+[]\OT1/cmr/m/n/12 Entiende porque los dos c^^Sodigos son iguales antes de con-t
+in-uar, prueba
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+<resources/images/forbrute.png, id=191, 658.71094pt x 488.57532pt>
+File: resources/images/forbrute.png Graphic file (type png)
+<use resources/images/forbrute.png>
+Package pdftex.def Info: resources/images/forbrute.png  used on input line 135.
+
+(pdftex.def)             Requested size: 197.61479pt x 146.57372pt.
+<resources/images/paresrec.png, id=192, 737.75626pt x 609.02531pt>
+File: resources/images/paresrec.png Graphic file (type png)
+<use resources/images/paresrec.png>
+Package pdftex.def Info: resources/images/paresrec.png  used on input line 141.
+
+(pdftex.def)             Requested size: 221.32858pt x 182.709pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./resources/images/forbrute.png> <./resources/images/paresrec.png>]
+Underfull \vbox (badness 8019) has occurred while \output is active []
+
+ [49]
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52])
+[53]
+\openout2 = `./TeX_files/busqueda_binaria.aux'.
+
+ (TeX_files/busqueda_binaria.tex [54
 
 
 
@@ -488,28 +536,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-[43] [44] [45]
+ [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [56]
+[57] [58] [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
 Underfull \vbox (badness 2005) has occurred while \output is active []
 
- [47]
-[48]
-Overfull \hbox (18.19641pt too wide) in paragraph at lines 261--262
-[]\OT1/cmr/m/n/12 La nueva com-ple-ji-dad ahora es $\OML/cmm/m/it/12 O\OT1/cmr/
-m/n/12 (\OML/cmm/m/it/12 logN\OT1/cmr/m/n/12 )$ por pre-gunta, en to-tal $\OML/
-cmm/m/it/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 TlogN\OT1/cmr/m/n/12 )$ 
- []
-
-[49]
+ [61]
+[62] [63]
 Overfull \hbox (12.36955pt too wide) in paragraph at lines 271--272
 []\OT1/cmr/m/n/12 Por supuesto, el prob-lema an-te-rior tiene cor-recci^^Son pa
 ra que la b^^Susqueda
  []
 
-[50]
+[64]
 Overfull \hbox (56.67165pt too wide) in paragraph at lines 282--283
 []\OT1/cmr/m/n/12 Deber^^Sas im-ple-men-tar una funci^^Son [][]\OT1/cmtt/m/n/12
  void adivina(long long a, long long b)
@@ -521,17 +565,13 @@ Overfull \hbox (82.06654pt too wide) in paragraph at lines 284--285
  [][]\OT1/cmtt/m/n/12 long long pista(long long x)[]\OT1/cmr/m/n/12 . 
  []
 
-
-LaTeX Warning: Reference `interactivos' on page 51 undefined on input line 309.
-
-
-[51]
-<resources/images/domino6.png, id=204, 498.36188pt x 412.54124pt>
+[65]
+<resources/images/domino6.png, id=254, 498.36188pt x 412.54124pt>
 File: resources/images/domino6.png Graphic file (type png)
 <use resources/images/domino6.png>
 Package pdftex.def Info: resources/images/domino6.png  used on input line 322.
 (pdftex.def)             Requested size: 199.34122pt x 165.01357pt.
-<resources/images/domino2.png, id=205, 227.34938pt x 214.55156pt>
+<resources/images/domino2.png, id=255, 227.34938pt x 214.55156pt>
 File: resources/images/domino2.png Graphic file (type png)
 <use resources/images/domino2.png>
 Package pdftex.def Info: resources/images/domino2.png  used on input line 327.
@@ -539,7 +579,7 @@ Package pdftex.def Info: resources/images/domino2.png  used on input line 327.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52 <./resources/images/domino6.png> <./resources/images/domino2.png>] [53]
+ [66 <./resources/images/domino6.png> <./resources/images/domino2.png>] [67]
 Overfull \hbox (1.76967pt too wide) in paragraph at lines 376--401
 []  
  []
@@ -547,43 +587,49 @@ Overfull \hbox (1.76967pt too wide) in paragraph at lines 376--401
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [68]
 Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
-[55] [56]
+[69] [70]
 Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
-[57] [58] [59]) [60]
+[71] [72] [73] [74]
+Overfull \hbox (3.08818pt too wide) in paragraph at lines 595--596
+\OT1/cmr/m/n/10.95 En C++ hay al-gu-nas fun-ciones ya pro-gra-madas que pueden 
+hacer b^^Susqueda
+ []
+
+) [75]
 \openout2 = `./TeX_files/busqueda_dfs.aux'.
 
- (TeX_files/busqueda_dfs.tex) [61
+ (TeX_files/busqueda_dfs.tex [76
 
 
 
 
-]
+]) [77]
 \openout2 = `./TeX_files/busqueda_bfs.aux'.
 
-
-(TeX_files/busqueda_bfs.tex [62
-
-
+ (TeX_files/busqueda_bfs.tex
+[78
 
 
-]) [63]
+
+
+]) [79]
 \openout2 = `./TeX_files/problemas.aux'.
 
- (TeX_files/problemas.tex [64
+ (TeX_files/problemas.tex [80
 
 
 
 
-] [65]
-<resources/images/mapasOMI2020.png, id=253, 461.725pt x 301.125pt>
+] [81]
+<resources/images/mapasOMI2020.png, id=311, 461.725pt x 301.125pt>
 File: resources/images/mapasOMI2020.png Graphic file (type png)
 <use resources/images/mapasOMI2020.png>
 Package pdftex.def Info: resources/images/mapasOMI2020.png  used on input line 
@@ -599,57 +645,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--78
 
  []
 
-[66 <./resources/images/mapasOMI2020.png (PNG copy)>] [67] [68] [69]
+[82 <./resources/images/mapasOMI2020.png (PNG copy)>] [83] [84] [85] [86])
+[87] [88
 
-LaTeX Warning: Reference `interactivos' on page 70 undefined on input line 174.
 
 
-[70]) [71] [72
+]
+\openout2 = `./TeX_files/extra.aux'.
 
+ (TeX_files/extra.tex) [89
 
 
 ] (main.aux (TeX_files/busquedas.aux)
 (TeX_files/busqueda_lineal.aux) (TeX_files/busqueda_lineal_func.aux)
 (TeX_files/busqueda_completa.aux) (TeX_files/iterar_pares.aux)
-(TeX_files/subcojuntos.aux) (TeX_files/busqueda_binaria.aux)
-(TeX_files/busqueda_dfs.aux) (TeX_files/busqueda_bfs.aux)
-(TeX_files/problemas.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(TeX_files/subcojuntos.aux) (TeX_files/exhaustiva.aux)
+(TeX_files/busqueda_binaria.aux) (TeX_files/busqueda_dfs.aux)
+(TeX_files/busqueda_bfs.aux) (TeX_files/problemas.aux) (TeX_files/extra.aux)) )
+ 
 Here is how much of TeX's memory you used:
- 6139 strings out of 478614
- 103843 string characters out of 2843123
- 636445 words of memory out of 3000000
- 24142 multiletter control sequences out of 15000+600000
- 480347 words of font info for 67 fonts, out of 8000000 for 9000
+ 6248 strings out of 478614
+ 107162 string characters out of 2843122
+ 635226 words of memory out of 3000000
+ 24239 multiletter control sequences out of 15000+600000
+ 480039 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,15n,76p,712b,1645s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1095.pk> <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1200.pk><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ferna/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ferna/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ferna/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Fer
-na/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
-sers/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr17.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr6.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Ferna/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ferna/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ferna/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Fe
-rna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (76 pages, 619637 bytes).
+ 55i,15n,62p,710b,1645s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+95.pk> <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm1200.pk><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ferna/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ferna/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ferna/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ferna
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
+rs/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Ferna/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ferna/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ferna/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Fern
+a/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (93 pages, 748532 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
+ 419 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

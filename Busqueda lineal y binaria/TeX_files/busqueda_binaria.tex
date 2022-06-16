@@ -258,7 +258,7 @@ Pero veamos que podemos usar búsqueda binaria. ya que al preguntar por una posi
 	}
 \end{lstlisting}
 
-La nueva complejidad ahora es \(O(logN)\) por pregunta, en total \(O(TlogN)\)
+La nueva complejidad ahora es \(O(logN)\) por pregunta, en total\\ \(O(TlogN)\)
 
 \section*{Dificultades}
 \addcontentsline{toc}{section}{Dificultades}
@@ -274,10 +274,10 @@ En esos casos, no quedará de otra más que hacer búsqueda completa o usar una 
 
 Otro ejemplo donde la búsqueda binaria no se puede utilizar es en encontrar el primer divisor que no sea 1 de un entero.
 \newpage
-\section*{Problemas de práctica}
-\addcontentsline{toc}{section}{Problemas de práctica}
 
-\paragraph{Problema 3.1} Adivina el número que esta pensando OmegaUp.
+\practiceproblemsection{3}
+
+\problemtitle Adivina el número que esta pensando OmegaUp.
 
 Deberás implementar una función \verb|void adivina(long long a, long long b)| que descubra el número \(s\) que OmegaUp esta pensando. Se cumplirá que \(a\leq s\leq b\).
 
@@ -310,7 +310,7 @@ NOTA: Este es un problema interactivo, si no conoces como trabajar con estos, ve
 
 \problembreak
 
-\paragraph{Problema 3.2} Sho colecciona juegos de dominó y quiere jugar.
+\problemtitle Sho colecciona juegos de dominó y quiere jugar.
 
 Pero los dominós de Sho son un poco especiales, ya que son k-dominós. El dominó tradicional es del tipo 6-dominó, porque tiene números del \(0\) al \(6\), con un total de 28 fichas.
 
@@ -478,14 +478,19 @@ Ahora, recordemos que la complejidad de la búsqueda binaria es \(O(logR)\), per
 
 \section*{Problemas de práctica}
 \addcontentsline{toc}{section}{Problemas de práctica}
-TODO: PONER PROBLEMAS DE PRACTICA AQUI
-\paragraph{Problema 3.3} Palomitas CF\\
+
+\problemtitle Palomitas CF\\
 
 \problembreak
 
-\paragraph{Problema 3.4} Dado un arreglo \(A\) de \(N\) enteros, determina si existe un subcadena que sume \(K\).
+\problemtitle Dado un arreglo \(A\) de \(N\) enteros, determina si existe un subcadena que sume \(K\).
 
 Una subcadena es cualquier subarreglo de elementos continuos.
+\begin{plimits}
+	\item \(1\leq N \leq 10^5\)
+	\item \(1\leq A_i, K \leq 10^9\)
+\end{plimits}
+
 
 \newpage
 \section*{Búsqueda en los reales}
@@ -544,14 +549,54 @@ Usamos las mismas observaciones que usamos para el ejemplo 3.1, pero esta vez lo
 \newpage
 \section*{Problemas de practica}
 \addcontentsline{toc}{section}{Problemas de práctica}
-\paragraph{Problema 3.5} Fernando ha adquirido un gusto por las carreras de coches en la fórmula \(\pi\).
+\problemtitle Fernando ha adquirido un gusto por las carreras de coches en la fórmula \(\pi\).
 
 En este deporte, los coches recorren una pista recta que mide \(L\) metros de longitud. Además, dependiendo de resultados anteriores el coche \(i\) inicia con \(x_i\) metros de ventaja.
 
-Como Fer es un aficionado muy dedicado, se ha percatado de que cada coche se moverá hacia la meta con una velocidad constante, en concreto, el .
+Como Fer es un aficionado muy dedicado, se ha percatado de que cada coche se moverá hacia la meta con una velocidad constante, en concreto, el carro \(i\) tendrá se moverá a \(v_i\) metros por segundo.
+
+Fernando se pregunta, en que tiempo (medido en segundos) cruza el coche que termina en lugar \(K\).
+
+\subsubsection*{Entrada}
+Tres enteros \(N\), \(L\) y \(K\), la cantidad de coches en la carrera, la longitud de la pista y el lugar que te interesa.
+
+En la segunda línea habrá \(N\) enteros, \(x_1, x_2, \ldots, x_n\), donde \(x_i\) es la posición inicial del coche \(i\).
+
+En la tercera línea vendrán \(N\) enteros, \(v_1, v_2, \ldots, v_n\), donde \(v_i\) es la velocidad del coche \(i\).
+
+\subsubsection*{Salida}
+Un solo número, indicando el segundo en el cual pasa la meta el coche que termina en lugar \(K\). Con presición absoluta de menor o igual que \(10^{-6}\).
+
+\subsubsection*{Ejemplos}
+\begin{casebox2}
+	\scase{
+		4 10 2\\
+		1 2 3 4\\
+		3 3 1 10
+	}  {
+		2.666667
+	}
+\end{casebox2}
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N, L, K \leq 10^5\)
+	\item \(1\leq v_i, \leq 10^3\)
+	\item \(0 \leq x_i < L\)
+\end{plimits}
 
 \problembreak
 
-\paragraph{Problema 3.6} Foto
+\problemtitle Foto
 
 \omegalink{carretera}
+
+\section*{Binaria en C++}
+\addcontentsline{toc}{section}{Binaria en C++}
+En C++ hay algunas funciones ya programadas que pueden hacer búsqueda binaria por nosotros.
+
+Principalmente reconocemos tres de estas, \verb|binary_search|, \verb|lower_bound| y \verb|upper_bound|.
+
+\subsection*{Binary search}
+Requiere incluir \verb|<algorithm>|
+
+Nos permite saber si un elemento concreto se encuentra o no en un arreglo ordenado.

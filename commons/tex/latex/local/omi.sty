@@ -19,6 +19,22 @@
 \definecolor{pink}{rgb}{0.87,0.59,0.7}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
+\newcounter{problemcount}
+
+\newcommand{\startproblemlist}{
+	\setcounter{problemcount}{0}
+}
+\newcommand{\problemgroup}{}
+\newcommand{\problemtitle}{
+	\stepcounter{problemcount}
+	\paragraph{Problema \problemgroup.\theproblemcount}
+}
+\newcommand{\practiceproblemsection}[1]{
+\section*{Problemas de práctica}
+\addcontentsline{toc}{section}{Problemas de practica}
+\startproblemlist
+\renewcommand{\problemgroup}{#1}
+}
 \lstset{frame=l,
 	language=C++,
 	aboveskip=3mm,

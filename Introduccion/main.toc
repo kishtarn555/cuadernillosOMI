@@ -1,0 +1,8 @@
+\contentsline {chapter}{Introducción}{1}{}%
+\contentsline {chapter}{Lectura}{3}{}%
+\contentsline {chapter}{Variables y operadores}{5}{}%
+\contentsline {chapter}{Condicionales}{7}{}%
+\contentsline {chapter}{Ciclos}{9}{}%
+\contentsline {chapter}{Arreglos}{11}{}%
+\contentsline {section}{Problemas de practica}{11}{}%
+\contentsline {paragraph}{Problema 1.1}{11}{}%
