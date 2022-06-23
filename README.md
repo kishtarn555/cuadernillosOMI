@@ -18,3 +18,58 @@ Cuadernillos de la OMI para olimpicos
     - Dijkstra
 5) DP
     - DP's clasicas   
+
+
+PES:
+1) Estructura de Datos
+    - Colas y Pilas (c++, array y apuntadores)
+    - Monticulo (array y pq)
+    - Sparse table
+    - BIT
+    - SegTree
+        - PURQ
+        - RUPQ (sumas)
+        - Lazy_propagation
+    - BST
+    -Treap
+
+
+2) Grafos II
+    - LCA
+    - Union Find
+    - MST
+    - DFS tree
+    - Tarjan
+        - Codos y puentes
+        - Bridge-decomposition
+	- BCC decomposition
+    - Toposort
+         - DFS (post-reverse)
+	 - Kan's algorithm
+    - Tarjan SCC
+    - Matching
+         - Kuhn algorithm O(V(V+E))
+
+3) Geometria
+    - Punto
+    - Vector
+    - Operaciones basicas
+         - Suma, resta, escalar, norma
+    - Line and Segment representations
+         - Pendiente y ordenada al origen y=mx+b
+         - Forma general Ax+By+C
+         - Punto, vector (x+y)+t(u,v)
+    - Producto punto
+    - Producto cruz
+    - Test:
+        - Perpendicularidad y paralelidad de vectores, giro izquierda
+        - Colinealidad
+        - LineLineIntersection
+        - LineSegmenetIntersection
+	- SegmenetSegment
+        - PointInLine
+    - Test-Punto en poligono
+        - Triangulo
+        - Convexo
+        - Simple (rayo)	
+    
