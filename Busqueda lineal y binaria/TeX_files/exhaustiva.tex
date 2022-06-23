@@ -1,6 +1,7 @@
 \chapter*{Decisiones}
 \markboth{Decisiones}{Decisiones}
 \addcontentsline{toc}{section}{Decisiones}
+\label{decision}
 
 Esta búsqueda es la verdadera búsqueda completa, la búsqueda exhaustiva. Es como la fórmula general de cualquier fuerza bruta.
 
@@ -16,6 +17,8 @@ Y la idea de esta búsqueda completa es revisar todas las formas posibles de tom
 Es decir, supongamos que estamos buscando la solución y tenemos una decisión ante nosotros con dos opciones. Lo que la búsqueda exhaustiva hace es ver "¿qué pasa si elijo la primera opción?" y luego revisa "¿Y qué sucede con la segunda opción?". Si después hay más decisiones, también explorara todas las opciones que aporten.
 
 De forma que la búsqueda se ve aproximadamente de la siguientes dos formas:
+
+
 \begin{lstlisting}
 	busqueda(decision, solucion) {
 		si (decision es el final) {
@@ -30,7 +33,12 @@ De forma que la búsqueda se ve aproximadamente de la siguientes dos formas:
 	}
 \end{lstlisting}
 
-O dependiendo del tipo de decisiones a tomar, tal vez se vea:
+
+Esta primera forma de hacer la búsqueda completa le llamamos backtracking, que significa retroceder en ingles.
+
+Esto es porque toma una opción haciendo recursión y luego cuando hace el return o termina la función, regresa en la pila recursiva, hacer un retroceso  de su decisión.
+
+Pero a veces conviene hacer otro tipo de búsqueda, dependiendo del tipo de decisiones a tomar, por ejemplo:
 
 \begin{lstlisting}
 	for (decision 1) {
@@ -211,7 +219,7 @@ Entonces, podemos hacer un código que haga eso, que vaya tomando las decisiones
 Para esto crearemos la función repartir(int c, int equipo1, int equipo2, int equipo3) que se encargara de decidir a cual equipo mandar al estudiante \(c\). 
 Y llevaremos cuenta de cuanta habilidad lleva cada equipo hasta ahora.
 
-Además usaremos un arreglo reparticion[] para llevar cuenta de a que equipo mandamos cada estudiante.
+Además usaremos un arreglo \verb|reparticion[]| para llevar cuenta de a que equipo mandamos cada estudiante.
 
 \begin{lstlisting}
 int n;
@@ -277,7 +285,144 @@ int main() {
 \end{lstlisting}
 
 \section*{Complejidad}
+\addcontentsline{toc}{subsection}{Complejidad}
 La complejidad de una búsqueda exhaustiva varia mucho dependiendo de que tipo de solución se esta buscando, en el Ejemplo 2.3.1 vimos un ejemplo de complejidad \(O(N^2)\). 
 
 Pero la complejidad del ejemplo anterior es \(O(3^N)\). Esto es porque la complejidad de la búsqueda exhaustiva o completa es \(O(candidatos)\) y en este caso, las formas de repartir se multiplican por tres por cada estudiante que se agregue a la clase, ya que tenemos todas las opciones de equipos anteriores, pero unas con el nuevo en el 1, otros con el equipo 2, y otra vez con el estudiante en el 3.
 
+
+
+\practiceproblemsection{2.3}
+
+\problemtitle Estas en una torre la cual tiene \(N\) pisos.
+
+El piso \(i\) tendrá \(K_i\) pasadizos que le permiten ir a pisos superiores. El único piso sin pasadizos es el último, el piso \(N\).
+
+Tu quieres ver cuantas formas hay de ir del piso \(1\) al \(N\). Dos maneras de ir del piso \(1\) al \(N\) son diferentes si en una usas un pasadizo y en la otra no.
+
+Nota: esta prohibido tomar los pasadizos de un piso superior a uno inferior
+
+\subsubsection*{Entrada}
+Dos enteros \(N\), la cantidad de pisos en la torre.
+
+En las siguientes \(N-1\) lineas vendrá la descripción de cada piso. 
+
+Cada piso constará de un entero \(K_i\) representando cuantos pasadizos hay allí que conectan hacia arriba. Seguido, vendrán \(K_i\) enteros diferentes, representando a que pisos tienes un pasadizo. Solo podrás ir a pisos superiores.
+
+\subsubsection*{Salida}
+Imprime un entero que represente la cantidad de formas de ir del piso \(1\) al piso \(N\).
+
+\subsubsection*{Ejemplo}
+\begin{casebox3}
+	\ecase{
+		4\\
+		2 2 3\\
+		2 3 4\\
+		1 4  
+	}{3}
+	{
+		Tienes tres formas de llegar:\\
+		\(1\rightarrow2\rightarrow3\rightarrow4\)\\
+		\(1\rightarrow2\rightarrow4\)\\
+		\(1\rightarrow3\rightarrow4\)\\
+	}
+\end{casebox3}
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N\leq 16\)
+	\item \(1\leq K_i< N\)
+\end{plimits}
+
+\omegalink{} TODO
+
+\problembreak
+
+\problemtitle El COMI diseñó unos mapas futuristas. Los mapas futuristas son como los mapas de ahora, pero están impresos en una superficie transparente. Ellos tienen un archivo de varios mapas de la galaxia. Sebastian y Héctor se dieron cuenta de que existen varios mapas repetidos, por lo que desean eliminar cualquier repetición. Para esto, Sebastian toma un mapa, Héctor toma otro y ambos comparan los mapas para determinar si son iguales. Sin embargo, Héctor estaba distraído y algunos mapas se los pasaba en una posición diferente a la original. Ahora necesitan tu ayuda para comparar los dos mapas y saber si son iguales.
+
+Un mapa está representado por una matriz cuadrada de \verb|X|s y \verb|O|s. Dos mapas son iguales si ambos tienen el mismo carácter en la misma coordenada, para todas las coordenadas.
+
+Para validar que dos mapas son iguales, puedes aplicar cualquiera de las siguientes acciones cero o más veces sobre un mapa que quieras comparar con otro:
+\begin{plimits}
+	\item Rotarlo 90º.
+	\item Rotarlo 180º.
+	\item Rotarlo 270º.
+	\item Invertirlo horizontalmente.
+	\item Invertirlo verticalmente.
+\end{plimits}
+\begin{center}
+	\includegraphics[scale=0.55]{mapasOMI2020}
+\end{center}
+
+\subsubsection*{Problema}
+Se te mostrará dos mapas y debes ayudarles a decir si son iguales o diferentes. Si son iguales, deberás escribir \verb|IGUALES|. Si son diferentes, deberás escribir \verb|DIFERENTES|.
+
+\subsubsection*{Entrada}
+En la primera línea \(N\), la longitud del lado de cada mapa. En las siguientes \(N\) líneas una cadena de \(N\) caracteres \verb|O| ó \verb|X| que representan el primer mapa. En las siguientes \(N\) líneas una cadena de \(N\) caracteres \verb|O| ó \verb|X| que representan el segundo mapa.
+\subsubsection*{Salida}
+Debes escribir \verb|IGUALES| si los mapas son iguales después de hacer todas las transformaciones necesarias o \verb|DIFERENTES| en caso contrario.
+
+\subsubsection*{Ejemplo}
+\begin{casebox3}
+	\ecase{
+		4\\
+		XOOO\\
+		XXOO\\
+		OOOO\\
+		XXXX\\
+		XOOO\\
+		XOOO\\
+		XOXO\\
+		XOXX
+	}{IGUALES}{Si el segundo mapa lo giras 90º y además\\ lo inviertes verticalmente, obtienes \\la misma distribución que el primer mapa.}
+	\ecase{
+		2\\
+		XX\\
+		OO\\
+		XO\\
+		OX
+	}{DIFERENTES}
+	{No hay manera de transformar el segundo \\mapa para que se vea tal como el primero.}
+	\ecase{
+		4\\
+		XOOO\\
+		XXOO\\
+		OOOO\\
+		XXXX\\
+		XOOO\\
+		XXOO\\
+		OOOO\\
+		XXXX
+	}{IGUALES}{
+		En este caso los mapas ya son iguales,\\ sin necesidad de aplicar ninguna operación.		
+	}
+\end{casebox3}
+
+\subsubsection*{Límites}
+\(1 \leq N \leq 500\)
+\subsubsection*{Subtareas}
+\begin{plimits}
+	\item (25 puntos)
+	\begin{plimits}
+		\item \(1\leq N \leq 10\)
+		\item Se asegura que, en caso de que los mapas sean iguales, no es necesario aplicar ninguna acción.
+	\end{plimits}
+	\item (25 puntos)
+	\begin{plimits}
+		\item \(1\leq N \leq 50\)
+		\item Se asegura que, en caso de que los mapas sean iguales, no es necesario aplicar ninguna rotación.
+	\end{plimits}
+	\item (25 puntos)
+	\begin{plimits}
+		\item \(1\leq N \leq 50\)
+		\item Se asegura que, en caso de que los mapas sean iguales, no es necesario aplicar ninguna inversión vertical o inversión horizontal.
+	\end{plimits}
+	\item (25 puntos)
+	\begin{plimits}
+		\item \(1\leq N \leq 500\)
+		\item Cualquier acción podría ser necesaria para validar que los mapas son iguales.
+	\end{plimits}
+\end{plimits}
+Fuente: \textbf{OMI 2020}
+
+\omegalink{OMI-2020-Mapas}

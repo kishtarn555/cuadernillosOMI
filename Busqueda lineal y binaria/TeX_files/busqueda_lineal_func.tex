@@ -111,7 +111,7 @@ Habrá veces que en la búsqueda tengamos que hacer código para validar cada co
 Con esto obtenemos un algoritmo con complejidad \(O(Busqueda\times Validar)\).
 \newpage
 
-\practiceproblemsection{1.2}
+\practiceproblemregion
 \label{bicicleta}
 \problemtitle  Karel ha comprado una bicicleta eléctrica con la que planea completar un recorrido. El recorrido se puede ver como \(N\) colinas en línea recta tal que la \(i\)-ésima colina tiene altura \(h_i\). Karel comienza en la colina hasta la izquierda y quiere terminar en la ultima colina de hasta la derecha.
 
@@ -141,8 +141,10 @@ Un entero, representando la menor cantidad de energía necesaria para completar 
 		ahora tiene 1.\\
 		Luego avanza y se recarga 3,\\
 		ahora tiene 4.\\
-		Después continua y se consume 2, ahora tiene 2. \\
-		Vuelve a avanzar quedándose con 0 de energía. \\		
+		Después continua y se consume 2,\\
+		ahora tiene 2.\\		
+		Vuelve a avanzar quedándose con 0\\
+		de energía. \\		
 		Pero luego avanza y se recarga a 5. \\
 		Finalmente avanza para termina con 5. \\
 	}
@@ -171,11 +173,13 @@ Enlace: [TODO]
 
 Determina cuantos números son capicúas entre \(L\) y \(R\).
 
+Enlace: [TODO]
 \subsubsection*{Ejemplo}
 Para \(L=1\) y \(R=50\) la respuesta es 13.
-
 \subsubsection*{Límites}
 \(1 \leq 1  \leq L \leq R \leq 10^5 \)
+
+\omegalink{Contar-capicuas}
 
 \problembreak
 
@@ -188,12 +192,13 @@ Dos enteros \(L\) y \(R\).
 La cantidad de números primos en el rango.
 \subsubsection{Caso ejemplo}
 \begin{casebox3}
-	\ecase{1 7}{4}{Los primos contados son \(2,3,5\) y \(7\)}	
+	\ecase{1 7}{4}{Los primos contados son: \(2,3,5\) y \(7\)}	
 \end{casebox3}
 
-\subsubsection*{Límites}
+\subsubsection*{Subtareas}
 \begin{plimits}
-	\item \(1\leq L \leq R \leq 10^5\)
+	\item (50 pts) \(1\leq L\leq R\leq 10^3\)
+	\item (50 pts) \(1\leq L\leq R\leq 10^5\)
 \end{plimits}
 
-Enlace: [TODO]
+\omegalink{Cuenta-primos}

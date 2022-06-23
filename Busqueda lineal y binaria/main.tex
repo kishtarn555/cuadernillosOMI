@@ -9,6 +9,8 @@
 \usepackage{multirow}
 \usepackage{makecell}
 
+
+
 \usepackage[skip=10pt]{parskip}
 
 \usepackage{listings}
@@ -32,9 +34,13 @@
 }
 \newcommand{\practiceproblemsection}[1]{
 	\section*{Problemas de práctica}
-	\addcontentsline{toc}{section}{Problemas de practica}
+	\addcontentsline{toc}{section}{Problemas de práctica}
 	\startproblemlist
 	\renewcommand{\problemgroup}{#1}
+}
+\newcommand{\practiceproblemregion}{
+	\section*{Problemas de práctica}
+	\addcontentsline{toc}{section}{Problemas de práctica}
 }
 \lstset{frame=l,
 	language=C++,

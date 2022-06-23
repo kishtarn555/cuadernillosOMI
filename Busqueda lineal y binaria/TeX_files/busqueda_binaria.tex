@@ -57,11 +57,11 @@ Como vemos, búsqueda binaria pudo reducir los candidatos a solo uno con siete p
 El motivo por el cuál la búsqueda binaria es tan efectiva, es que realiza \(\lceil log_2(candidatos) \rceil\) pasos \footnote{\(\lceil log_2(A) \rceil \) significa: techo del logaritmo base dos de A.\\ Recordemos que \(log_2(A)=x\) significa que \(2^x=A\).\\ Y el techo nos dice que tomemos el menor entero que sea mayor igual que el valor de adentro, por ejemplo:. \(\lceil 3.12 \rceil =4\)}. Esto es porque \(\lceil log_2 \rceil \) nos permite calcular cuantas veces podemos dividir un número entre dos hasta que sea 1.
 
 Veamos un ejemplo que se puede resolver con búsqueda binaria.
-
+\pagebreak
 \section*{Ejemplo 3.1}
 \addcontentsline{toc}{section}{Ejemplo 3.1}
 
-Javier es un granjero y esta cansado de que sus animales siempre huyan de su terreno, por lo que ha decidido poner una reja al rededor de todo el terreno.
+Javier es un granjero y esta cansado de que sus animales siempre huyan de su granja, por lo que ha decidido poner una reja al rededor de todo el terreno.
 
 Sin embargo, Javier no sabe cuantos metros de reja va a necesitar y te ha contratado para que tu le digas esto. 
 
@@ -277,36 +277,78 @@ Otro ejemplo donde la búsqueda binaria no se puede utilizar es en encontrar el 
 
 \practiceproblemsection{3}
 
-\problemtitle Adivina el número que esta pensando OmegaUp.
+\problemtitle Fernando es el operador de montacargas en un almacén cuando le pidieron que sacara \(K\) piezas del inventario.
 
-Deberás implementar una función \verb|void adivina(long long a, long long b)| que descubra el número \(s\) que OmegaUp esta pensando. Se cumplirá que \(a\leq s\leq b\).
+Sin embargo, las piezas están organizadas en una pila de \(N\) cajas. La caja \(i\) contiene \(C_i\) piezas.
 
-Para adivinar el número podrás llamar a la función \verb|long long pista(long long x)|.
+Como funciona el montacargas, Fer puede agarrar las primeras \(R\) cajas de la pila y traerlas consigo.
 
-Esta función regresará:
-\begin{plimits}
-	\item \verb|-1| si el número que piensa OmegaUp es menor que \(x\).
-	\item \verb|0| si el número que piensa OmegaUp es \(x\).
-	\item \verb|1| si el número que piensa OmegaUp es mayor que \(x\).
-\end{plimits} 
+Es decir, si \(C=[1,2,3,4]\) y \(R=2\), el montacargas se llevará las cajas \([1,2]\).
 
-La ultima llamada a pista debe ser con el número que OmegaUp esta pensando.
+Como el montacargas gasta gasolina según cuantas cajas cargue y esta es muy cara, ayuda a Fer a determinar la mínima \(R\) para \(Q\) valores de \(K\).
 
+\subsubsection*{Entrada}
+Un entero \(N\) representando la cantidad de cajas.
+
+En la siguiente línea habrá \(N\) enteros, los valores de \(C_1, C_2, \ldots, C_N\).
+
+En la tercera línea estará el entero \(Q\), para cuantos valores debes descubrir \(R\).
+
+En las siguientes \(Q\) líneas habrá un entero \(K\) que representa la cantidad de piezas deseada, suponiendo que siempre tenemos las mismas \(N\) cajas.
+
+\subsubsection*{Salida}
+
+Por cada una de las \(Q\) preguntas: imprime una línea con la mínima \(R\) para obtener \(K\) piezas, si no se puede imprime \(-1\).
+
+\subsubsection*{Ejemplo}
+
+\begin{casebox3}
+	\ecase{
+		3\\
+		1 4 1\\
+		3\\
+		1\\
+		3\\
+		10
+	}{
+		1\\
+		2\\
+		-1
+	}{
+		Agarrando la caja No. 1 obtenemos 1 pieza\\ 
+		\\
+		Tomando la caja No. 1 y No. 2, tenemos 5\\ piezas, las cuales son mas que 3.\\
+		\\
+		No hay suficientes piezas para 10.
+	}
+	\ecase{
+		5\\
+		3 1 1 3 1\\
+		1\\
+		4
+	}{
+		2
+	}{}
+\end{casebox3}
 \subsubsection*{Límites}
 \begin{plimits}
-	\item \(-2^{61}\leq a,b \leq 2^{61}\)	
-\end{plimits}
-\subsubsection*{Evaluación}
-Tu puntuación será en base a la cantidad de llamadas que hagas a la función \verb|long long pista(long long x)| de la siguiente manera:
-\begin{plimits}
-	\item 100\% si haces a lo más \(log(b-a+1)\)llamadas
-	\item 50\% si haces a lo más \(2log(b-a+1)\)llamadas
-	\item 0\% si haces más de \(2log(b-a+1)\)llamadas
+	\item Para 50\%
+	\begin{plimits}
+		\item \(0< N \leq 10^2\)
+		\item \(0< Q \leq 10^3\)
+	\end{plimits}
+	\item Para 100\%
+	\begin{plimits}
+		\item \(0< N \leq 10^5\)
+		\item \(0< Q \leq 10^5\)
+		\item \(0< C_i \leq 1000\)
+		\item \(0\leq K \leq 10^9\)
+	\end{plimits}
 \end{plimits}
 
-Enlace: \omegalink{COMI-Adivina-el-numero}
+Enlace: \omegalink{Transporte-de-Cajas}
 
-NOTA: Este es un problema interactivo, si no conoces como trabajar con estos, ve la página: \pageref{interactivos}
+
 
 \problembreak
 
@@ -345,6 +387,98 @@ Dado \(N\), encuentra el valor de \(k\) para el k-dominó que le sirve a Sho.
 
 Enlace: TODO
 
+\problembreak
+
+\problemtitle Adivina el número que esta pensando OmegaUp.
+
+Deberás implementar una función \verb|void adivina(long long a, long long b)| que descubra el número \(s\) que OmegaUp esta pensando. Se cumplirá que \(a\leq s\leq b\).
+
+Para adivinar el número podrás llamar a la función \verb|long long pista(long long x)|.
+
+Esta función regresará:
+\begin{plimits}
+	\item \verb|-1| si el número que piensa OmegaUp es menor que \(x\).
+	\item \verb|0| si el número que piensa OmegaUp es \(x\).
+	\item \verb|1| si el número que piensa OmegaUp es mayor que \(x\).
+\end{plimits} 
+
+La ultima llamada a pista debe ser con el número que OmegaUp esta pensando.
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(-2^{61}\leq a,b \leq 2^{61}\)	
+\end{plimits}
+\subsubsection*{Evaluación}
+Tu puntuación será en base a la cantidad de llamadas que hagas a la función \verb|long long pista(long long x)| de la siguiente manera:
+\begin{plimits}
+	\item 100\% si haces a lo más \(log(b-a+1)\)llamadas
+	\item 50\% si haces a lo más \(2log(b-a+1)\)llamadas
+	\item 0\% si haces más de \(2log(b-a+1)\)llamadas
+\end{plimits}
+
+Enlace: \omegalink{COMI-Adivina-el-numero}
+
+NOTA: Este es un problema interactivo, si no conoces como trabajar con estos, ve la página: \pageref{interactivos}
+
+\problembreak
+
+\problemtitle A.R.C. Markland-N es un edificio alto con \(n\) pisos enumerados del \(1\) al \(n\). Entre cada dos pisos adyacentes existe una escalera que los conecta.
+
+Es hora del almuerzo para nuestro sensei, Colin "ConneR" Neumann Jr, y él está planeando la ubicación donde disfrutar su comida.
+
+La oficina de ConneR esta en el piso \(s\) del edificio. En cada piso (incluyendo \(s\)) hay un restaurante ofreciendo comida. Sin embargo, debido a renovaciones que están en proceso, \(k\) restaurantes se encuentran cerrados y por lo tanto, ConneR no puede disfrutar su almuerzo en ellos.
+
+ConneR quiere llegar a un restaurante tan rápido como sea posible. ¿Cuál es el mínimo número de escaleras que debe usar para llegar al restaurante más cercano abierto?
+
+\subsubsection*{Entrada}
+En la primera línea habrá un entero \(t\) -- El número de casos pruebas. Luego vendrán las descripciones de cada uno de los \(t\) casos de prueba.
+
+La primera línea de un caso de prueba tiene tres enteros \(n\), \(s\) y \(k\) -- Respectivamente, el número de pisos, el piso donde está ConneR y el número de restaurantes cerrados.
+
+La segunda línea del caso de prueba tendrá \(k\) enteros distintos \(a_1, a_2 \ldots a_k\) -- Los números de piso con su restaurante cerrado.
+\subsection*{Salida}
+
+Por cada caso de prueba imprime una línea con la respuesta -- el mínimo número de escaleras que ConneR debe usar para llegar a un restaurante abierto.
+
+\subsubsection*{Ejemplo}
+
+\begin{casebox2}
+	\scase{
+		5\\
+		5 2 3\\
+		1 2 3\\
+		4 3 3\\
+		4 1 2\\
+		10 2 6\\
+		1 2 3 4 5 7\\
+		2 1 1\\
+		2\\
+		100 76 8\\
+		76 75 36 67 41 74 10 77		
+	} {
+		2\\
+		0\\
+		4\\
+		0\\
+		2
+	}
+\end{casebox2}
+\subsubsection*{Límites}
+\begin{plimits}
+	\item\( 1 \leq t \leq 1000\)
+	\item \(2\leq n \leq 10^9\)
+	\item \(1\leq s \leq n\)
+	\item \(1\leq k \leq min(n-1, 1000)\)
+	\item Se garantiza que la suma de los valores de \(k\) no excederá \(1000\).
+\end{plimits}
+
+\codeforces
+
+\codeforceslink{1293}{A}
+
+
+\newpage
+%------------------------------------------------------
 \section*{Función de validación}
 \addcontentsline{toc}{section}{Función de validación}
 Igual que en búsqueda lineal podíamos agregar funciones más complicadas a la hora de buscar la respuesta, lo mismo sucede en búsqueda binaria. A veces requeriremos de más código que una simple comparación para saber en cual mitad esta la respuesta.
@@ -353,10 +487,7 @@ Veamos unos ejemplos.
 
 
 \section*{Ejemplo 3.3}
-\addcontentsline{toc}{section}{Ejemplo 3.3}
-TODO: PENSAR UN PROBLEMA CON FORMULA MAS COMPLICADA
-
-\section*{Ejemplo 3.4}
+\addcontentsline{toc}{section}{Ejemplo 3.4}
 Karel ha comprado una bicicleta eléctrica con la que planea completar un recorrido. El recorrido se puede ver como \(N\) colinas en línea recta tal que la \(i\)-ésima colina tiene altura \(h_i\). Karel comienza en la colina hasta la izquierda y quiere terminar en la ultima colina de hasta la derecha.
 
 Cuando Karel sube un metro gasta \(1\) unidad de energía, mientras que bajar un metro recupera \(1\) unidad de altura. Si Karel en algún momento necesita subir, pero su batería tiene 0 de energía, Karel se quedará atorado y no terminará el recorrido.
@@ -455,7 +586,7 @@ Es decir, se ve de la siguiente forma:
 
 TODO PONER IMAGEN AQUI
 
-Esto hace que podamos hacer búsqueda binaria para encontar el primer SI.
+Esto hace que podamos hacer búsqueda binaria para encontrar el primer SI.
 
 El código se verá como:
 
@@ -479,13 +610,52 @@ Ahora, recordemos que la complejidad de la búsqueda binaria es \(O(logR)\), per
 \section*{Problemas de práctica}
 \addcontentsline{toc}{section}{Problemas de práctica}
 
-\problemtitle Palomitas CF\\
+\problemtitle Barcos turísticos
+
+El COMI ha preparado un paseo por barco para los olimpicos del OMI por el río \textit{algorrio}. 
+
+El concurso está organizado por \(M\) delegaciones enumeradas del \(1\) al \(M\), cada una con \(a_i\) olímpicos.
+
+Para este paseo se planean contratar \(K\) barcos en el que se subirán los olímpicos. Para que todo sea seguro, se debe poner un limite \(X\) de forma de que en un barco no pueda haber más de \(X\)  olímpicos abordo.
+
+Para el abordaje, cada delegación se subira a un barco de forma que todos los olimpicos de la delegación esten en el mismo barco. Además, si en un barco esta la delegación \(x\) y la delegación \(y\) tal que \(x < y\), entonces también debe estar la delegación \(z\) en el mismo barco si se cumple que \(x < z < y\). En otras palabras, los barcos tendrán un rango consecutivos de delegaciones.
+
+¿Cuál es la mínima \(X\) que permita que todos las delegaciones se suban a los barcos?
+
+\subsubsection*{Entrada}
+La primera línea tiene dos enteros \(M\) y \(K\) --la cantidad de delegaciones y barcos.
+
+La segunda linea tendrá \(M\) enteros \(a_1, a_2, \ldots, a_M\) -- \(a_i\) es la cantidad e olimpicos en la delegación \(i\).
+
+\subsubsection*{Salida}
+Imprime un entero -- El menor valor de \(X\) que permita que todos los olímpicos se suban a algún barco.
+
+\subsubsection*{Ejemplo}
+\begin{casebox3}
+	\ecase{
+		5 3\\
+		7 5 8 5 9
+	}{13}{
+		Los barcos serán\\
+		1. La delegación 1 y 2\\
+		2. La delegación 3 y 4\\
+		3. La delegación 5	
+	}
+\end{casebox3}
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N, K \leq 10^5\)
+	\item \(1\leq a_i \leq 10^9\)
+\end{plimits}
+TODO:
+\omegalink{arg1}
 
 \problembreak
 
 \problemtitle Dado un arreglo \(A\) de \(N\) enteros, determina si existe un subcadena que sume \(K\).
 
-Una subcadena es cualquier subarreglo de elementos continuos.
+Una subcadena es cualquier subarreglo de elementos continuos. Para el arreglo \([1, 2, 10, 5, 3]\), tenemos 15 subcadenas, algunas de estas son: \([1,2,10]\),
+\([10,5]\), \([2,10,5]\), \([3]\).
 \begin{plimits}
 	\item \(1\leq N \leq 10^5\)
 	\item \(1\leq A_i, K \leq 10^9\)
@@ -586,17 +756,126 @@ Un solo número, indicando el segundo en el cual pasa la meta el coche que termi
 
 \problembreak
 
+\problemtitle Planetas: 
+
+\omegalink{planetas} 
+
+\problembreak
+
 \problemtitle Foto
 
 \omegalink{carretera}
 
+\problembreak
+
+\problemtitle La siguiente lección en preparatoria requiere que dos temas sean discutidos. El i-ésimo tema es interesante por \(a_i\) unidades para el profesor y \(b_i\) unidades para los estudiantes.
+
+Un par te temas \(i\) y \(j\) (\(i<j\)) es llamado \textbf{bueno} si \(a_i+a_j > b_i+b_j\) (es decir, es más interesante para el profesor).
+
+Tu tarea es encontrar el número de parejas de temas \textbf{buenas}.
+\subsubsection*{Entrada}
+Un entero \(n\), la cantidad de temas.
+
+La segunda línea tiene \(n\) enteros: \(a_1,a_2,\ldots, a_n\), donde \(a_i\) es cuan interesante es el tema \(i\) para el profesor.
+
+La tercera línea tiene \(n\) enteros: \(b_1,b_2,\ldots, b_n\), donde \(b_i\) es cuan interesante es el tema \(i\) para los estudiantes.
+
+\subsubsection*{Salida}
+Un entero, la cantidad de parejas buenas.
+
+\subsubsection*{Ejemplo}
+\begin{casebox2}
+	\scase{
+		5\\
+		4 8 2 6 2\\
+		4 5 4 1 3
+	}{7}
+	\scase{
+		4\\
+		1 3 2 4\\
+		1 3 2 4
+	}{0}
+\end{casebox2}
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(2\leq N\leq 2\cdot 10^5\)
+	\item \(1\leq a_i, b_i\leq  10^9\)
+\end{plimits}
+\codeforces
+
+\codeforceslink{1324}{D} 
+
+\problembreak
+\newpage
 \section*{Binaria en C++}
 \addcontentsline{toc}{section}{Binaria en C++}
 En C++ hay algunas funciones ya programadas que pueden hacer búsqueda binaria por nosotros.
 
 Principalmente reconocemos tres de estas, \verb|binary_search|, \verb|lower_bound| y \verb|upper_bound|.
 
+Todas estas funciones requieren incluir \verb|<algorithm>|
 \subsection*{Binary search}
-Requiere incluir \verb|<algorithm>|
 
 Nos permite saber si un elemento concreto se encuentra o no en un arreglo ordenado.
+
+A continuación se muestra un ejemplo de un arreglo con \(N\) elementos.
+\begin{lstlisting}
+	if (binary_search(arreglo, arreglo+N, elemento)) {
+		cout << "Existe: "<<elemento<<" en el arreglo";	
+	}	 else {
+		cout << "No existe: "<<elemento<<" en el arreglo";	
+	}
+\end{lstlisting}
+
+\subsection*{Lower bound}
+Encuentra el primer elemento menor o igual que un valor en un arreglo ordenado. Si el elemento no existe, nos regresa un iterador al final.
+
+Veamos como obtener el indice del elemento encontrado.
+
+Con arreglos:
+\begin{small}
+\begin{lstlisting}
+int posicion = 
+	lower_bound(arreglo, arreglo+N, valor)-arreglo;
+\end{lstlisting}
+\end{small}
+
+Con un vector queda como:
+
+\begin{small}
+\begin{lstlisting}
+int posicion = 
+	lower_bound(arr.begin(), arr.end(), valor)-arr.begin();
+\end{lstlisting}
+\end{small}
+
+Si no hay elemento mayor o igual en el arreglo, obtenemos \verb|posicion=N|.
+
+Lo que en realidad regresa \verb|lower_bound|, es un iterador, si te interesa más del tema, puedes leer sobre ellos en internet, para nosotros nos basta con saber la formula de arriba.
+
+\subsection*{Upper bound}
+Encuentra el primer elemento estrictamente mayor que un valor en un arreglo ordenado. 
+
+Podemos usarlo como \verb|lower_bound|:
+
+Con arreglos:
+
+\begin{small}
+\begin{lstlisting}
+int posicion = 
+	upper_bound(arreglo, arreglo+N, valor)-arreglo;
+\end{lstlisting}
+\end{small}
+
+Con un vector queda como:
+
+\begin{small}
+\begin{lstlisting}
+int posicion = 
+	upper_bound(arr.begin(), arr.end(), valor)-arr.begin();
+\end{lstlisting}
+\end{small}
+
+Obtendremos \verb|posicion = N| si no existe elemento estrictamente mayor que valor.
+

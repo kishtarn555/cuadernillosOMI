@@ -2,25 +2,26 @@
 \contentsline {chapter}{Búsqueda lineal}{3}{}%
 \contentsline {section}{Ejemplo 1.1}{4}{}%
 \contentsline {section}{Ejemplo 1.2}{5}{}%
-\contentsline {section}{Problemas de practica}{7}{}%
-\contentsline {paragraph}{Problema 1.1.1}{7}{}%
-\contentsline {paragraph}{Problema 1.1.2}{7}{}%
-\contentsline {paragraph}{Problema 1.1.3}{7}{}%
-\contentsline {paragraph}{Problema 1.1.4}{7}{}%
-\contentsline {paragraph}{Problema 1.1.5}{7}{}%
+\contentsline {section}{Problemas de práctica}{7}{}%
+\contentsline {paragraph}{Problema 1.1}{7}{}%
+\contentsline {paragraph}{Problema 1.2}{7}{}%
+\contentsline {paragraph}{Problema 1.3}{7}{}%
+\contentsline {paragraph}{Problema 1.4}{7}{}%
+\contentsline {paragraph}{Problema 1.5}{7}{}%
 \contentsline {subsubsection}{Casos ejemplo}{8}{}%
 \contentsline {section}{Búsqueda lineal con función de validación}{9}{}%
 \contentsline {section}{Ejemplo 1.3}{9}{}%
 \contentsline {section}{Conclusión}{12}{}%
-\contentsline {section}{Problemas de practica}{13}{}%
-\contentsline {paragraph}{Problema 1.2.1}{13}{}%
-\contentsline {paragraph}{Problema 1.2.2}{14}{}%
-\contentsline {paragraph}{Problema 1.2.3}{15}{}%
+\contentsline {section}{Problemas de práctica}{13}{}%
+\contentsline {paragraph}{Problema 1.6}{13}{}%
+\contentsline {paragraph}{Problema 1.7}{14}{}%
+\contentsline {paragraph}{Problema 1.8}{15}{}%
 \contentsline {subsubsection}{Caso ejemplo}{15}{}%
 \contentsline {chapter}{Búsqueda completa}{17}{}%
 \contentsline {section}{Pares de elementos}{19}{}%
 \contentsline {subsection}{Ejemplo 2.1.1}{19}{}%
-\contentsline {section}{Problemas de practica}{23}{}%
+\contentsline {subsection}{Complejidad}{22}{}%
+\contentsline {section}{Problemas de práctica}{23}{}%
 \contentsline {paragraph}{Problema 2.1.1}{23}{}%
 \contentsline {paragraph}{Problema 2.1.2}{23}{}%
 \contentsline {subsubsection}{Ejemplo}{24}{}%
@@ -29,43 +30,66 @@
 \contentsline {paragraph}{Problema 2.1.5}{27}{}%
 \contentsline {section}{Subconjuntos}{29}{}%
 \contentsline {subsection}{Definición}{29}{}%
-\contentsline {subsection}{Buscar subconjuntos y ejemplo 2.2.1}{30}{}%
+\contentsline {subsection}{Buscar subconjuntos (ejemplo 2.2.1)}{30}{}%
+\contentsline {subsection}{Complejidad}{34}{}%
 \contentsline {subsection}{Ejemplo 2.2.2}{35}{}%
-\contentsline {section}{Problemas de practica}{39}{}%
-\contentsline {paragraph}{Problema 2.2.1}{39}{}%
-\contentsline {paragraph}{Problema 2.2.2}{40}{}%
-\contentsline {paragraph}{Problema 2.2.3}{40}{}%
-\contentsline {section}{Decisiones}{43}{}%
-\contentsline {subsection}{Ejemplo 2.3.1}{45}{}%
-\contentsline {subsection}{Ejemplo 2.3.2}{49}{}%
-\contentsline {chapter}{Búsqueda binaria}{55}{}%
-\contentsline {section}{Ejemplo 3.1}{57}{}%
-\contentsline {paragraph}{Nota:}{61}{}%
-\contentsline {section}{Ejemplo 3.2}{61}{}%
-\contentsline {section}{Dificultades}{63}{}%
-\contentsline {section}{Problemas de practica}{65}{}%
-\contentsline {paragraph}{Problema 3.1}{65}{}%
-\contentsline {paragraph}{Problema 3.2}{65}{}%
-\contentsline {section}{Función de validación}{67}{}%
-\contentsline {section}{Ejemplo 3.3}{67}{}%
-\contentsline {section}{Problemas de práctica}{71}{}%
-\contentsline {paragraph}{Problema 3.3}{71}{}%
-\contentsline {paragraph}{Problema 3.4}{71}{}%
-\contentsline {section}{Búsqueda en los reales}{72}{}%
-\contentsline {section}{Ejemplo 3.5}{72}{}%
-\contentsline {section}{Problemas de práctica}{74}{}%
-\contentsline {paragraph}{Problema 3.5}{74}{}%
-\contentsline {paragraph}{Problema 3.6}{75}{}%
-\contentsline {section}{Binaria en C++}{75}{}%
-\contentsline {chapter}{Búsqueda a profundidad (DFS)}{77}{}%
-\contentsline {chapter}{Búsqueda en amplitud (BFS)}{79}{}%
-\contentsline {chapter}{Problemas}{81}{}%
-\contentsline {paragraph}{Problema E.1}{81}{}%
-\contentsline {paragraph}{Problema E.2}{81}{}%
-\contentsline {paragraph}{Problema E.3}{81}{}%
-\contentsline {paragraph}{Problema E.4}{84}{}%
-\contentsline {paragraph}{P6}{84}{}%
-\contentsline {paragraph}{Problema E.5}{84}{}%
-\contentsline {paragraph}{Problema E.6}{85}{}%
-\contentsline {chapter}{Anexo}{89}{}%
-\contentsline {section}{Problemas interactivos}{89}{}%
+\contentsline {section}{Problemas de práctica}{38}{}%
+\contentsline {paragraph}{Problema 2.2.1}{38}{}%
+\contentsline {paragraph}{Problema 2.2.2}{39}{}%
+\contentsline {paragraph}{Problema 2.2.3}{39}{}%
+\contentsline {section}{Decisiones}{41}{}%
+\contentsline {subsection}{Ejemplo 2.3.1}{43}{}%
+\contentsline {subsection}{Ejemplo 2.3.2}{47}{}%
+\contentsline {subsection}{Complejidad}{51}{}%
+\contentsline {section}{Problemas de práctica}{51}{}%
+\contentsline {paragraph}{Problema 2.3.1}{51}{}%
+\contentsline {paragraph}{Problema 2.3.2}{52}{}%
+\contentsline {chapter}{Búsqueda binaria}{57}{}%
+\contentsline {section}{Ejemplo 3.1}{59}{}%
+\contentsline {paragraph}{Nota:}{62}{}%
+\contentsline {section}{Ejemplo 3.2}{63}{}%
+\contentsline {section}{Dificultades}{65}{}%
+\contentsline {section}{Problemas de práctica}{66}{}%
+\contentsline {paragraph}{Problema 3.1}{66}{}%
+\contentsline {paragraph}{Problema 3.2}{67}{}%
+\contentsline {paragraph}{Problema 3.3}{69}{}%
+\contentsline {paragraph}{Problema 3.4}{70}{}%
+\contentsline {section}{Función de validación}{72}{}%
+\contentsline {section}{Ejemplo 3.4}{72}{}%
+\contentsline {section}{Problemas de práctica}{75}{}%
+\contentsline {paragraph}{Problema 3.5}{75}{}%
+\contentsline {paragraph}{Problema 3.6}{77}{}%
+\contentsline {section}{Búsqueda en los reales}{78}{}%
+\contentsline {section}{Ejemplo 3.5}{78}{}%
+\contentsline {section}{Problemas de práctica}{80}{}%
+\contentsline {paragraph}{Problema 3.7}{80}{}%
+\contentsline {paragraph}{Problema 3.8}{81}{}%
+\contentsline {paragraph}{Problema 3.9}{81}{}%
+\contentsline {paragraph}{Problema 3.10}{81}{}%
+\contentsline {section}{Binaria en C++}{83}{}%
+\contentsline {chapter}{Búsqueda en profundidad (DFS)}{85}{}%
+\contentsline {section}{Ejemplo 4.1}{86}{}%
+\contentsline {section}{Estados y transiciones}{91}{}%
+\contentsline {section}{Complejidad}{92}{}%
+\contentsline {section}{Problemas de práctica}{93}{}%
+\contentsline {paragraph}{Problema 4.1}{93}{}%
+\contentsline {paragraph}{Problema 4.2}{94}{}%
+\contentsline {chapter}{Búsqueda en amplitud (BFS)}{97}{}%
+\contentsline {section}{Ejemplo 5.1}{99}{}%
+\contentsline {section}{Complejidad}{103}{}%
+\contentsline {section}{Problemas de práctica}{104}{}%
+\contentsline {paragraph}{Problema 5.1}{104}{}%
+\contentsline {paragraph}{Problema 5.2}{105}{}%
+\contentsline {paragraph}{Problema 5.3}{106}{}%
+\contentsline {paragraph}{Problema 5.4}{107}{}%
+\contentsline {chapter}{Problemas}{111}{}%
+\contentsline {paragraph}{Problema E.1}{111}{}%
+\contentsline {paragraph}{Problema E.2}{112}{}%
+\contentsline {chapter}{Anexo}{113}{}%
+\contentsline {section}{Problemas interactivos}{113}{}%
+\contentsline {subsection}{Ejemplo}{115}{}%
+\contentsline {paragraph}{Tu procedimiento:}{116}{}%
+\contentsline {paragraph}{Función del evaluador:}{116}{}%
+\contentsline {subsection}{Compilar y probar interactivos}{117}{}%
+\contentsline {section}{Colas}{121}{}%
+\contentsline {subsection}{Usar queue}{121}{}%

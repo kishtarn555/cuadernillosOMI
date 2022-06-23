@@ -16,7 +16,7 @@ Veamos un poco de notación. Para escribir el conjunto A de números esta confor
 TODO: CORREGIR ESTO
 \newpage
 \section*{Buscar subconjuntos}
-\addcontentsline{toc}{subsection}{Buscar subconjuntos y ejemplo 2.2.1}
+\addcontentsline{toc}{subsection}{Buscar subconjuntos (ejemplo 2.2.1)}
 
 Veamos como hacer para visitar todos los subconjuntos, lo cuál será necesario para problemas donde nos preguntan por ellos.
 
@@ -142,13 +142,24 @@ int main () {
 
 De forma que el árbol de la recursión para construyeSubconjuntos(0,0) con \(N=2\) se ve:
 
-\begin{center}
+ \begin{center}
 	\includegraphics[scale=0.15]{AB}
-\end{center}
+\end{center} 
 
 Un consejo para entender el código es simular la ejecución del programa paso a paso a mano en papel. Esto es útil cualquier otro algoritmo u técnica nueva.
 
 \subsection*{Complejidad}
+\addcontentsline{toc}{subsection}{Complejidad}
+La complejidad de este código es igual a la cantidad de subconjuntos que se tienen con \(N\) elementos.
+
+La primera forma de hacerlo es darnos cuenta que cada elemento tiene dos opciones, estar o no estar, por principio multiplicativo vemos que se multiplica por dos tantas veces como elementos tengamos. En total es \(2^N\) 
+
+Esto es observable si recordamos el diagrama de las llamadas recursivas.
+
+Vemos que por cada elemento, se divide en dos, duplicando la cantidad de llamadas en el proceso. En el primer nivel con pos=0, tenemos solo una llamada, con pos=1 tenemos dos, pos=3 obtenemos cuatro y así sucesivamente.
+
+Por lo tanto, la complejidad es \(O(2^N)\), exponencial.
+
 Una vez comprendido esto, pasemos a utilizar esto para resolver problemas.
 \section*{Ejemplo 2.2.2}
 \addcontentsline{toc}{subsection}{Ejemplo 2.2.2}
