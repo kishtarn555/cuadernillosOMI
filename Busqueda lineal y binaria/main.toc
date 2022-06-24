@@ -56,8 +56,8 @@
 \contentsline {paragraph}{Problema 3.4}{70}{}%
 \contentsline {section}{Función de validación}{72}{}%
 \contentsline {section}{Ejemplo 3.4}{72}{}%
-\contentsline {section}{Problemas de práctica}{75}{}%
-\contentsline {paragraph}{Problema 3.5}{75}{}%
+\contentsline {section}{Problemas de práctica}{76}{}%
+\contentsline {paragraph}{Problema 3.5}{76}{}%
 \contentsline {paragraph}{Problema 3.6}{77}{}%
 \contentsline {section}{Búsqueda en los reales}{78}{}%
 \contentsline {section}{Ejemplo 3.5}{78}{}%
@@ -74,22 +74,23 @@
 \contentsline {section}{Problemas de práctica}{93}{}%
 \contentsline {paragraph}{Problema 4.1}{93}{}%
 \contentsline {paragraph}{Problema 4.2}{94}{}%
-\contentsline {chapter}{Búsqueda en amplitud (BFS)}{97}{}%
-\contentsline {section}{Ejemplo 5.1}{99}{}%
-\contentsline {section}{Complejidad}{103}{}%
-\contentsline {section}{Problemas de práctica}{104}{}%
-\contentsline {paragraph}{Problema 5.1}{104}{}%
-\contentsline {paragraph}{Problema 5.2}{105}{}%
-\contentsline {paragraph}{Problema 5.3}{106}{}%
-\contentsline {paragraph}{Problema 5.4}{107}{}%
+\contentsline {chapter}{Búsqueda en anchura (BFS)}{97}{}%
+\contentsline {section}{Ejemplo 5.1}{100}{}%
+\contentsline {section}{Complejidad}{104}{}%
+\contentsline {section}{Problemas de práctica}{105}{}%
+\contentsline {paragraph}{Problema 5.1}{105}{}%
+\contentsline {paragraph}{Problema 5.2}{106}{}%
+\contentsline {paragraph}{Problema 5.3}{107}{}%
+\contentsline {paragraph}{Problema 5.4}{108}{}%
 \contentsline {chapter}{Problemas}{111}{}%
 \contentsline {paragraph}{Problema E.1}{111}{}%
 \contentsline {paragraph}{Problema E.2}{112}{}%
-\contentsline {chapter}{Anexo}{113}{}%
-\contentsline {section}{Problemas interactivos}{113}{}%
-\contentsline {subsection}{Ejemplo}{115}{}%
-\contentsline {paragraph}{Tu procedimiento:}{116}{}%
-\contentsline {paragraph}{Función del evaluador:}{116}{}%
-\contentsline {subsection}{Compilar y probar interactivos}{117}{}%
-\contentsline {section}{Colas}{121}{}%
-\contentsline {subsection}{Usar queue}{121}{}%
+\contentsline {paragraph}{Problema E.3}{113}{}%
+\contentsline {chapter}{Anexo}{117}{}%
+\contentsline {section}{Problemas interactivos}{117}{}%
+\contentsline {subsection}{Ejemplo}{119}{}%
+\contentsline {paragraph}{Tu procedimiento:}{120}{}%
+\contentsline {paragraph}{Función del evaluador:}{120}{}%
+\contentsline {subsection}{Compilar y probar interactivos}{121}{}%
+\contentsline {section}{Colas}{125}{}%
+\contentsline {subsection}{Usar queue}{125}{}%

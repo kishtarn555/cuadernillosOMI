@@ -1,0 +1,44 @@
+El COMI ha preparado un paseo por barco para los olímpicos del OMI por el río \textit{algorrio}. 
+
+El concurso está organizado por \(M\) delegaciones enumeradas del \(1\) al \(M\), cada una con \(a_i\) olímpicos.
+
+Para este paseo se planean contratar \(K\) barcos en el que se subirán los olímpicos. Para que todo sea seguro, se debe poner un limite \(X\) de forma de que en un barco no pueda haber más de \(X\)  olímpicos abordo.
+
+Para el abordaje, cada delegación se subirá a un barco de forma que todos los olímpicos de la delegación estén en el mismo barco. Además, si en un barco esta la delegación \(x\) y la delegación \(y\) tal que \(x < y\), entonces también debe estar la delegación \(z\) en el mismo barco si se cumple que \(x < z < y\). En otras palabras, los barcos tendrán un rango consecutivos de delegaciones.
+
+¿Cuál es la mínima \(X\) que permita que todos las delegaciones se suban a los barcos?
+
+\subsubsection*{Entrada}
+La primera línea tiene dos enteros \(M\) y \(K\) --- la cantidad de delegaciones y barcos.
+
+La segunda linea tendrá \(M\) enteros \(a_1, a_2, \ldots, a_M\) --- \(a_i\) es la cantidad e olímpicos en la delegación \(i\).
+
+\subsubsection*{Salida}
+Imprime un entero --- El menor valor de \(X\) que permita que todos los olímpicos se suban a algún barco.
+
+\subsubsection*{Ejemplo}
+\begin{casebox3}
+	\ecase{
+		5 3\\
+		7 5 8 5 9
+	}{13}{
+		Los barcos serán\\
+		1. La delegación 1 y 2\\
+		2. La delegación 3 y 4\\
+		3. La delegación 5	
+	}
+\end{casebox3}
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq M, K \leq 10^5\)
+	\item \(1\leq a_i \leq 10^9\)
+\end{plimits}
+
+\subsubsection*{Subtareas}
+\begin{plimits}
+	\item (20 pts) \(a_i=1\)
+	\item (40 pts) \(1\leq M,K,a_i \leq 50\)
+	\item (40 pts) Sin restricciones adicionales.
+\end{plimits}
+
+\omegalink{Barcos-turisticos}

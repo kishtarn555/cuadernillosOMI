@@ -1,0 +1,25 @@
+Este es un problema interactivo.\footnote{Este es un problema interactivo, si no conoces como trabajar con estos, ve la página: \pageref{interactivos}}
+
+Se te pide que busques \(K\) tesoros ocultos en una cuadrícula de \(n\times m\). Para esto debes implementar \verb|void BuscarTesoros(int n, int m, int k)|.
+
+Se asegura que cada casilla solo puede tener \(0\) o \(1\) tesoro y que no hay más de un tesoro en cada columna.
+
+Para esto puedes usar dos funciones del evaluador:
+
+\verb|int Preguntar(int i, int j)| : te responderá cuantos tesoros hay en el área del rectángulo que abarca de la fila \(1\) a la fila \(i\) y de la columna \(1\) a la columna \(j\).
+
+\verb|bool Cavar(int i, int j)|: Saca el tesoro enterrado en la coordenada (i, j). No debe ser llamada en una casilla sin tesoros u obtendrás 0 puntos.
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq n, m \leq 1000\)
+	\item \(1\leq k \leq m\)
+\end{plimits}
+
+Tu puntaje se dependerá del número de llamadas a la función \verb|Preguntar|. Si usas menos o igual que la solución oficial, recibirás 100 puntos. Si usas más de \(nm\)  veces o realices una llamada inválida, recibirás 0 puntos. Si haces una cantidad intermedia recibirás un puntaje parcial.
+
+NOTA: Esta es una versión resumida por motivos de ahorro de papel, la redacción completa esta en omegaup.
+
+Fuente: \textbf{OMI 2018}
+
+\omegalink{OMI2018-Tesoro}

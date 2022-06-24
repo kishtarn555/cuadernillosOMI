@@ -1,0 +1,46 @@
+Polycarpio acaba de inventar un nuevo juego. El juego consiste en un tablero de \(n\) botones, cada botón tiene un valor entero positivo, cero o negativo. El tablero tendrá dos enteros \(a\) y \(b\). (\(a\) representa el inicio y \(b\) la meta).
+
+El objetivo es llegar de \(a\) a \(b\) en la menor de pasos. Para jugar debes elegir un botón del tablero y sumarle a \(a\) el valor del botón. La cantidad de veces que puedes presionar un botón es ilimitada y el orden en el que lo presionas puede ser cualquiera.
+
+Siempre es posible llegar de \(a\) a \(b\).
+
+\subsubsection*{Entrada}
+En la primera línea recibirás \(a\) y \(b\) (el inicio y la meta).
+
+En la segunda línea un numero ¿(n) que representa el número de botones.
+
+\(n\) líneas con el valor de cada botón \(n_i\).
+
+\subsubsection*{Salida}	
+\begin{casebox3}
+	\ecase{
+		1 2\\
+		3\\
+		2\\
+		1\\
+		-1
+	}{1}{Presiona el segundo botón con valor \(1\).}
+	\ecase{
+		1 7\\
+		5\\
+		20\\
+		30\\
+		-10\\
+		1\\
+		-2
+	}{4}{
+		En este caso los botones a presionar\\ 
+		son -2, -2, -10, 20.		
+	}
+\end{casebox3}
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(-10^5 \leq a,b \leq 10^5\)
+	\item \(n \leq 5\)
+\end{plimits}
+
+Para 10\%:  \(n = 2\)
+
+Fuente: OMIAGS 2020
+
+\omegalink{Juego-de-los-botones}

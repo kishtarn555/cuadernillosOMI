@@ -582,9 +582,11 @@ Pero ahora veamos dos hechos importantes:
 	\item Si funciona(m) falla, también lo hará cualquier valor menor que \(m\).
 \end{itemize}
 
-Es decir, se ve de la siguiente forma:
+Es decir, el rango de búsqueda se ve de la siguiente forma:
 
-TODO PONER IMAGEN AQUI
+\begin{center}
+	\includegraphics[scale=0.3]{binprop}
+\end{center}
 
 Esto hace que podamos hacer búsqueda binaria para encontrar el primer SI.
 
@@ -610,45 +612,7 @@ Ahora, recordemos que la complejidad de la búsqueda binaria es \(O(logR)\), per
 \section*{Problemas de práctica}
 \addcontentsline{toc}{section}{Problemas de práctica}
 
-\problemtitle Barcos turísticos
-
-El COMI ha preparado un paseo por barco para los olimpicos del OMI por el río \textit{algorrio}. 
-
-El concurso está organizado por \(M\) delegaciones enumeradas del \(1\) al \(M\), cada una con \(a_i\) olímpicos.
-
-Para este paseo se planean contratar \(K\) barcos en el que se subirán los olímpicos. Para que todo sea seguro, se debe poner un limite \(X\) de forma de que en un barco no pueda haber más de \(X\)  olímpicos abordo.
-
-Para el abordaje, cada delegación se subira a un barco de forma que todos los olimpicos de la delegación esten en el mismo barco. Además, si en un barco esta la delegación \(x\) y la delegación \(y\) tal que \(x < y\), entonces también debe estar la delegación \(z\) en el mismo barco si se cumple que \(x < z < y\). En otras palabras, los barcos tendrán un rango consecutivos de delegaciones.
-
-¿Cuál es la mínima \(X\) que permita que todos las delegaciones se suban a los barcos?
-
-\subsubsection*{Entrada}
-La primera línea tiene dos enteros \(M\) y \(K\) --la cantidad de delegaciones y barcos.
-
-La segunda linea tendrá \(M\) enteros \(a_1, a_2, \ldots, a_M\) -- \(a_i\) es la cantidad e olimpicos en la delegación \(i\).
-
-\subsubsection*{Salida}
-Imprime un entero -- El menor valor de \(X\) que permita que todos los olímpicos se suban a algún barco.
-
-\subsubsection*{Ejemplo}
-\begin{casebox3}
-	\ecase{
-		5 3\\
-		7 5 8 5 9
-	}{13}{
-		Los barcos serán\\
-		1. La delegación 1 y 2\\
-		2. La delegación 3 y 4\\
-		3. La delegación 5	
-	}
-\end{casebox3}
-\subsubsection*{Límites}
-\begin{plimits}
-	\item \(1\leq N, K \leq 10^5\)
-	\item \(1\leq a_i \leq 10^9\)
-\end{plimits}
-TODO:
-\omegalink{arg1}
+\problemtitle \input{problemas/barcos-turisticos}
 
 \problembreak
 
@@ -735,7 +699,7 @@ En la segunda línea habrá \(N\) enteros, \(x_1, x_2, \ldots, x_n\), donde \(x_
 En la tercera línea vendrán \(N\) enteros, \(v_1, v_2, \ldots, v_n\), donde \(v_i\) es la velocidad del coche \(i\).
 
 \subsubsection*{Salida}
-Un solo número, indicando el segundo en el cual pasa la meta el coche que termina en lugar \(K\). Con presición absoluta de menor o igual que \(10^{-6}\).
+Un solo número, indicando el segundo en el cual pasa la meta el coche que termina en lugar \(K\). Con precisión absoluta de menor o igual que \(10^{-6}\).
 
 \subsubsection*{Ejemplos}
 \begin{casebox2}

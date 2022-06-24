@@ -79,7 +79,14 @@
 	}{	
 	\end{tabular}	
 }
-
+\newenvironment{rutinebox3}{
+	\begin{tabular}{|l|l|l|}
+		\hline		
+		\thead{Función\\llamada} & \thead{Valor\\devuelto}& \thead{Expliación} \\
+		\hline
+	}{	
+	\end{tabular}	
+}
 
 \newcommand{\scase}[2]{
 	\makecell[tl]{#1}&\makecell[tl]{#2} \\

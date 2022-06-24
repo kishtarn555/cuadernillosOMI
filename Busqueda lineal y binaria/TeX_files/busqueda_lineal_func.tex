@@ -112,93 +112,13 @@ Con esto obtenemos un algoritmo con complejidad \(O(Busqueda\times Validar)\).
 \newpage
 
 \practiceproblemregion
-\label{bicicleta}
-\problemtitle  Karel ha comprado una bicicleta eléctrica con la que planea completar un recorrido. El recorrido se puede ver como \(N\) colinas en línea recta tal que la \(i\)-ésima colina tiene altura \(h_i\). Karel comienza en la colina hasta la izquierda y quiere terminar en la ultima colina de hasta la derecha.
 
-Cuando Karel sube un metro gasta \(1\) unidad de energía, mientras que bajar un metro recupera \(1\) unidad de altura. Si Karel en algún momento necesita subir, pero su batería tiene 0 de energía, Karel se quedará atorado y no terminará el recorrido.
-
-Por suerte al inicio hay una estación de recarga donde Karel puede recargar su bicicleta. Como nota, la batería tiene capacidad \(R\) y jamás podrá almacena más energía que \(R\).
-
-Actualmente Karel tiene \(0\) de energía, Determina cuál es la menor cantidad de energía que es necesaria recargar al inicio para completar el recorrido. O determina si es imposible hacer el recorrido con la bicicleta de Karel.
-
-\subsubsection*{Entrada}
-La primera línea tiene dos enteros, el valor de \(N\) y \(R\).
-
-En la siguiente línea vienen \(N\), enteros separados por espacios, siendo la altura de las colinas de izquierda a derecha. Recuerda que Karel comienza en la primera colina y quiera terminar en la última.
-\subsubsection*{Salida}
-Un entero, representando la menor cantidad de energía necesaria para completar el recorrido. Si Karel no puede completar el recorrido, imprime \(-1\).
-
-\subsubsection*{Casos ejemplo}
-\begin{casebox3}	
-	\ecase{
-		6 8\\
-		4 6 3 5 7 
-	}
-	{3}
-	{
-		Karel inicia con 3 de energía, moverse de   \\
-		la primera a la segunda colina le toma 2,  \\
-		ahora tiene 1.\\
-		Luego avanza y se recarga 3,\\
-		ahora tiene 4.\\
-		Después continua y se consume 2,\\
-		ahora tiene 2.\\		
-		Vuelve a avanzar quedándose con 0\\
-		de energía. \\		
-		Pero luego avanza y se recarga a 5. \\
-		Finalmente avanza para termina con 5. \\
-	}
-	\ecase{
-		5 6\\
-		1 10 1 2 0
-	}
-	{-1}
-	{}
-	\hline
-\end{casebox3}	
-
-\subsubsection*{Límites}
-\begin{plimits}
-	\item \(2\leq N, R \leq 5000\)
-	\item \(0\leq h_i\leq 5000\)
-\end{plimits}
-
-Fuente: OMIS online 2022.
-
-Enlace: [TODO]
+\problemtitle \input{problemas/bicicleta-de-karel}
 
 \problembreak
 
-\problemtitle Un número capicúa es aquel que no cambia cuando se escribe al revés, por ejemplo \(34143\) y \(1221\) son capicúa, pero \(145\) no lo es porque \(145\neq 541\). Tampoco \(30\) es capicúa.
-
-Determina cuantos números son capicúas entre \(L\) y \(R\).
-
-Enlace: [TODO]
-\subsubsection*{Ejemplo}
-Para \(L=1\) y \(R=50\) la respuesta es 13.
-\subsubsection*{Límites}
-\(1 \leq 1  \leq L \leq R \leq 10^5 \)
-
-\omegalink{Contar-capicuas}
+\problemtitle \input{problemas/contar-capicuas}
 
 \problembreak
 
-\problemtitle Dado \(L\) y \(R\), encuentra cuantos números primos\footnote{Un número es primo si y solo si tiene exactamente dos divisores positivos, el \(1\) y el mismo.} hay entre \(L\) y \(R\), incluyendo \(L\) y \(R\).
- 
-
-\subsubsection*{Entrada}
-Dos enteros \(L\) y \(R\).
-\subsubsection*{Salida}
-La cantidad de números primos en el rango.
-\subsubsection{Caso ejemplo}
-\begin{casebox3}
-	\ecase{1 7}{4}{Los primos contados son: \(2,3,5\) y \(7\)}	
-\end{casebox3}
-
-\subsubsection*{Subtareas}
-\begin{plimits}
-	\item (50 pts) \(1\leq L\leq R\leq 10^3\)
-	\item (50 pts) \(1\leq L\leq R\leq 10^5\)
-\end{plimits}
-
-\omegalink{Cuenta-primos}
+\problemtitle \input{problemas/cuenta-primos}

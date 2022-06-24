@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.15)  23 JUN 2022 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.15)  24 JUN 2022 12:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -231,20 +231,20 @@ File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 (TeX_files/problemas.aux) (TeX_files/extra.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
 
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -338,14 +338,15 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-[4] [5] [6]
+[4] [5] [6] (problemas/frecuencia-de-k.tex) (problemas/multiplos-de-cinco.tex)
+(problemas/divisores.tex) (problemas/suma-de-digitos.tex)
+(problemas/escalera-de-fer.tex
 <resources/images/escaleras.png, id=48, 660.21657pt x 306.39468pt>
 File: resources/images/escaleras.png Graphic file (type png)
 <use resources/images/escaleras.png>
-Package pdftex.def Info: resources/images/escaleras.png  used on input line 151
-.
+Package pdftex.def Info: resources/images/escaleras.png  used on input line 3.
 (pdftex.def)             Requested size: 165.05373pt x 76.59848pt.
- [7]) [8 <./resources/images/escaleras.png>]
+ [7])) [8 <./resources/images/escaleras.png>]
 \openout2 = `./TeX_files/busqueda_lineal_func.aux'.
 
 
@@ -361,11 +362,11 @@ Underfull \vbox (badness 2351) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-[12] [13]
+[12] (problemas/bicicleta-de-karel.tex [13]) (problemas/contar-capicuas.tex
 Underfull \vbox (badness 5862) has occurred while \output is active []
 
  [14])
-[15]
+(problemas/cuenta-primos.tex)) [15]
 \openout2 = `./TeX_files/busqueda_completa.aux'.
 
  (TeX_files/busqueda_completa.tex [16
@@ -373,11 +374,11 @@ Underfull \vbox (badness 5862) has occurred while \output is active []
 
 
 
-] [17]) [18]
+]
+[17]) [18]
 \openout2 = `./TeX_files/iterar_pares.aux'.
 
-
-(TeX_files/iterar_pares.tex
+ (TeX_files/iterar_pares.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19
@@ -598,8 +599,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 546--548
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
-[75] [76] [77] [78] [79] [80] [81] [82]
-Overfull \hbox (3.08818pt too wide) in paragraph at lines 813--814
+<resources/images/binprop.png, id=295, 752.8125pt x 188.20313pt>
+File: resources/images/binprop.png Graphic file (type png)
+<use resources/images/binprop.png>
+Package pdftex.def Info: resources/images/binprop.png  used on input line 588.
+(pdftex.def)             Requested size: 225.84549pt x 56.46136pt.
+
+(problemas/barcos-turisticos.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75 <./resources/images/binprop.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76])
+[77] [78] [79] [80] [81] [82]
+Overfull \hbox (3.08818pt too wide) in paragraph at lines 777--778
 \OT1/cmr/m/n/10.95 En C++ hay al-gu-nas fun-ciones ya pro-gra-madas que pueden 
 hacer b^^Susqueda
  []
@@ -620,7 +634,7 @@ Underfull \vbox (badness 3492) has occurred while \output is active []
 
  [86]
 [87]
-<resources/images/exhaustivaDFS1.png, id=337, 749.04843pt x 487.8225pt>
+<resources/images/exhaustivaDFS1.png, id=339, 749.04843pt x 487.8225pt>
 File: resources/images/exhaustivaDFS1.png Graphic file (type png)
 <use resources/images/exhaustivaDFS1.png>
 Package pdftex.def Info: resources/images/exhaustivaDFS1.png  used on input lin
@@ -630,7 +644,7 @@ e 120.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [88 <./resources/images/exhaustivaDFS1.png>]
-<resources/images/exhaustivaDFS2.png, id=342, 749.04843pt x 487.8225pt>
+<resources/images/exhaustivaDFS2.png, id=344, 749.04843pt x 487.8225pt>
 File: resources/images/exhaustivaDFS2.png Graphic file (type png)
 <use resources/images/exhaustivaDFS2.png>
 Package pdftex.def Info: resources/images/exhaustivaDFS2.png  used on input lin
@@ -657,7 +671,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [93]
 [94]
-<resources/images/caminoDFS1.png, id=363, 461.47406pt x 257.46187pt>
+<resources/images/caminoDFS1.png, id=365, 461.47406pt x 257.46187pt>
 File: resources/images/caminoDFS1.png Graphic file (type png)
 <use resources/images/caminoDFS1.png>
 Package pdftex.def Info: resources/images/caminoDFS1.png  used on input line 29
@@ -667,6 +681,12 @@ Package pdftex.def Info: resources/images/caminoDFS1.png  used on input line 29
 \openout2 = `./TeX_files/busqueda_bfs.aux'.
 
  (TeX_files/busqueda_bfs.tex
+<resources/images/bfs1.png, id=373, 606.76688pt x 392.96812pt>
+File: resources/images/bfs1.png Graphic file (type png)
+<use resources/images/bfs1.png>
+Package pdftex.def Info: resources/images/bfs1.png  used on input line 14.
+(pdftex.def)             Requested size: 212.37158pt x 137.5409pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [97
@@ -674,24 +694,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-]
+ <./resources/images/bfs1.png>]
+<resources/images/bfs2.png, id=379, 606.76688pt x 392.96812pt>
+File: resources/images/bfs2.png Graphic file (type png)
+<use resources/images/bfs2.png>
+Package pdftex.def Info: resources/images/bfs2.png  used on input line 20.
+(pdftex.def)             Requested size: 212.37158pt x 137.5409pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [98]
-[99] [100]
+ [98 <./resources/images/bfs2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [101]
+ [99]
+[100] [101]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [102]
-[103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+[104]
 Overfull \hbox (1.35443pt too wide) in paragraph at lines 168--169
 []\OT1/cmr/m/n/10.95 Despu^^Ses de pul-sar el bot^^Son rojo, el dis-pos-i-tivo 
 mul-ti-plica por dos el n^^Sumero.
  []
 
-[104] [105]
+[105] [106]
 File: resources/images/caminoDFS1.png Graphic file (type png)
 <use resources/images/caminoDFS1.png>
 Package pdftex.def Info: resources/images/caminoDFS1.png  used on input line 26
@@ -700,8 +729,8 @@ Package pdftex.def Info: resources/images/caminoDFS1.png  used on input line 26
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [106]
-<resources/images/relojes.png, id=403, 188.20313pt x 191.21437pt>
+ [107]
+<resources/images/relojes.png, id=412, 188.20313pt x 191.21437pt>
 File: resources/images/relojes.png Graphic file (type png)
 <use resources/images/relojes.png>
 Package pdftex.def Info: resources/images/relojes.png  used on input line 285.
@@ -709,8 +738,8 @@ Package pdftex.def Info: resources/images/relojes.png  used on input line 285.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [107]
-<resources/images/relojes2.png, id=407, 451.6875pt x 79.04532pt>
+ [108]
+<resources/images/relojes2.png, id=416, 451.6875pt x 79.04532pt>
 File: resources/images/relojes2.png Graphic file (type png)
 <use resources/images/relojes2.png>
 Package pdftex.def Info: resources/images/relojes2.png  used on input line 313.
@@ -719,25 +748,30 @@ Package pdftex.def Info: resources/images/relojes2.png  used on input line 313.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108 <./resources/images/relojes.png> <./resources/images/relojes2.png>]) [109
+ [109 <./resources/images/relojes.png> <./resources/images/relojes2.png>]) [110
 ]
 \openout2 = `./TeX_files/problemas.aux'.
 
 
-(TeX_files/problemas.tex [110
+(TeX_files/problemas.tex (problemas/tesoro.tex [111
 
+
+
+
+])
+(problemas/juegobotones.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [112])
+(problemas/OMI-explorador.tex [113])) [114] [115] [116
 
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [111])
-[112]
 \openout2 = `./TeX_files/extra.aux'.
 
  (TeX_files/extra.tex
-<resources/images/ioproblem.png, id=426, 685.05937pt x 195.73125pt>
+<resources/images/ioproblem.png, id=445, 685.05937pt x 195.73125pt>
 File: resources/images/ioproblem.png Graphic file (type png)
 <use resources/images/ioproblem.png>
 Package pdftex.def Info: resources/images/ioproblem.png  used on input line 12.
@@ -746,14 +780,11 @@ Package pdftex.def Info: resources/images/ioproblem.png  used on input line 12.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [113
-
-
-
+ [117
 
 
  <./resources/images/ioproblem.png>]
-<resources/images/interactivo1.png, id=431, 659.46375pt x 545.03625pt>
+<resources/images/interactivo1.png, id=450, 659.46375pt x 545.03625pt>
 File: resources/images/interactivo1.png Graphic file (type png)
 <use resources/images/interactivo1.png>
 Package pdftex.def Info: resources/images/interactivo1.png  used on input line 
@@ -762,24 +793,24 @@ Package pdftex.def Info: resources/images/interactivo1.png  used on input line
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [114 <./resources/images/interactivo1.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [115]
-[116] [117]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [118]
+ [118 <./resources/images/interactivo1.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [119]
-[120]
+[120] [121]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [122]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [123]
+[124]
 Overfull \hbox (6.88898pt too wide) in paragraph at lines 234--235
 \OT1/cmr/m/n/10.95 tipo de datos recibir^^Sa, para esto seguimos el for-mato []
 []\OT1/cmtt/m/n/10.95 queue<tipo> nombre;[]\OT1/cmr/m/n/10.95 .
  []
 
-[121] [122]) [123] (main.aux (TeX_files/busquedas.aux)
+[125] [126]) [127] (main.aux (TeX_files/busquedas.aux)
 (TeX_files/busqueda_lineal.aux) (TeX_files/busqueda_lineal_func.aux)
 (TeX_files/busqueda_completa.aux) (TeX_files/iterar_pares.aux)
 (TeX_files/subcojuntos.aux) (TeX_files/exhaustiva.aux)
@@ -787,10 +818,10 @@ Overfull \hbox (6.88898pt too wide) in paragraph at lines 234--235
 (TeX_files/busqueda_bfs.aux) (TeX_files/problemas.aux) (TeX_files/extra.aux)) )
  
 Here is how much of TeX's memory you used:
- 6455 strings out of 478614
- 110966 string characters out of 2843122
+ 6567 strings out of 478614
+ 114802 string characters out of 2843122
  635297 words of memory out of 3000000
- 24438 multiletter control sequences out of 15000+600000
+ 24509 multiletter control sequences out of 15000+600000
  480833 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,62p,968b,1645s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -817,9 +848,9 @@ ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ferna/AppData
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Us
 ers/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb>
-Output written on main.pdf (129 pages, 1004969 bytes).
+Output written on main.pdf (133 pages, 1044139 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
+ 573 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

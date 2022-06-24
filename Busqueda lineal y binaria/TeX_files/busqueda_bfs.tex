@@ -1,6 +1,6 @@
-\chapter*{Búsqueda en amplitud}
-\markboth{Búsqueda en amplitud (BFS)}{Búsqueda en amplitud (BFS)}
-\addcontentsline{toc}{chapter}{Búsqueda en amplitud (BFS)}
+\chapter*{Búsqueda en anchura}
+\markboth{Búsqueda en anchura (BFS)}{Búsqueda en anchura (BFS)}
+\addcontentsline{toc}{chapter}{Búsqueda en anchura (BFS)}
 
 La BFS es similar a la DFS, en el sentido que explora todos los estados a los que se puede llegar a partir uno inicial.
 
@@ -11,13 +11,13 @@ La DFS lo que hace es en un estado, explora totalmente lo que ofrezca una transi
 En cambio, la BFS lo que hace es llevar una lista de "estados por explorar" y procesarlos en orden. Para iniciar, revisamos todas las transiciones del estado inicial y los estados a los que nos lleven los agregamos en la lista.
 
 \begin{center}
-	TODO pon imagen aquí.
+	\includegraphics[scale=0.35]{bfs1}
 \end{center}
 
 Y luego para cada una de esos estados los exploramos también, es decir, expandimos las transiciones de esos estados y lo nuevo que encontremos lo ponemos en la lista de "estados por explorar". Importante: los visitamos en el orden que fueron agregados a la lista por explorar.
 
 \begin{center}
-	TODO pon imagen aquí.
+	\includegraphics[scale=0.35]{bfs2}
 \end{center}
 
 De esta forma, comenzamos visitando todos los lugares alcanzables con una transición, luego dos transiciones, después tres, cuatro, cinco y  así sucesivamente.

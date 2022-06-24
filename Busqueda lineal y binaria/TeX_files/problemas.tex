@@ -7,42 +7,12 @@ En esta sección encontrarás una lista de problemas que se resuelven con los te
 \startproblemlist
 \renewcommand{\problemgroup}{E}
 
-\problemtitle La leyenda dice que el tesoro de Moctezuma está enterrado en el Centro Histórico de la Ciudad de México. El Centro Histórico está representado como una cuadrícula de \(n\) filas y \(m\) columnas. Gracias a la tecnología de la nueva app iFind puedes desenterrarlo por fin.
-
-iFind es una app donde especificas una casilla \((i,j)\) de la cuadrícula y la app responde cuántos tesoros hay enterrados en el área del rectángulo que abarca de la fila \(1\) a la fila \(i\) y de la columna \(1\) a la columna \(j\).
-
-Una vez que sabes la casilla exacta donde hay un tesoro debes cavar en esa posición para desenterrarlo.
-
-Se asegura que cada casilla solo puede tener  o  tesoro y que no hay más de  tesoro en cada columna.
-
-\subsubsection*{Problema}
-Escribe un programa que dados \(n\) y \(m\), el alto y ancho de la cuadrícula y \(k\), el número total de tesoros enterrados, desentierre los \(k\) tesoros usando la menor cantidad posible de preguntas a la app.
-
-\subsubsection*{Interacción}
-No necesitas leer o escribir\footnote{Este es un problema interactivo, si no conoces como trabajar con estos, ve la página: \pageref{interactivos}}, debes implementar en tu código la función \verb|BuscaTesoros| y mandar llamar las funciones del evaluador \verb|Preguntar| y \verb|Cavar| para completar tu tarea.
-
-Internamente el evaluador llevará el registro de cuántos tesoros quedan. Tu programa no necesitará imprimir ni devolver nada: solo asegurarse de que hayas desenterrado los  tesoros usando la función Cavar.
-
-\subsubsection*{Implementación}
-\verb|void BuscaTesoros(int n, int m, int k);|
-
-\textbf{Descripción:} El evaluador buscará en tu código esta función y la llamará con los parámetros \verb|n|, \verb|m| y \verb|k|. Tu implementación deberá utilizar las funciones \verb|Preguntar| y \verb|Cavar| para desenterrar todos los tesoros. En cada caso de prueba solo se llamará a esta función una vez.
-
-\textbf{Parámetos}
-\vspace{-\baselineskip}
-\begin{plimits}
-	\item \verb|n|: Filas de la cuadrícula.
-	\item \verb|m|: Columnas de la cuadrícula.
-	\item \verb|k|:  El número de tesoros enterrados.
-\end{plimits}
-
-TODO COMPLETAR
-
-Fuente: \textbf{OMI 2018}
-
-\omegalink{OMI2018-Tesoro}
+\problemtitle \input{problemas/tesoro}
 
 \problembreak
 
-\problemtitle
+\problemtitle \input{problemas/juegobotones}
 
+\problembreak
+
+\problemtitle \input{problemas/OMI-explorador}
