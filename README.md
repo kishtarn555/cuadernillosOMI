@@ -12,19 +12,24 @@ Se asume que sabes todo lo de: C++ basico (IO, var, func, arreglos, sentencias d
 	- bucketSort
 	- quickSort
 	- MergeSort
-2) Búsquedas 
-   - Búsqueda completa: (fuerza bruta) Busq. lineal , Pares, next_permutation, subconjuntos, exhaustiva (la recursión lentisima)
-   - Búsqueda binaria
-   - BFS y DFS en estados (Como https://codeforces.com/contest/1681/problem/D)
+2) Búsqueda Completa (Fuerza bruta)
+   - Busq. secuencial (lineal)
+   - Pares
+   - Exhaustiva (la recursión lentisima)
 3) Ciencias de la computacion
 	- Complejidad
 	- Recursion
 	- Variables
 	- Debuggeo
-5) Matemáticas para la olimpiada
+4) Búsqueda binaria 
+5) Búsqueda por estados O(búsqueda con memorizacion si quieren añadir podas aquí)
+	- Tal vez podas?
+	- DFS
+	- BFS
+7) Matemáticas para la olimpiada
     - Combinatoria
     - Teoría de números 
-6) Programacion
+8) Programacion
 	-STL
 	-Creacion de estructuras simples (sin apuntadores, equivalentes a pair y tupple)
 	-Explicacion de la memoria en C++
