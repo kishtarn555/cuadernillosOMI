@@ -2,6 +2,9 @@
 
 Cuadernillos de la OMI para olimpicos
 
+Se asume que sabes todo lo de: C++ basico (IO, var, func, arreglos, sentencias de control) i.e. https://omegaup.com/course/introduccion_a_cpp
+
+
 1) Algoritmos de ordenamiento
 	- insertionSort
 	- selectionSort
