@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{omi}[2014/08/21 OMI package]
+\ProvidesPackage{omi2}[2014/08/21 OMI package v2]
 \RequirePackage{graphicx}
 \RequirePackage{setspace}
 \RequirePackage[]{geometry}
@@ -7,38 +7,19 @@
 \graphicspath{ {resources/images} }
 \RequirePackage{multirow}
 \RequirePackage{makecell}
-
 \RequirePackage[skip=10pt]{parskip}
-
 \RequirePackage{listings}
 \RequirePackage{color}
+\RequirePackage{environ}
+
+\usepackage[spanish]{babel} % Incluye español
 
 
+% Formato para codigos cpp 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{pink}{rgb}{0.87,0.59,0.7}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\newcounter{problemcount}
-
-\newcommand{\startproblemlist}{
-	\setcounter{problemcount}{0}
-}
-\newcommand{\problemgroup}{}
-\newcommand{\problemtitle}{
-	\stepcounter{problemcount}
-	\paragraph{Problema \problemgroup.\theproblemcount}
-}
-\newcommand{\practiceproblemsection}[1]{
-	\section*{Problemas de práctica}
-	\addcontentsline{toc}{section}{Problemas de practica}
-	\startproblemlist
-	\renewcommand{\problemgroup}{#1}
-}
-\newcommand{\practiceproblemregion}{
-	\section*{Problemas de práctica}
-	\addcontentsline{toc}{section}{Problemas de práctica}
-}
 \lstset{frame=l,
 	language=C++,
 	aboveskip=3mm,
@@ -56,7 +37,17 @@
 	tabsize=3
 }
 
-%CASES FORMATTING
+% Ejercicios
+
+\newtheorem{excersice}{Ejercicio}[section]
+
+\DeclareOption{hideStatements}{\global\@hiddentrue}
+\ProcessOptions\relax
+\newif\if@hidden
+\NewEnviron{pstatement}
+	{\if@hidden\else\BODY\fi}
+
+% FORMATTING
 \renewcommand\theadfont{\bfseries}
 
 \newenvironment{casebox2}{	
@@ -68,6 +59,8 @@
 	\end{tabular}	
 }
 
+% Formato de casos ejemplos (basado en omegaup)
+%% Entrada | Salida | Explicación
 \newenvironment{casebox3}{
 	\begin{tabular}{|l|l|l|}
 		\hline		
@@ -77,7 +70,7 @@
 	\end{tabular}	
 }
 
-
+%% Entrada | salida |
 \newcommand{\scase}[2]{
 	\makecell[tl]{#1}&\makecell[tl]{#2} \\
 	\hline
