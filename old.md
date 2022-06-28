@@ -1,5 +1,5 @@
 1) Elementos básicos 
-   - C++, Simulación, Suma de prefijos, Busqueda lineal, Sorts y Complejidad
+   - C++, Simulación, Suma de prefijos, Busqueda lineal, Sorts y Complejidad, Recursión
 2) Búsquedas 
    - Búsqueda completa: (fuerza bruta) Busq. lineal (otra vez?), Pares, next_permutation, subconjuntos, exhaustiva (la recursión lentisima)
    - Búsqueda binaria
