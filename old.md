@@ -12,5 +12,5 @@
     - Grafos
     - Árboles
     - Dijkstra
-5) DP
+5) Paradigmas de resolución
     - DP's clasicas   
