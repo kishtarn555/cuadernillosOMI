@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.28)  28 JUN 2022 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.28)  28 JUN 2022 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,10 +561,10 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 694CACEFCFF032345D59701B6EC36465;410.
  ) 
 Here is how much of TeX's memory you used:
- 14353 strings out of 478037
- 220881 string characters out of 5843053
+ 14352 strings out of 478037
+ 220873 string characters out of 5843053
  722749 words of memory out of 5000000
- 32571 multiletter control sequences out of 15000+600000
+ 32570 multiletter control sequences out of 15000+600000
  477972 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,81p,527b,1934s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -576,7 +576,7 @@ ype1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb>
-Output written on document.pdf (8 pages, 101950 bytes).
+Output written on document.pdf (8 pages, 100340 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
