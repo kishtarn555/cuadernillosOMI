@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.15)  24 JUN 2022 12:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.15)  27 JUN 2022 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -29,6 +29,9 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
+(C:/Users/Ferna/Documents/.Hector/Librario/commons\tex/latex/local\omi.sty
+Package: omi 2014/08/21 OMI package
+
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -217,7 +220,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)
+))
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
@@ -231,20 +234,20 @@ File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 (TeX_files/problemas.aux) (TeX_files/extra.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 (C:\Users\Ferna\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -363,19 +366,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 [12] (problemas/bicicleta-de-karel.tex [13]) (problemas/contar-capicuas.tex
-Underfull \vbox (badness 5862) has occurred while \output is active []
-
- [14])
-(problemas/cuenta-primos.tex)) [15]
+[14]) (problemas/cuenta-primos.tex)) [15]
 \openout2 = `./TeX_files/busqueda_completa.aux'.
 
- (TeX_files/busqueda_completa.tex [16
+ (TeX_files/busqueda_completa.tex
+[16
 
 
 
 
-]
-[17]) [18]
+] [17]) [18]
 \openout2 = `./TeX_files/iterar_pares.aux'.
 
  (TeX_files/iterar_pares.tex
@@ -818,13 +818,13 @@ Overfull \hbox (6.88898pt too wide) in paragraph at lines 234--235
 (TeX_files/busqueda_bfs.aux) (TeX_files/problemas.aux) (TeX_files/extra.aux)) )
  
 Here is how much of TeX's memory you used:
- 6567 strings out of 478614
- 114802 string characters out of 2843122
- 635297 words of memory out of 3000000
- 24509 multiletter control sequences out of 15000+600000
+ 6587 strings out of 478614
+ 115427 string characters out of 2843122
+ 636475 words of memory out of 3000000
+ 24525 multiletter control sequences out of 15000+600000
  480833 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,62p,968b,1645s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 70i,18n,76p,968b,1645s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
 95.pk> <C:\Users\Ferna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
 tcrm1200.pk><C:/Users/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -848,7 +848,7 @@ ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ferna/AppData
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Us
 ers/Ferna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb>
-Output written on main.pdf (133 pages, 1044139 bytes).
+Output written on main.pdf (133 pages, 1044104 bytes).
 PDF statistics:
  573 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

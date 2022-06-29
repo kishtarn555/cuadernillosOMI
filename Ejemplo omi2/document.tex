@@ -1,0 +1,75 @@
+\documentclass[b5paper,12pt]{book}
+\usepackage[hideStatements]{omi2}
+% remover hideStatements para mostrar pstatment
+
+
+\begin{document}
+	
+	\author{}
+	\title{OMI2}
+	\date{}
+	
+	\frontmatter
+	\maketitle
+	
+	\tableofcontents
+	
+	
+	\mainmatter
+	\part{Ejemplo}
+
+	\chapter{Lo que podemos usar}
+	Esto es una prueba general del archivo omi2.sty
+	
+	Primero mostraremos una de las funciones de este archivo, el casebox que usaremos para mostrar casos ejemplos.
+	
+	Solo usa el ambiente \lstinline|casebox2|, y cada caso utiliza el comando \lstinline|\scase|.
+	
+	\begin{casebox2}
+		\scase{
+		4\\
+		Esta es la entrada
+		} {
+			Y esta es la salida del problema.
+		}
+	\end{casebox2}
+
+	Para tener una tabla con explicación puedes usar \lstinline|casebox3| y para los comandos usa \lstinline|\ecase|
+	
+	\begin{casebox3}
+		\ecase{
+			Entrada\\
+			1\\
+			2\\
+			3		
+		}{
+			Salida = 3
+		} {
+			Escribe aqui la descripcion del caso \\
+			ejemplo que explica la salida
+		}
+	\end{casebox3}
+	
+	\section{Problemas de práctica}
+	
+	Para los problemas de practica usamos el ambiente \textit{excercise}.
+	
+	Además, se agregaron unos comandos para escribir enlaces rápidamente para codeforces y omegaup. Estos son \lstinline[language=tex]|\codeforceslink{number}{letter}| y \lstinline|\omegauplink{alias}|.
+	
+	También se agregó un comando llamado \lstinline|\problema| que recibe dos argumentos, el titulo del problema y el enlace, con el objetivo de poder cambiar el formato de esto si es deseado fácilmente.
+	
+	\begin{excersice}
+		\problema{Nombre del problema}{\codeforceslink{123}{A}}
+		
+		\begin{pstatement}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et blandit sem. Sed rhoncus accumsan malesuada. Pellentesque gravida lacus bibendum fermentum semper. Sed tempus tellus non turpis varius, pulvinar pretium tellus fringilla. Duis odio metus, dictum vitae condimentum non, bibendum ac lorem. 
+		\end{pstatement}		
+	\end{excersice}
+
+\begin{excersice}
+	\problema{Nombre del problema}{\omegauplink{ejemplo}}
+\end{excersice}
+	\backmatter
+	
+	
+\end{document}
