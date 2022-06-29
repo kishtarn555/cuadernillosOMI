@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.28)  28 JUN 2022 22:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.28)  28 JUN 2022 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,8 +392,8 @@ File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box57
 )
 (./document.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 )
 \openout1 = `document.aux'.
 
@@ -482,19 +482,19 @@ e
 
 \c@lstlisting=\count308
 Package hyperref Info: Link coloring OFF on input line 6.
+(./document.out) (./document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
 
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-[1
+ [1
 
 
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-]
-(./document.toc
+] (./document.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -557,20 +557,14 @@ LaTeX Info: Redefining \% on input line 72.
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  694CACEFCFF032345D59701B6EC36465;410.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 694CACEFCFF032345D59701B6EC36465;410.
  ) 
 Here is how much of TeX's memory you used:
- 14345 strings out of 478037
- 220795 string characters out of 5843053
- 722710 words of memory out of 5000000
- 32567 multiletter control sequences out of 15000+600000
+ 14353 strings out of 478037
+ 220881 string characters out of 5843053
+ 722757 words of memory out of 5000000
+ 32571 multiletter control sequences out of 15000+600000
  477972 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,81p,527b,1934s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -582,10 +576,10 @@ ype1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb>
-Output written on document.pdf (8 pages, 101806 bytes).
+Output written on document.pdf (8 pages, 102568 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  15 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
