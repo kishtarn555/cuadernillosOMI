@@ -38,12 +38,17 @@
 }
 
 % Ejercicios
-
 \newtheorem{excersice}{Ejercicio}[section]
+\newcommand{\problema}[2]{#1
+	\\ 
+	(\footnotesize{#2})}
 
-\DeclareOption{hideStatements}{\global\@hiddentrue}
-\ProcessOptions\relax
 \newif\if@hidden
+\DeclareOption{hideStatements}{\global\@hiddentrue}
+\DeclareOption*{\PackageWarning{examplepackage}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+
 \NewEnviron{pstatement}
 	{\if@hidden\else\BODY\fi}
 
@@ -86,8 +91,8 @@
 	\end{itemize}
 }
 % LINK COMMANDS
-\newcommand{\omegalink}[1]{\small{www.omegaup.com/arena/problem/#1}}
-\newcommand{\codeforceslink}[2]{\small{www.codeforces.com/problemset/problem/#1/#2}}
+\newcommand{\omegauplink}[1]{www.omegaup.com/arena/problem/#1}
+\newcommand{\codeforceslink}[2]{www.codeforces.com/problemset/problem/#1/#2}
 \newcommand{\codeforces}{Fuente: codeforces.com}
 
 % FORMAT COMMANDS
