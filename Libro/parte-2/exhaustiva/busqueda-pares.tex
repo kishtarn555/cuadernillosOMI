@@ -1,0 +1,126 @@
+\section{Parejas de elementos}
+
+\markright{PAREJAS DE ELEMENTOS}
+
+En muchos problemas nos pedirán que encontremos o contemos la cantidad de pares que cumplan alguna condición, o nosotros convertiremos a un problema de este estilo. Para este tipo de problemas será útil conocer como hacer una búsqueda completa que revise todas las posibles parejas de elementos.
+
+Como antes, veamos un problema que puede ser resuelto con esto.
+
+\subsection{Ejemplo: Pares de suma K}
+
+Fernando necesita \(K\) tornillos de la ferretería. Sin embargo, la vida no siempre es fácil y la ferretería no vende exactamente \(K\) tornillos.
+
+Sin embargo, venden \(N\) cajas de tornillos cada una con \(C_i\) tornillos dentro. 
+
+Como Fernando tiene una obsesión con no desperdiciar, él solo comprara las cajas de forma que traigan juntas exactamente \(K\) tornillos. Además, odia las bolsas de un solo uso que dan en la ferretería por lo que solo comprará dos cajas, una por cada mano.
+
+Entonces, dado el tamaño de las cajas, determina si Fernando puede traer consigo exactamente \(K\) tornillos.
+
+\subsection*{Entrada}
+Dos enteros, \(N\) y \(K\), representando cuantas cajas hay y cuantos tornillos se requieren.
+
+En la siguiente línea vendrán \(N\) enteros separados por espacios, indicando la cantidad de tornillos en cada caja.
+
+\subsection*{Salida}
+Deberás imprimir “SI” en caso de que Fernando pueda obtener K tornillos con sus reglas, o “NO” si es imposible.
+
+\subsection*{Casos ejemplo}
+
+\begin{casebox3}
+	\ecase{
+		4 6 \\
+		3 1 8 5
+	}
+	{SI}
+	{Usa las cajas con 1 y 5 tornillos.}
+	\ecase{
+		5 10\\
+		3 1 8 5 12
+	}
+	{NO}
+	{}
+\end{casebox3}
+
+\subsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N \leq 1000\)
+	\item \(1\leq K \leq 10^9\)
+	\item \(1\leq C_i \leq 10^9\)
+	\item \(C_i \neq K\)
+\end{plimits}
+
+Enlace: [TODO]
+
+\section * {Solución}
+
+Lo que nos pregunta el problema es: ¿Existe un par de cajas tal qué sumen \(K\)?
+
+Para determinar si existe dicha pareja, lo que haremos será buscar entre todas las parejas de cajas aquella que sume \(K\). Es decir, buscaremos completamente todas las parejas posibles.
+
+Para iterar por todas las parejas lo que haremos es primero definir una pareja como dos índices \((i,j)\), tal que \(0\leq i < j <N\).  Como queremos iterar por todos los posibles pares, primero iteraremos por todos los valores de \(i\). Y para cada \(i\), iteraremos por todas las \(j\) con las que se puede emparejar. El código se ve como:
+
+\begin{lstlisting}
+	for (int i =0; i < N; i++) {
+		for (int j=i+1; j< N; j++) {
+			cout << i<<" "<<j<< "\n";/* imprimimos 
+			cada par */ 
+		}
+	}
+\end{lstlisting}
+
+Y ahora que sabemos iterar por todos los pares, lo utilizamos para revisar si existe un par que sume \(K\). 
+
+\begin{lstlisting}
+	for (int i =0; i < N; i++) {
+		for (int j=i+1; j< N; j++) {
+			if (Caja[i]+Caja[j] == K) {
+				cout << "SI";
+				exit(0); /* Termina el programa, 
+				encontramos la respuesta */
+			}
+		}
+	}
+	cout << "NO";
+\end{lstlisting}
+
+Entonces, son estos dos ciclos for nos permiten iterar por toda pareja de elementos en un arreglo. Esta es una herramienta bastante útil para resolver muchos problemas y subtareas.
+
+\subsection {Complejidad}
+Bien, ahora hablemos de la complejidad de esta técnica. La complejidad es \(O(N^2)\). Esto es porque la cantidad de parejas con \(N\) elementos crece en\(O(N^2)\).
+
+Pero incluso si no conocemos como crecen las parejas, podemos ver que este ciclo para \(i = 0\), itera por \(N-1\) valores de \(j\); para \(i=1\), iteramos por \(N-2\) valores de \(j\); para \(i=2\), iteramos por \(N-3\) valores de \(j\), y así sucesivamente. De forma que hacemos \((N-1)+(N-2)+\ldots+1+0\) iteraciones de \(j\). Entonces hacemos \(1+2+3+\ldots+(N-1)\) iteraciones.
+
+Usando la formula se suma de gauss\footnote{Formula de gauss para sumar los primeros \(N\) naturales: \(1+2+3+\ldots+N=\frac{N(N+1)}{2}\)} obtenemos que:
+
+\[1+2+3+\ldots+(N-1)=\frac{N(N-1)}{2}=\frac{N^2}{2}-\frac{N}{2}\]
+
+Entonces, la complejidad queda como \(O(\frac{N^2}{2}-\frac{N}{2})=O(N^2)\)
+
+Por lo tanto, iterar por todos los pares de un arreglo es una técnica de complejidad cuadrada, perfecta para límites hasta \(\sim{10^4}\).
+
+
+\section*{Problemas de práctica}
+\addcontentsline{toc}{section}{Problemas de práctica}
+
+\begin{exercise}
+		\problema[inversiones-arreglo]{TODO Inversiones en el arreglo}{\omegauplink{inversiones-arreglo}}
+\end{exercise}
+
+
+\begin{exercise}
+	\problema[contar-sumas-pares]{TODO Puntuación de la ferretería}{\omegauplink{contar-sumas-pares}}
+\end{exercise}
+
+\begin{exercise}
+	\problema[algofashion-fibo]{TODO Números de moda}{\omegauplink{moda-fibonacci}}
+\end{exercise}
+
+\begin{exercise}
+	\problema[terreno-valioso]{TODO Terreno más valios}{\omegauplink{terreno-valioso}}
+\end{exercise}
+ 
+ 
+\begin{exercise}
+	\problema[suma-modulo-k]{TODO Suma modular}{\omegauplink{suma-modulo-k}}
+\end{exercise}
+Enlace: [TODO]

@@ -1,0 +1,81 @@
+\section{Búsqueda en los reales}
+\markright{BÚSQUEDA EN LOS REALES}
+Hay veces en la que no estamos buscando un valor entero, si no en vez querremos encontrar un valor real a cierta precisión.
+
+El problema dirá algo por el estilo de: imprime la respuesta con precisión de \(10^{-6}\), esto quiere decir que tu respuesta no debe estar alejada de la solución por más de \(10^{-6}\).
+
+Para estos problemas debes cambiar la condición de paro de \(a==b\), por \(b-a < precision\). Aunque en realidad, recomiendo poner una precisión un poco más ajustada ya que no tiende a aumentar mucho el costo y permite una programación más relajada.
+
+De forma que ahora la binaria se verá como:
+
+\begin{lstlisting}
+double a =0, b=1e9;
+double epsilon = 1e-8;
+while(b-a>= epsilon) {
+	double m = (a+b)/2;
+	if (funciona(m)) {
+		b=m;
+	} else {
+		a=m;
+	}
+}
+\end{lstlisting}
+
+\section{Ejemplo: Raíz cuadrada real}
+Calcula la raíz cuadrada de un número A con precisión absoluta de \(10^{-4}\).
+
+\textbf{Ejemplo}\\
+\begin{casebox2}
+	\scase{10}{3.1622}
+	\scase{16}{4.0000}
+\end{casebox2}
+
+\textbf{Límites}
+\begin{plimits}
+	\item \(1\leq A \leq 10^9\)
+\end{plimits}
+
+\subsection*{Solución}
+Usamos las mismas observaciones que usamos para el ejemplo ``De área a perímetro", pero esta vez lo haremos con \lstinline|double| y nos detenemos basados en una precisión.
+\begin{lstlisting}
+	double raiz(double A) {
+		double a=0, b=A;
+		while (b-a >= 1e-5) {
+			double m=(a+b)/2;
+			if (m*m < A) {
+				a=m;
+			} else {
+				b=m;
+			}
+		}
+		return a;
+	}
+\end{lstlisting}
+
+\subsection{Complejidad}
+La complejidad de este procedimiento sigue siendo \(O(log(Espacio))\), pero ahora debemos encontrar el tamaño del espacio de búsqueda. 
+
+Con un poco de matemáticas veremos que es \(E=\frac{R-L}{precision}\), en el caso de ejemplo la precisión es pues: \(\frac{A}{10^{-4}}\), aunque nosotros usamos una precisión de \(10^{-5}\), por lo que es \(\frac{A}{10^{-5}}\).
+
+Por lo tanto, la complejidad del ejemplo anterior es:
+\[O(logE)\]
+\[ = O(log\frac{A}{10^{-5}})\]
+\[ = O(log(A)-log({10^{-5}}))\]
+\[ = O(log(A)+log({10^{5}}))\]
+
+Entonces, poner una precisión de \(10^-5\) solo nos aumenta un costo de \(log(10^5)=16.6\), o en otras palabras, 17 preguntas extra.
+
+\section*{Problemas de práctica}
+\addcontentsline{toc}{section}{Problemas de práctica}
+
+\begin{exercise}
+	\problema{Carreras de la Formula \(\pi\) }{TODO}
+\end{exercise}
+
+\begin{exercise}
+	\problema{Planetas}{\omegauplink{planetas}}
+\end{exercise}
+
+\begin{exercise}
+\problema{Carretera}{\omegauplink{carretera}}
+\end{exercise}

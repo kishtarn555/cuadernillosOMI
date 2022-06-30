@@ -1,0 +1,433 @@
+\chapter[Búsqueda con podas]{Búsqueda con podas\\ Backtracking}
+
+Sigamos con otra búsqueda que evita probar absolutamente todo el espacio de búsqueda, en este caso es la búsqueda de vuelta a atrás, o backtracking en inglés.
+
+Esta búsqueda es similar a la búsqueda exhaustiva, pero estando atentos a no explorar candidatos en los que nos demos cuenta que no encontraremos lo que buscamos.
+
+Como acostumbramos veamos un ejemplo.
+
+\section{Ejemplo: Subconjunto de suma K}
+
+Dada una lista de \(N\) enteros positivos, determina si existe un subconjunto que sus elementos sumen \(K\).
+
+\textbf{Entrada}\\
+Dos enteros \(N\) y \(K\) --- La cantidad de enteros y la suma que queremos.
+
+En la segunda línea hay \(N\) enteros \(A_1, A_2, \ldots A_N\) --- Los valores de la lista.
+\textbf{Salida}\\
+Imprime \verb|SI| en caso de que exista un subconjunto de suma \(K\), o imprime \verb|NO| en caso contrario.
+
+\textbf{Ejemplos}\\
+\begin{casebox3}
+	\ecase{
+	4 12\\
+	5 8 3 1 7	
+	} {
+	SI
+	}
+	{
+		\(5+7=12\)
+	}
+	\ecase{
+		6 11\\
+		10 5 2 3 5 7
+	} {
+		NO
+	}
+	{
+	}
+	\ecase{
+	4 22\\
+	5 5 5 11 
+	} {
+	NO
+	}
+	{	
+	}
+\end{casebox3}
+
+\textbf{Límites}
+\begin{plimits}
+	\item \(1\leq N,K \leq 200\)
+	\item \(1\leq A_i \leq 200\)
+\end{plimits}
+	
+\textbf{Subtareas}
+\begin{plimits}
+	\item (30 pts) \(1\leq N \leq 20\)
+	\item (30 pts)
+	\begin{plimits}
+		\item \(1\leq N \leq 30\)
+		\item \(1\leq K \leq 9\)		
+	\end{plimits}
+	\item (40 pts) Sin restricciones adicionales
+\end{plimits}
+
+\subsection*{Solución}
+Vamos a ir construyendo una solución desde la fuerza bruta hasta obtener la de 100 puntos.
+
+\subsubsection*{Fuerza bruta}
+La fuerza bruta es crear todos los subconjuntos posibles, viendo si la suma es lo que queremos o no, recordemos que en código se ve:
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}
+void buscar(int posicion, int suma) {
+	if (posicion==N) {
+		if (suma==K) {
+			cout << "SI";
+			exit(0);
+		}
+		return;
+	}
+	//prueba a incluir arr[pos]
+	buscar(posicion+1, suma+arr[posicion]);
+	
+	//prueba a excluir arr[pos]
+	buscar(posicion+1, suma);
+}
+\end{lstlisting}
+\end{minipage}
+
+Esta búsqueda nos produce el siguiente diagrama de recursión en el caso ejemplo uno. Cada llamada recursiva es representada por dos números, el primero es posición y el segundo es suma.
+
+
+\Tree [.buscar(0,0) 
+	[.1\\5 
+		[.2\\13 
+			[.3\\16
+				[.4\\17 
+					5\\24 
+					5\\17
+				]
+				[.4\\16
+					5\\23
+					5\\16
+				]
+			]
+			[.3\\13
+				[.4\\14
+					5\\21
+					5\\14
+				]
+				[.4\\13
+					5\\20
+					5\\13
+				]
+			]
+		]
+		[.2\\5
+			[.3\\8
+				[.4\\9
+					5\\16
+					5\\9				
+				]
+				[.4\\8
+				5\\15
+				5\\8				
+				]
+			]			
+			[.3\\5
+				[.4\\6
+					5\\13
+					5\\6
+				]
+				[.4\\5
+					\textbf{5}\\\textbf{12}
+				]
+			]		
+		]
+	]	
+]
+
+
+
+
+En total, se requirió de 31 llamadas recursivas y revisamos 15 subconjuntos, ¿pero realmente fue necesario hacer todo lo que hicimos?
+
+\subsection*{Primera poda}
+Pongamos atención en la llamada de \lstinline|buscar(2, 13)|, desde aquí hacemos 14 llamadas recursivas, que si lo pensamos ya son innecesarias. Si la suma ya supero 12, que es lo que buscamos y no hay números negativos, entonces no importa que hagamos, jamas encontraremos 12.
+
+Por lo tanto, la primera forma de mejorar la fuerza bruta es detener la búsqueda si superamos \(K\). Esto se ve en código:
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}
+		void buscar(int posicion, int suma) {
+			if (suma > K) {
+				return;
+			}
+			if (posicion==N) {
+				if (suma==K) {
+					cout << "SI";
+					exit(0);
+				}
+				return;
+			}
+			//prueba a incluir arr[pos]
+			buscar(posicion+1, suma+arr[posicion]);
+			
+			//prueba a excluir arr[pos]
+			buscar(posicion+1, suma);
+		}
+	\end{lstlisting}
+\end{minipage}
+
+De forma que ahora el diagrama de la recursión es mucho menor.
+
+\Tree [.buscar(0,0) 
+[.1\\5 
+		[.2\\13 		
+		]
+		[.2\\5
+			[.3\\8
+				[.4\\9
+					5\\16
+					5\\9				
+				]
+				[.4\\8
+					5\\15
+					5\\8				
+				]
+			]
+			[.3\\5
+				[.4\\6
+					5\\13
+					5\\6
+				]
+				[.4\\5
+					\textbf{5}\\\textbf{12}
+				]
+			]			
+		]
+	]	
+]
+
+Esta poda nos permite sacar la segunda subtarea, esto es porque como \(K\) vale a lo más \(9\), la cantidad de subconjuntos por explorar son aquellos con \(9\) elementos o menos, los cuales para \(n=30\) hay \(22,964,087\), esto lo podemos comprobar con una búsqueda que cuente la cantidad de subconjuntos de menos de \(9\) elementos, o con fórmulas matemáticas que veremos más adelante.
+
+A esta forma de evitar visitar candidatos le llamamos poda, porque estamos podando ramas del diagrama y reduciendo el volumen de búsqueda. Igual que podar un árbol reduce la cantidad de hojas y el volumen de un árbol.
+
+\subsection*{Segunda poda}
+Esta no es la única forma de podar, también podemos cortar la búsqueda en con información de lo que ya hemos explorado.
+
+Para ver esto, veamos el tercer caso ejemplo.
+
+
+\Tree[.0\\0
+	[.1\\5
+		[.2\\10
+			[.3\\15
+				4\\26
+				4\\15
+			]
+			[.3\\10
+				4\\21
+				4\\10			
+			]
+		]	
+		[.\textbf{2}\\\textbf{5}
+			[.\textbf{3}\\\textbf{10}
+				\textbf{4}\\\textbf{21}
+				\textbf{4}\\\textbf{10}			
+			]
+			[.\textbf{3}\\\textbf{5}
+				\textbf{4}\\\textbf{16}
+				\textbf{4}\\\textbf{5}
+			]				
+		]
+	]
+	[.1\\0
+		[.\textbf{2}\\\textbf{5}
+			[.\textbf{3}\\\textbf{10}
+				\textbf{4}\\\textbf{21}
+				\textbf{4}\\\textbf{10}
+			]
+			[.\textbf{3}\\\textbf{5}
+				\textbf{4}\\\textbf{16}
+				\textbf{4}\\\textbf{5}
+			]
+		]
+		[.2\\0
+			[.3\\5
+				4\\16
+				4\\5
+			]
+			[.3\\0
+				4\\11
+				4\\0
+			]
+		]
+	]	
+]
+
+Este diagrama no es afectado por la poda anterior, pero vamos a introducir una nueva poda. Para esto, probablemente te fijaste en que en el diagrama anterior, resaltamos dos ramas del diagrama en negritas.
+
+El motivo por el cual están calcadas es porque son iguales, inician con buscar(2, 5) para llamar a buscar(3, 10) y buscar(3, 5), etc. Y como son iguales, entonces la segunda vez que lo exploremos, ¿podremos ahora encontrar la respuesta? Claro que no, vamos a ver lo que ya habíamos revisado antes.
+
+Por esto, la segunda poda será que en caso de llegar a un buscar con un valor repetido de posicion  y suma, detener la búsqueda.
+
+En código se ve:
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}
+bool marcas[250][250];
+void buscar(int posicion, int suma) {
+	if (suma > K) 
+		return;	
+	if (marcas[posicion][suma]) 
+		return;
+	marcas[posicion][suma]=true;//Marcamos esta pareja de (pos, suma) como ya explorado para no repetir.
+	if (posicion==N) {
+		if (suma==K) {
+			cout << "SI";
+			exit(0);
+		}
+		return;
+	}
+	//prueba a incluir arr[pos]
+	buscar(posicion+1, suma+arr[posicion]);
+	
+	//prueba a excluir arr[pos]
+	buscar(posicion+1, suma);
+}
+	\end{lstlisting}
+\end{minipage}
+
+Y esto produce el siguiente diagrama, donde marcamos con negritas las ramas podadas:
+
+\Tree[.0\\0
+[.1\\5
+[.2\\10
+[.3\\15
+4\\26
+4\\15
+]
+[.3\\10
+4\\21
+4\\10			
+]
+]	
+[.2\\5
+[.\textbf{3}\\\textbf{10}		
+]
+[.3\\5
+4\\16
+4\\5
+]				
+]
+]
+[.1\\0
+[.\textbf{2}\\\textbf{5}
+]
+[.2\\0
+[.\textbf{3}\\\textbf{5}
+]
+[.3\\0
+4\\11
+4\\0
+]
+]
+]	
+]
+
+Esta poda nos pasa de 31 llamadas recursivas y 16 subconjuntos revisados, a solo usar 21 llamadas y revisar 7 subconjuntos.
+
+Esta poda en concreto nos reduce la complejidad a \(O(NK)\), esto es porque vamos a explorar solo cuando los argumentos aparecen por primera vez. Los valores de posición son de \(0\) a \(N\) y los la suma tiene rango de \(0\) a \(K\). Lo cual implica que en total tenemos \((N+1)(K+1)\) posibles pares de valores. 
+
+Hay llamadas repetidas para los pares, pero estas no hacen nada ya que son podadas de forma inmediata, además, estas solo pueden ser llamadas por un buscar no podado.
+
+Complejidad de \(O(NK)\) corre en tiempo sin problemas para los 100 puntos.
+
+Veamos otro ejemplo.
+
+\section{Ejemplo: Explorando una matriz}
+
+\input{problemas/OMI-explorador}
+
+\subsection*{Solución}
+Comencemos con la fuerza bruta, básicamente, buscaremos la secuencia de pasos más corta para llegar desde el punto \(A\) hasta el punto \(B\).
+
+Para esto, una observación clave es que ningún camino que sea el más corto pasa dos veces por la misma casilla, esto es porque es innecesario caminar en círculos.
+
+Esto implica que la distancia a lo más usa todas las casillas, esto es \(50\times50=2500\).
+
+Ahora, la fuerza bruta la haremos con una función recursiva que vaya probando todas las secuencias de movimientos posibles, llevando cuenta de las coordenadas de donde va y cuantos pasos ha dado:
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}
+int N, M;
+int respuesta=1e9;
+int destino_i, destino_j;
+int marcas[55][55];
+void explorar(int pos_i, int pos_j, int pasos) {
+	if (pos_i < 0 || pos_i >=N)
+		return;//Estas fuera del mapa
+	if (pos_j < 0 || pos_j >=M)
+		return;//Estas fuera del mapa
+	if (pos_i==destino_i && pos_j == destino_j) {
+		//Comparar respuesta con la que encontramos
+		if (respuesta > pasos)
+			respuesta=pasos;
+		return;
+	}
+	if (mapa[pos_i][pos_j])return;
+	if (marcas[pos_i][pos_j]) return;
+	marcas[pos_i][pos_j]=true; //Marcar para no pasar por aqui otra vez.	
+	explorar(pos_i-1, pos_j, pasos+1);//arriba
+	explorar(pos_i+1, pos_j, pasos+1);//abajo
+	explorar(pos_i, pos_j-1, pasos+1);//izquierda
+	explorar(pos_i, pos_j+1, pasos+1);//derecha	
+	marcas[pos_i][pos_j]=false; //Desmarcar para permitir pasar por aqui en otros caminos.	
+}
+int main() {
+	cin >> N >>M;
+	[...]
+	int pi, pj;
+	cin >> pi >> pj;
+	cin >> destino_i>>destino_j;
+	explorar(pi, pj, 1);
+	cout << respuesta;
+}
+
+\end{lstlisting}
+\end{minipage}
+
+Esta fuerza bruta prueba todos los caminos posibles del punto \(A\) al punto \(B\), pero es excesivamente lenta y obtenemos 0 puntos, necesitamos mejorarla.
+
+La primera poda que podemos hacer es que si en algun momento llevamos más pasos que la respuesta encontrada hasta ahora, nos detengamos.
+
+\begin{lstlisting}
+	if (pasos >=respuesta) return;
+\end{lstlisting}
+
+Con esta idea mejoramos a 25 puntos, pero todavía podemos mejorar.
+
+Para esto, veamos que si en algun momento llegamos a la casilla \((i, j)\) con 20 pasos y luego llegamos con 50, de aquí no podremos encontrar un camino más rápido al punto \(B\), pues todos los caminos desde aquí ya fueron explorados y de forma mejor.
+
+Entonces, añadiremos para cada casilla un marcador de con que tiempo llegamos y solo exploraremos una casilla si llegamos a ella más rápido que antes.
+\begin{lstlisting}
+if (tiempo[pos_i][pos_j]<=pasos) return;
+tiempo[pos_i][pos_j]=pasos;
+\end{lstlisting}
+
+Esta segunda poda nos pasa la complejidad a: \(O(distanciaMaxima\times N \times M)\) y como ya vimos, distanciaMaxima es \(N\times M\), por lo tanto la complejidad es \(O((NM)^2)\), lo cual equivale a \(50^4=6,250,000\) que corre en tiempo.
+
+Esta complejidad es resultado de que cada casilla es explorada a lo más la distancia máxima de veces.
+\pagebreak
+\section{Código general}
+
+Entonces, un código de backtracking se va a ver con la siguiente forma:
+\begin{lstlisting}
+void buscar(solucion) {
+	if (se poda solucion)
+		return;
+	if (solucion es valida) {
+		registrar solucion;
+	}
+	buscar(soluciones siguientes)
+}
+\end{lstlisting}
+
+\section*{Problemas de práctica}
+
+\begin{exercise}
+	\problema{Suma de digitos}{\omegauplink{Suma-de-digitos}}	
+\end{exercise}

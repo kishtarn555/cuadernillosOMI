@@ -2,7 +2,6 @@
 \ProvidesPackage{omi2}[2014/08/21 OMI package v2]
 \RequirePackage{graphicx}
 \RequirePackage{setspace}
-\RequirePackage[]{geometry}
 \RequirePackage{amsmath}
 \graphicspath{ {resources/images} }
 \RequirePackage{multirow}
@@ -11,7 +10,8 @@
 \RequirePackage{listings}
 \RequirePackage{color}
 \RequirePackage{environ}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{qtree}
 
 \usepackage[spanish]{babel} % Incluye español
 
@@ -39,10 +39,8 @@
 }
 
 % Ejercicios
-\newtheorem{excersice}{Ejercicio}[section]
-\newcommand{\problema}[2]{#1
-	\\ 
-	(\footnotesize{#2})}
+\newtheorem{exercise}{Ejercicio}[chapter]
+
 
 \newif\if@hidden
 \DeclareOption{hideStatements}{\global\@hiddentrue}
@@ -51,8 +49,27 @@
 
 
 \NewEnviron{pstatement}
-	{\if@hidden\else\BODY\fi}
+{\if@hidden\else\BODY\fi}
 
+\newcommand{\fstatement}[1]{
+	\begin{pstatement}
+		\input{#1}
+		
+		\problembreak
+		
+	\end{pstatement}
+	
+}
+
+\newcommand{\problema}[3][2]{
+	\begin{samepage} 		
+	#2\\ 
+	(\footnotesize{#3})		
+	
+	\end{samepage}
+
+	\fstatement{#1}	
+}
 % FORMATTING
 \renewcommand\theadfont{\bfseries}
 
@@ -86,9 +103,7 @@
 	\hline
 }
 % LIMIT LIST FORMATTING
-\newenvironment{plimits}{\begin{itemize}
-		\setlength{\parskip}{0.75pt}			
-	}{
+\newenvironment{plimits}{\begin{itemize} \setlength{\parskip}{0.75pt} }{
 	\end{itemize}
 }
 % LINK COMMANDS

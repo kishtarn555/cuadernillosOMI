@@ -1,0 +1,24 @@
+Definimos una inversión como una parejas \((i,j)\) en un arreglo tal que \(1\leq i < j \leq N\) y también \(A_i > A_j\). Es decir, una pareja de números que estén al revés de como deberían estarlo en un orden de menor a mayor.
+
+Dado un arreglo de \(N\) enteros, imprime cuantas inversiones hay en él.
+
+\subsubsection*{Ejemplo}
+\begin{casebox3}
+	\ecase{
+		4\\
+		3 2 6 1
+	}
+	{4}
+	{
+		Las inversiones son: \\
+		El 3 con el 2, \\
+		el 3 con el 1,\\
+		el 2 con el 1, \\
+		y el 6 con el 1. 
+	}	
+\end{casebox3}
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N \leq 5000\)
+	\item \(1\leq A_i \leq 10^9\)
+\end{plimits}
