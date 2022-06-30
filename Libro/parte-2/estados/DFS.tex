@@ -16,7 +16,7 @@ El código de una DFS en general se verá de la siguiente forma:
 
 Veamos un problema ejemplo:
 
-\section{Ejemplo: Dos operaciones}
+\section*{Ejemplo: Dos operaciones}
 Javier tiene una calculadora un poco peculiar. Esta tiene un entero \(x\) en la pantalla y dos botones.
 \begin{plimits}
 	\item El primer botón, al ser presionado le suma \(a\) al número \(x\).
@@ -150,9 +150,9 @@ void busqueda(int x, int pasos) {
 		//x solo crece, de aqui ya es imposible hayar a y.
 		return;
 	}
-	if (visitado[x]) {			
+	if (visitado[x]) 
 		return;
-	}
+	visitado[x]=true;
 	//presiona el boton 1.
 	solucion[paso]=1;
 	busqueda(x+a; pasos+1);,

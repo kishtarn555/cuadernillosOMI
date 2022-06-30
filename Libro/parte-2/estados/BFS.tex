@@ -65,7 +65,7 @@ void BFS(inicio) {
 \end{minipage}
 
 Como ya es de costumbre, veamos un ejemplo para entender esto.
-\section{Ejemplo: Dos operaciones}
+\section*{Ejemplo: Dos operaciones}
 Javier tiene una calculadora un poco peculiar. Esta muestra un número \(x\) en pantalla y tiene dos botones.
 
 \begin{plimits}
@@ -148,3 +148,33 @@ Esto se verá:
 	}
 \end{lstlisting}
 \end{minipage}
+
+\section{Complejidad}
+La complejidad de una BFS es sencillamente de calcular. Veamos que cada estado es colocado una sola vez dentro de la cola y por lo tanto, explorado una sola vez.
+
+Por lo tanto, cada transición también es visitada una única vez, cuando su estado correspondiente sea visitado.
+
+Esto provoca que la complejidad de la BFS sea \(O(V+E)\), donde \(V\) es la cantidad de estados y \(E\) es el número de transiciones.
+
+En el ejemplo 5.1, la cantidad de estados son a lo más \(y\) y a lo más tenemos dos transiciones por estado, por lo que la complejidad es \(O(V+E)=O(y+2y)=O(y)\).\\
+
+\section*{Problemas de práctica}
+\addcontentsline{toc}{section}{Problemas de práctica}
+
+\begin{exercise}
+	\problema{Two Buttons}{\codeforceslink{520}{B}}
+	Traduccion: TODO
+\end{exercise}
+
+\begin{exercise}
+	\problema{Required Length}{\codeforceslink{1681}{D}}
+	Traduccion: TODO
+\end{exercise}
+
+\begin{exercise}
+	\problema{Camino mas corto en matriz}{TODO}
+\end{exercise}
+
+\begin{exercise}
+\problema{IOI 1994 - Relojes}{\omegauplink{relojes}}
+\end{exercise}

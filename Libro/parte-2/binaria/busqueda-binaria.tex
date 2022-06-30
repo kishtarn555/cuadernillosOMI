@@ -55,7 +55,7 @@ El motivo por el cuál la búsqueda binaria es tan efectiva, es que realiza \(\l
 
 Veamos un ejemplo que se puede resolver con búsqueda binaria.
 
-\section{Ejemplo: Del área al perímetro}
+\section*{Ejemplo: Del área al perímetro}
 Javier es un granjero y esta cansado de que sus animales siempre huyan de su granja, por lo que ha decidido poner una reja al rededor de todo el terreno.
 
 Sin embargo, Javier no sabe cuantos metros de reja va a necesitar y te ha contratado para que tu le digas esto. 
@@ -150,14 +150,14 @@ De forma que ahora tenemos:
 
 \begin{minipage}{\linewidth}	
 \begin{lstlisting}
-	long long buscar(long long a, long long b, long long A) {
-		long long m =(a+b)/2;
-		if (m*m < A) {
-			return buscar(m+1, b, A);
-		} else {
-			return buscar(a, m, A);
-		}
-	} 
+long long buscar(long long a, long long b, long long A) {
+	long long m =(a+b)/2;
+	if (m*m < A) {
+		return buscar(m+1, b, A);
+	} else {
+		return buscar(a, m, A);
+	}
+} 
 \end{lstlisting}
 
 \end{minipage}
@@ -187,7 +187,25 @@ Ahora, la complejidad de esto es \(O(log(\sqrt{A}))\), lo cual corre perfectamen
 
 \textbf{Nota:} En este problemas también se pudo haber usado \lstinline|L=sqrt(A)| con la librería \verb|<math.h>| que calcula el valor rápidamente, pero se uso búsqueda binaria para ejemplificar.
 
-\section{Ejemplo: Buscar en un arreglo}
+También puede ser escrita de forma iterativa de la siguiente manera:
+
+\begin{minipage}{\textwidth}
+	\begin{lstlisting}
+long long buscar(long lonng a, long long b, long long A) {
+	while (a!=b) {
+		long long m=(a+b)/2;
+		if (m*m < A) {
+			a=m+1;
+		} else {
+			b=m;
+		}
+	}
+	return a;
+}
+	\end{lstlisting}
+\end{minipage}
+
+\section*{Ejemplo: Buscar en un arreglo}
 Se te da un arreglo \(A\) de \(N\) enteros diferentes. El arreglo estará en orden creciente, es decir, \(A[i] < A[i+1]\).
 
 Deberás responder \(T\) preguntas:
