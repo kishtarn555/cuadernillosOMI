@@ -1,0 +1,44 @@
+La revista “algofashion” dijo esta semana que los números a la moda son aquellos que pueden ser representados como la suma de dos números pertenecientes a la secuencia de Fibonacci.
+
+Recordemos que la secuencia de Fibonacci empieza con dos 1. Y luego cada número será resultado de la suma de los dos anteriores.
+\[F_1=F_2=1\]
+\[F_n=F_{n-1}+F_{n-2}\]
+
+De forma que los primeros números de la secuencia son:
+\[1,1,2,3,5,8,13,21\ldots\]
+
+Karel acaba de leer la revista y ahora quiere responder \(T\) preguntas, cada pregunta será del tipo: ¿El número \(x_i\) está de moda?
+
+Como amigo, debes hacer un código que responda las dudas de Karel.
+
+\subsubsection*{Entrada}
+En la primera línea vendrá el valor de \(T\), cuantas preguntas tiene Karel.
+
+En las siguientes \(T\) líneas vendrán las preguntas de Karel, una por línea. Cada pregunta consiste en un solo entero \(x_i\).
+
+\subsubsection*{Salida}
+Imprime \(T\) líneas, cada una siendo la respuesta a una pregunta de Karel. La línea \(i\) debe ser “SI” si \(x_i\) está a la moda y debe ser “NO” si no está a la moda. 
+
+\subsubsection*{Caso ejemplo}	
+
+\begin{casebox2}
+	\scase{
+		3\\
+		5\\
+		6\\
+		10
+	}
+	{
+		SI\\
+		NO\\
+		SI
+	}
+\end{casebox2}
+
+\subsubsection*{Límites}
+
+\begin{itemize}
+	\setlength{\parskip}{1pt}	
+	\item \(1\leq T \leq 100\)
+	\item \(1\leq x_i \leq 10^{18}\)
+\end{itemize}

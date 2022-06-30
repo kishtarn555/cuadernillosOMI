@@ -11,6 +11,7 @@
 \RequirePackage{color}
 \RequirePackage{environ}
 \usepackage[hidelinks]{hyperref}
+\usepackage{qtree}
 
 \usepackage[spanish]{babel} % Incluye español
 
@@ -48,23 +49,26 @@
 
 
 \NewEnviron{pstatement}
-	{\if@hidden\else\BODY\fi}
+{\if@hidden\else\BODY\fi}
 
 \newcommand{\fstatement}[1]{
-\begin{pstatement}
-\input{#1}
-
-\problembreak
-
-\end{pstatement}
+	\begin{pstatement}
+		\input{#1}
+		
+		\problembreak
+		
+	\end{pstatement}
 	
 }
 
-\newcommand{\problema}[3][2]{#2
-	\\ 
-	(\footnotesize{#3})
+\newcommand{\problema}[3][2]{
+	\begin{samepage} 		
+	#2\\ 
+	(\footnotesize{#3})		
+	
+	\end{samepage}
 
-\fstatement{#1}
+	\fstatement{#1}	
 }
 % FORMATTING
 \renewcommand\theadfont{\bfseries}
@@ -99,9 +103,7 @@
 	\hline
 }
 % LIMIT LIST FORMATTING
-\newenvironment{plimits}{\begin{itemize}
-		\setlength{\parskip}{0.75pt}			
-	}{
+\newenvironment{plimits}{\begin{itemize} \setlength{\parskip}{0.75pt} }{
 	\end{itemize}
 }
 % LINK COMMANDS

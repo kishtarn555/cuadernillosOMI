@@ -1,0 +1,39 @@
+Estas en una torre la cual tiene \(N\) pisos.
+
+El piso \(i\) tendrá \(K_i\) pasadizos que le permiten ir a pisos superiores. El único piso sin pasadizos es el último, el piso \(N\).
+
+Tu quieres ver cuantas formas hay de ir del piso \(1\) al \(N\). Dos maneras de ir del piso \(1\) al \(N\) son diferentes si en una usas un pasadizo y en la otra no.
+
+Nota: esta prohibido tomar los pasadizos de un piso superior a uno inferior
+
+\subsubsection*{Entrada}
+Dos enteros \(N\), la cantidad de pisos en la torre.
+
+En las siguientes \(N-1\) lineas vendrá la descripción de cada piso. 
+
+Cada piso constará de un entero \(K_i\) representando cuantos pasadizos hay allí que conectan hacia arriba. Seguido, vendrán \(K_i\) enteros diferentes, representando a que pisos tienes un pasadizo. Solo podrás ir a pisos superiores.
+
+\subsubsection*{Salida}
+Imprime un entero que represente la cantidad de formas de ir del piso \(1\) al piso \(N\).
+
+\subsubsection*{Ejemplo}
+\begin{casebox3}
+	\ecase{
+		4\\
+		2 2 3\\
+		2 3 4\\
+		1 4  
+	}{3}
+	{
+		Tienes tres formas de llegar:\\
+		\(1\rightarrow2\rightarrow3\rightarrow4\)\\
+		\(1\rightarrow2\rightarrow4\)\\
+		\(1\rightarrow3\rightarrow4\)\\
+	}
+\end{casebox3}
+
+\subsubsection*{Límites}
+\begin{plimits}
+	\item \(1\leq N\leq 16\)
+	\item \(1\leq K_i< N\)
+\end{plimits}

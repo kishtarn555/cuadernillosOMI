@@ -1,0 +1,320 @@
+\chapter{Búsqueda binaria}
+
+Esta técnica es una de las más poderosas e importantes en la informática. Es una forma muy eficiente de hacer búsquedas que nos permite resolver problemas antes imposibles.
+
+Utilizada en muchas aplicaciones, nos permite resolver problemas donde una búsqueda exhaustiva tardaría miles de millones de años en menos de un segundo. Y esta impresionante herramienta ahora será tuya.
+
+La búsqueda binaria difiere de la fuerza bruta al evitar revisar absolutamente todas las opciones del espacio de búsqueda. Si no, lo que hace es que en cada paso logra descartar la mitad del espacio de búsqueda al darse cuenta que la respuesta no está allí.
+
+Porque en cada paso va descartando la mitad de las opciones, llega a una única opción (la respuesta si esta existe) en muy poco tiempo. Mientras que la búsqueda ehaustiva va eliminando opciones de una en una, lo cual es lento.
+
+Comparemos un ejemplo de la búsqueda exhaustiva vs la binaria, si tuviéramos \(128\) candidatos. 
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\multirow{2}{*}{\shortstack{Número\\ de pasos}} & \multicolumn{2}{c|}{Candidatos restantes} \\
+		\cline{2-3}
+		& Exhaustiva & Binaria \\
+		\hline
+		0 & 128 & 128  \\		
+		\hline
+		1 & 127 & 64  \\		
+		\hline
+		2 & 126 & 32  \\
+		\hline
+		3 & 125 & 16  \\
+		\hline
+		4 & 124 & 8  \\
+		\hline
+		5 & 123 & 4  \\
+		\hline
+		6 & 122 & 2  \\
+		\hline
+		7 & 121 & 1  \\
+		\hline
+		8 & 120 & -  \\	
+		\multicolumn{3}{c}{
+			\begin{LARGE}
+				
+				\(\cdots\)
+				
+			\end{LARGE} 
+		}\\
+		125 & 3 & - \\		
+		\hline
+		126 & 2 & - \\		
+		\hline
+		127 & 1 & - \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Como vemos, búsqueda binaria pudo reducir los candidatos a solo uno con siete pasos, mientras que la búsqueda completa requirió de 127.
+
+El motivo por el cuál la búsqueda binaria es tan efectiva, es que realiza \(\lceil log_2(candidatos) \rceil\) pasos \footnote{\(\lceil log_2(A) \rceil \) significa: techo del logaritmo base dos de A.\\ Recordemos que \(log_2(A)=x\) significa que \(2^x=A\).\\ Y el techo nos dice que tomemos el menor entero que sea mayor igual que el valor de adentro, por ejemplo:. \(\lceil 3.12 \rceil =4\)}. Esto es porque \(\lceil log_2 \rceil \) nos permite calcular cuantas veces podemos dividir un número entre dos hasta que sea 1.
+
+Veamos un ejemplo que se puede resolver con búsqueda binaria.
+
+\section*{Ejemplo: Del área al perímetro}
+Javier es un granjero y esta cansado de que sus animales siempre huyan de su granja, por lo que ha decidido poner una reja al rededor de todo el terreno.
+
+Sin embargo, Javier no sabe cuantos metros de reja va a necesitar y te ha contratado para que tu le digas esto. 
+
+Lo que él si sabe es que el tiene forma cuadrada con lados de longitud entera, además recuerda que este mide \(A\) metros cuadrados de área.
+
+Ayuda a Javier para que sepa cuanta reja necesita.
+
+avier es un granjero y esta cansado de que sus animales siempre huyan de su granja, por lo que ha decidido poner una reja al rededor de todo el terreno.
+
+Sin embargo, Javier no sabe cuantos metros de reja va a necesitar y te ha contratado para que tu le digas esto. 
+
+Lo que él si sabe es que el tiene forma cuadrada con lados de longitud entera, además recuerda que este mide \(A\) metros cuadrados de área.
+
+Ayuda a Javier para que sepa cuanta reja necesita.
+
+\textbf{Entrada}\\
+Un entero \(A\), el tamaño del terreno en metros cuadrados.
+
+\textbf{Salida}\\
+Un entero indicando cuantos metros de reja necesita para rodear todo el terreno. 
+
+\textbf{Ejemplos}\\
+\begin{casebox2}
+	\scase{36}{24}
+	\scase{100}{40}
+	\scase{1}{4}
+\end{casebox2}
+
+\textbf{Límites}
+\begin{plimits}
+	\item \(1\leq A \leq 10^{18}\)
+\end{plimits}
+
+\textbf{Subtareas}
+\begin{plimits}
+	\item (35 pts) \(1\leq A \leq 10^9\)
+	\item (65 pts) Sin restricciones adicionales
+\end{plimits}
+
+ENLACE: TODO
+
+\subsection*{Solución}
+Como siempre, antes de leer la solución te invitamos a que intentes el problema.
+
+En este problema nos piden de que dado el área de un cuadrado, imprimamos el perímetro. Por esto, recordemos las fórmulas del cuadrado.
+\[Per\acute{i}metro=4\times Lado \]
+\[\acute{A}rea=Lado\times Lado \]
+
+Entonces, si encontramos el lado que nos de el área de entrada, podremos encontrar el perímetro.
+
+Para este problema vamos a ver dos estrategias para resolverlo, la de búsqueda lineal y la binaria.
+
+Comencemos con la que ya deberíamos estar familiarizada, usemos búsqueda lineal.
+\subsection*{Búsqueda lineal}
+Entonces, buscaremos el entero \(L\) de entre todos los posibles, que cumpla que \(A=4\times L\). Para esto, podremos ir probando del \(1\) en adelante hasta encontrar el que cumpla.
+
+\begin{lstlisting}
+	long long L=1;
+	while (L*L != A) {
+		L++;
+	}
+\end{lstlisting}
+
+Esto itera por todos los enteros del \(1\) a la respuesta que es \(\sqrt{A}\). Por lo tanto, su complejidad es \(O(\sqrt{A})\). Lo cual es suficiente para la subtarea de 35 puntos, pero no para el límite completo de \(10^{18}\).
+
+\subsection*{Búsqueda binaria}
+Ahora resolvamos el problema utilizando búsqueda binaria.
+
+Definamos nuestro espacio de búsqueda, ¿cuáles valores puede ser \(L\)? y si lo pensamos puede ser desde \(1\) hasta \(10^9\). Porque \(10^9\times 10^9=10^{18}\) y de los límites sabemos que \(1\leq A\leq 10^{18}\).
+
+Entonces queremos encontrar la respuesta que esta entre \(1\) y \(10^9\), hagamos una función que logre esto llamada buscar que reciba el rango de donde esta la respuesta.
+
+\begin{lstlisting}
+	//Encuentra L tal que L*L=A, sabiendo que a<=L<=b.
+	long long buscar(long long a, long long b, long long A);
+\end{lstlisting}
+
+Ahora tenemos \(10^9\) candidatos donde encontrar la respuesta y queremos reducirlo a la mitad. 
+
+Para esto podemos ver que sucede con \(5\times10^8\). 
+
+Si resulta que \((5\times10^8)\times(5\times10^8) <A\), entonces sabemos que cualquier valor menor igual que \(5 \times 10^8\) no funcionará porque es demasiado pequeño. Por lo tanto la respuesta debe estar entre \(5\times 10^8 +1\) y \(10^9\) y los candidatos se redujeron a la mitad.
+
+Pero si en vez sucede que \((5\times10^8)\times(5\times10^8) >=A\), entonces sabremos que cualquier valor más grande que \(5\times 10^8\) nos dará valores más grandes que \(A\) y por lo tanto la respuesta no estará allí. Ahora nuestros candidatos son los números entre \(1\) y \(5\times 10^8\), reduciendo los valores que podrían ser la respuesta a la mitad.
+
+Y de hecho, si en general, la respuesta esta entre \(a\) y \(b\), nos convendrá preguntar por el punto medio \((a+b)/2\), que nos reducirá el espacio a la mitad.
+
+Una vez que redujimos el rango de la búsqueda, tendremos que encontrar la respuesta en ese nuevo rango, y para esto podemos hacer recursión.
+
+De forma que ahora tenemos:
+
+\begin{minipage}{\linewidth}	
+\begin{lstlisting}
+long long buscar(long long a, long long b, long long A) {
+	long long m =(a+b)/2;
+	if (m*m < A) {
+		return buscar(m+1, b, A);
+	} else {
+		return buscar(a, m, A);
+	}
+} 
+\end{lstlisting}
+
+\end{minipage}
+
+
+Ahora, lo que le falta a esa recursión es una condición de paro, saber cuando ya termino y encontramos la respuesta.
+
+Podremos ver que habremos encontrado la respuesta cuando ya estemos seguros de cual es esta. Y esto sucede cuando nuestro rango solo incluye un valor, es decir, cuando \(a==b\) se cumpla.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}
+long long buscar(long lonng a, long long b, long long A) {
+	if (a==b)
+		return a;
+	long long m=(a+b)/2;
+	if (m*m<A) {
+		return buscar(m+1, b, A);
+	} else {
+		return buscar(a, m, A);
+	}
+}
+\end{lstlisting}
+\end{minipage}
+Y con esto, tenemos que \verb|L=buscar(1, 1000000000, A)|.
+
+Ahora, la complejidad de esto es \(O(log(\sqrt{A}))\), lo cual corre perfectamente para \(10^{18}\).
+
+\textbf{Nota:} En este problemas también se pudo haber usado \lstinline|L=sqrt(A)| con la librería \verb|<math.h>| que calcula el valor rápidamente, pero se uso búsqueda binaria para ejemplificar.
+
+También puede ser escrita de forma iterativa de la siguiente manera:
+
+\begin{minipage}{\textwidth}
+	\begin{lstlisting}
+long long buscar(long lonng a, long long b, long long A) {
+	while (a!=b) {
+		long long m=(a+b)/2;
+		if (m*m < A) {
+			a=m+1;
+		} else {
+			b=m;
+		}
+	}
+	return a;
+}
+	\end{lstlisting}
+\end{minipage}
+
+\section*{Ejemplo: Buscar en un arreglo}
+Se te da un arreglo \(A\) de \(N\) enteros diferentes. El arreglo estará en orden creciente, es decir, \(A[i] < A[i+1]\).
+
+Deberás responder \(T\) preguntas:
+
+Cada pregunta consistirá de un entero \(q_i\) y tu deberás imprimir el índice del valor \(q_i\) o \(-1\) si este valor no existe.
+\textbf{Entrada}\\
+El enteros \(N\).
+
+En la siguiente línea: \(N\) enteros separados, los valores del arreglo \(A\).
+
+En la siguiente línea recibirás el entero \(T\).
+
+En las siguientes \(T\) líneas recibirás los valores de cada pregunta.
+
+\textbf{Salida}\\
+Imprime la respuesta cada pregunta en una línea en el mismo orden que el de lectura.
+
+\textbf{Ejemplo}\\
+\begin{casebox2}
+	\scase{
+		7\\
+		2 5 6 7 8 9 10\\
+		5\\
+		2\\
+		6\\
+		4\\
+		10\\
+		5\\
+	}
+	{
+		0\\
+		2\\
+		-1\\
+		6\\
+		1		
+	}
+\end{casebox2}
+
+\textbf{Límites}
+\begin{plimits}
+	\item \(1\leq N,T \leq 10^5 \)
+	\item \(1\leq A[i], q_i \leq 10^9 \)
+\end{plimits}
+
+Enlace: TODO
+
+\subsection*{Solución}
+Esta ocasión nos piden encontrar el indice de un valor en un arreglo ordenado. Ya hemos visto como hacerlo con búsqueda lineal:
+
+\begin{lstlisting}
+	int indice(int q) {
+		for (int i =0; i < N;i++) 
+		if (A[i]==q)
+		return i;
+		return -1;
+	}
+\end{lstlisting}
+
+Sin embargo, esto no corre en tiempo ya que la complejidad es \(O(N)\) por pregunta, siendo en total \(O(TN)\) y como \(TN=10^{10}\), obtendremos TLE.
+
+Pero veamos que podemos usar búsqueda binaria. ya que al preguntar por una posición de en medio y discernir si tenemos que buscar adelante o atrás.
+
+\begin{lstlisting}
+	int binaria(int a, int b, int q) {
+		if (a>b)
+		return -1;
+		int m =(a+b)/2;
+		if (A[m]==q)
+		return m;
+		if (A[m]<q) {
+			return binaria(m+1, b, q);
+		} else {
+			return binaria(a, m-1, q);
+		}		
+	}
+	int indice(int q) {
+		return binaria(0, N-1, q);
+	}
+\end{lstlisting}
+
+La nueva complejidad ahora es \(O(logN)\) por pregunta, en total\\ \(O(TlogN)\).
+
+\section{Dificultades}
+Ya vimos que la búsqueda binaria tiene una ventaja enorme sobre la búsqueda lineal ya que resuelve el problema en un tiempo mucho menor.
+
+Pero tristemente, no siempre es posible aplicar la búsqueda binaria. Hay veces en las que no podemos descartar fácilmente la mitad de los candidatos.
+
+Un caso donde puede suceder sería en el ejemplo anterior si el arreglo no estuviese ordenado. En ese caso no podríamos hacer el truco de solo revisar adelante si \(A[m]<q\) ya que no nos da suficiente información esa pregunta para eliminar todos los valores de \(0\) a \(m\).
+
+Por supuesto, el problema anterior tiene corrección para que la búsqueda binaria siga funcionando y muchas veces esto es parte del problema, ¿cómo hago la binaria aquí? Pero hay otras veces que es imposible, o al menos, más allá de los conocimientos actuales.
+
+En esos casos, no quedará de otra más que hacer búsqueda completa o usar una técnica diferente a búsqueda.
+
+Otro ejemplo donde la búsqueda binaria no se puede utilizar es en encontrar el primer divisor que no sea 1 de un entero.
+
+\section*{Problemas de práctica}
+\addcontentsline{toc}{section}{Problemas de práctica}
+
+\begin{exercise}
+	\problema{Transporte de cajas}{\omegauplink{Transporte-de-Cajas}}
+\end{exercise}
+
+\begin{exercise}
+	\problema{Hommer y sus rosquillas}{}
+	Fuente: Adaptación de ORIG 2015-2016
+\end{exercise}
+
+\begin{exercise}
+	\problema{ConneR and the A.R.C. Markland-N}{\codeforceslink{1293}{A}}	
+	Traducción: TODO
+\end{exercise}
+

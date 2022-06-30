@@ -1,0 +1,41 @@
+Un explorador tiene que decidir donde construir un camino para llegar de un punto \(A\) a un punto \(B\). 
+
+Para auxiliarse el explorador ha hecho un mapa con los obstáculos que existen. Cuadriculó su mapa y quiere un camino que pase por el menor número de cuadros. El camino sólo puede ir de un cuadro a otro si tienen un lado en común, es decir, no puede avanzar en diagonal, y no puede pasar por un cuadro que contenga un obstáculo. 
+
+Cada cuadro del mapa se identifica por sus coordenadas, primero la fila y después la columna. Las filas están numerados de arriba hacia abajo iniciando con el \(0\). Las columnas están numeradas de izquierda a derecha iniciando con el \(0\).
+
+Escribe un programa que dado un mapa con obstáculos encuentre el menor número de cuadros por los que debe pasar un camino que vaya del punto \(A\) al punto \(B\), incluyendo a los cuadros que contienen a \(A\) y a \(B\).
+
+\textbf{Entrada}\\
+En la primera línea los enteros \(N\) y \(M\) el número de filas y columnas del mapa. En cada una de las siguientes.
+
+En las siguientes \(N\) líneas hay \(M\) enteros que pueden ser \verb|0| ó \verb|1|. Es \verb|0| si no hay obstáculo en el cuadro correspondiente y \verb|1| si lo hay.
+
+En la siguiente línea (la penúltima) la fila y columna del punto \(A\).
+
+En la última línea la fila y columna del punto \(B\).
+
+\textbf{Salida}\\
+En la primera linea el número de cuadros por los que pasa un camino mínimo entre \(A\) y \(B\)
+
+\textbf{Ejemplo}\\
+\begin{casebox2}
+	\scase{
+	4 5\\
+	0 1 0 0 0\\
+	0 0 1 1 0\\
+	0 1 0 0 0\\
+	0 0 0 0 0\\
+	3 1\\
+	0 2	
+	}{9}
+\end{casebox2}
+
+\textbf{Límites}
+\begin{plimits}
+	\item \(1 \leq N, M\leq 50\)
+\end{plimits}
+
+Fuente: OMI 1996, Modificado subtask A
+
+\omegauplink{OIEG2013SSC}

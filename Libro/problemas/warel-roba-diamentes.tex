@@ -1,0 +1,35 @@
+\newpage
+\begin{lstlisting}
+	#include<iostream>
+	#include<stdlib.h>
+	using namespace std;
+	int Cajas[25];
+	int N;
+	long long K;
+	// Aqui, llevamos la suma del subconjunto construido
+	void buscaSubconjunto(int pos, long long suma) {
+		if (pos==N) {
+			if (suma == K) {
+				/* Encontramos un subconjunto con suma K.
+				Imprimmos SI y terminemos el programa */
+				cout << "SI";
+				exit(0);
+			}
+			return;
+		}
+		buscaSubconjunto(pos+1, suma+Cajas[pos]);//Incluyamos pos en el subconjunto
+		buscaSubconjunto(pos+1, suma);//Excluyamos pos del subconjunto	
+	}
+	
+	int main () {
+		ios_base::sync_with_stdio(0); cin.tie(0);
+		cin >> N >>K;
+		for (int i=0; i < N; i++) {
+			cin >> Cajas[i];
+		}
+		buscaSubconjunto(0,0);
+		//Si llegamos aqui es porque nunca encontramos la respuesta.
+		cout << "NO";
+		return 0;
+	}
+\end{lstlisting}
