@@ -262,12 +262,10 @@ Además, aprovecharemos allí para validar que la repartición sea justa. Si lo 
 		}
 		//Mandar el estudiante c al equipo1:
 		reparticion[c]=1;
-		repartir(c+1, equipo1+a[c], equipo2, equipo3);
-		
+		repartir(c+1, equipo1+a[c], equipo2, equipo3);		
 		//Mandar el estudiante c al equipo2:
 		reparticion[c]=2;
-		repartir(c+1, equipo1, equipo2+a[c], equipo3);
-		
+		repartir(c+1, equipo1, equipo2+a[c], equipo3);		
 		//Mandar el estudiante c al equipo2:
 		reparticion[c]=3;
 		repartir(c+1, equipo1, equipo2, equipo3+a[c]);
@@ -275,13 +273,11 @@ Además, aprovecharemos allí para validar que la repartición sea justa. Si lo 
 	int main() {
 		ios_base::sync_with_stdio(0); cin.tie(0);
 		cin >> n;
-		for (int i =0; i< n; i++) {
-			cin >> a[i];
-		}
+		for (int i =0; i< n; i++) 
+			cin >> a[i];		
 		repartir(0, 0, 0, 0);
 		cout << "NO";
-	}
-	
+	}	
 \end{lstlisting}
 
 \subsection{Complejidad}
@@ -291,23 +287,15 @@ La complejidad de una búsqueda exhaustiva varia mucho dependiendo de que tipo d
 Pero la complejidad del ejemplo anterior es \(O(3^N)\). Esto es porque la complejidad de la búsqueda exhaustiva es \(O(candidatos)\) y en este caso, las formas de repartir se multiplican por tres por cada estudiante que se agregue a la clase, ya que tenemos todas las opciones de equipos anteriores, pero unas con el nuevo en el 1, otros con el equipo 2, y otra vez con el estudiante en el 3.
 
 
-\section*{Problemas de práctica}
-\addcontentsline{toc}{section}{Problemas de práctica}
-\begin{exercise}
-	\problema{Encontrar posición en un arreglo}{TODO}
-
-	NOTA: Utiliza recursión.
-\end{exercise}
-
-\begin{exercise}
-	\problema{Contando LaserTag justos}{TODO}
-\end{exercise}
-\begin{exercise}
-	\problema[torre-I]{Subiendo la torre}{TODO}
-\end{exercise}
-
-\begin{exercise}
-	\problema{Mapas}{\omegauplink{OMI-2020-Mapas}}
-\end{exercise}
-
-
+%\begin{exercise}
+%	Prueba a programar la búsqueda lineal con está técnica.
+%	
+%	(\omegauplink{TODO (Busca el valor en arreglo)})
+%\end{exercise}
+%
+%
+%\begin{exercise}
+%	Intenta programar un código que genere todos los ordenes posibles con recursión.
+%	
+%	(\omegauplink{TODO (Busca el valor en arreglo)})
+%\end{exercise}

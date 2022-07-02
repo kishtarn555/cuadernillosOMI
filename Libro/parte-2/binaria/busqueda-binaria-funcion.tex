@@ -56,7 +56,7 @@ Un entero, representando la menor cantidad de energía necesaria para completar 
 
 Fuente: OMIS online 2022.\\
 \footnotesize{(\omegauplink{Bicicleta-de-Karel})}
-
+\pagebreak
 \subsection*{Solución}
 Este problema 1.6 de búsqueda lineal con validación en la página \pageref{bicicleta}, si no sabes resolverlo con búsqueda lineal para los límites de allí, primero descubre esa solución.
 
@@ -109,6 +109,7 @@ Esto hace que podamos hacer búsqueda binaria para encontrar el primer SI.
 
 El código se verá como:
 
+\begin{minipage}{\linewidth}
 \begin{lstlisting}
 	int a=0,b=R;
 	while(a!=b) {
@@ -121,8 +122,9 @@ El código se verá como:
 	}
 	int respuesta=-1;
 	if (funciona(a))
-	respuesta=a;
+		respuesta=a;
 \end{lstlisting}
+\end{minipage}
 
 \section{Complejidad}
 
@@ -133,13 +135,3 @@ Pero también, en cada paso de la búsqueda podemos usar una llamada de validaci
 Es decir, la complejidad de una búsqueda binaria es \(O(busqueda \times validacion)\) que es igual a \(O(logN \times validacion)\).
 
 
-\section*{Problemas de práctica}
-\addcontentsline{toc}{section}{Problemas de práctica}
-
-\begin{exercise}
-	\problema[barcos-turisticos]{Barcos turísticos}{\omegauplink{Barcos-turisticos}}
-\end{exercise}
-
-\begin{exercise}
-	\problema{Subcadena de suma K}{TODO}
-\end{exercise}
