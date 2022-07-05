@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.28)  2 JUL 2022 03:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.28)  5 JUL 2022 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,60 +682,71 @@ LaTeX Info: Redefining \% on input line 59.
 [8]
 LaTeX Info: Redefining \. on input line 85.
 LaTeX Info: Redefining \% on input line 85.
- [9])
+ [9]
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+ [10])
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
- [10]
+ [11]
 \openout2 = `parte-2/exhaustiva/busqueda-lineal-funcion.aux'.
 
  (./parte-2/exhaustiva/busqueda-lineal-funcion.tex
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
- [11
+ [12
 
 
 
 ]
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
- [12]
+
+[13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 82.
 LaTeX Info: Redefining \% on input line 82.
- [13])
+ [14])
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 
-[14]
+[15]
 \openout2 = `parte-2/exhaustiva/busqueda-pares.aux'.
 
  (./parte-2/exhaustiva/busqueda-pares.tex
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
- [15
+ [16
 
 
 
 ]
 LaTeX Info: Redefining \. on input line 61.
 LaTeX Info: Redefining \% on input line 61.
- [16]
+ [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
- [17])
+ [18]
+Overfull \hbox (8.58499pt too wide) in paragraph at lines 110--111
+[]\OT1/cmr/m/it/12 B^^Susque-da li-neal en-cuen-tra un so-lo ele-men-to, aqu^^S
+^^P apren-
+ []
+
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+[19])
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
-
-[18]
+ [20]
 \openout2 = `parte-2/exhaustiva/busqueda-ordenes.aux'.
 
  (./parte-2/exhaustiva/busqueda-ordenes.tex)
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
- [19
+ [21
 
 
 
@@ -748,7 +759,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
- [20
+ [22
 
 
 
@@ -757,12 +768,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 62.
 LaTeX Info: Redefining \% on input line 62.
- [21]
+ [23]
 LaTeX Info: Redefining \. on input line 81.
 LaTeX Info: Redefining \% on input line 81.
 
-[22]
-<resources/images/subconjuntos1.png, id=406, 1339.25343pt x 919.93687pt>
+[24]
+<resources/images/subconjuntos1.png, id=419, 1339.25343pt x 919.93687pt>
 File: resources/images/subconjuntos1.png Graphic file (type png)
 <use resources/images/subconjuntos1.png>
 Package pdftex.def Info: resources/images/subconjuntos1.png  used on input line
@@ -781,18 +792,18 @@ Underfull \vbox (badness 2111) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 101.
 LaTeX Info: Redefining \% on input line 101.
- [23 <./resources/images/subconjuntos1.png>]
+ [25 <./resources/images/subconjuntos1.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 105.
 LaTeX Info: Redefining \% on input line 105.
- [24]
+ [26]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 138.
 LaTeX Info: Redefining \% on input line 138.
- [25]
-<resources/images/AB.png, id=452, 1882.03125pt x 770.88pt>
+ [27]
+<resources/images/AB.png, id=466, 1882.03125pt x 770.88pt>
 File: resources/images/AB.png Graphic file (type png)
 <use resources/images/AB.png>
 Package pdftex.def Info: resources/images/AB.png  used on input line 146.
@@ -800,23 +811,23 @@ Package pdftex.def Info: resources/images/AB.png  used on input line 146.
 LaTeX Info: Redefining \. on input line 159.
 LaTeX Info: Redefining \% on input line 159.
 
-[26 <./resources/images/AB.png>]
+[28 <./resources/images/AB.png>]
 Underfull \vbox (badness 1796) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 198.
 LaTeX Info: Redefining \% on input line 198.
- [27]
+ [29]
 LaTeX Info: Redefining \. on input line 214.
 LaTeX Info: Redefining \% on input line 214.
 
-[28])
+[30])
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [29]
+ [31]
 \openout2 = `parte-2/exhaustiva/busqueda-recursiva.aux'.
 
  (./parte-2/exhaustiva/busqueda-recursiva.tex
-<resources/images/decisiones.png, id=507, 1355.0625pt x 451.6875pt>
+<resources/images/decisiones.png, id=521, 1355.0625pt x 451.6875pt>
 File: resources/images/decisiones.png Graphic file (type png)
 <use resources/images/decisiones.png>
 Package pdftex.def Info: resources/images/decisiones.png  used on input line 17
@@ -827,7 +838,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
- [30
+ [32
 
 
 
@@ -836,7 +847,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 41.
 LaTeX Info: Redefining \% on input line 41.
- [31 <./resources/images/decisiones.png>]
+ [33 <./resources/images/decisiones.png>]
 Overfull \hbox (2.17194pt too wide) in paragraph at lines 69--70
 []\OT1/cmr/m/n/12 Este pro-ble-ma lo vi-mos en la sec-ci^^Son de ite-rar por pa
 -res,lo que deb^^S^^Pamos
@@ -844,24 +855,24 @@ Overfull \hbox (2.17194pt too wide) in paragraph at lines 69--70
 
 LaTeX Info: Redefining \. on input line 75.
 LaTeX Info: Redefining \% on input line 75.
-[32]
+[34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
- [33]
+ [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 123.
 LaTeX Info: Redefining \% on input line 123.
- [34]
-<resources/images/forbrute.png, id=586, 658.71094pt x 488.57532pt>
+ [36]
+<resources/images/forbrute.png, id=599, 658.71094pt x 488.57532pt>
 File: resources/images/forbrute.png Graphic file (type png)
 <use resources/images/forbrute.png>
 Package pdftex.def Info: resources/images/forbrute.png  used on input line 134.
 
 (pdftex.def)             Requested size: 197.61479pt x 146.57372pt.
-<resources/images/paresrec.png, id=587, 737.75626pt x 609.02531pt>
+<resources/images/paresrec.png, id=600, 737.75626pt x 609.02531pt>
 File: resources/images/paresrec.png Graphic file (type png)
 <use resources/images/paresrec.png>
 Package pdftex.def Info: resources/images/paresrec.png  used on input line 142.
@@ -872,42 +883,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 143.
 LaTeX Info: Redefining \% on input line 143.
- [35 <./resources/images/forbrute.png>]
+ [37 <./resources/images/forbrute.png>]
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
- [36 <./resources/images/paresrec.png>]
+ [38 <./resources/images/paresrec.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 203.
 LaTeX Info: Redefining \% on input line 203.
- [37]
+ [39]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 223.
 LaTeX Info: Redefining \% on input line 223.
- [38]
+ [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 248.
 LaTeX Info: Redefining \% on input line 248.
- [39]
+ [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 287.
-LaTeX Info: Redefining \% on input line 287.
- [40])
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
+ [42])
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 
-[41]
+[43]
 \openout2 = `parte-2/exhaustiva/problemas-de-practica.aux'.
 
  (./parte-2/exhaustiva/problemas-de-practica.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
- [42
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+ [44
 
 
 
@@ -915,85 +926,85 @@ LaTeX Info: Redefining \% on input line 55.
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 
-[43]
+[45]
 \openout2 = `parte-2/podas/busqueda-con-podas.aux'.
 
  (./parte-2/podas/busqueda-con-podas.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [44
+ [46
 
 
 
 
 ]
 Cap\'{\i }tulo 2.
-[45]
+[47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
- [46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47]
-Underfull \vbox (badness 3029) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
  [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [49]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3029) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 211.
-LaTeX Info: Redefining \% on input line 211.
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
  [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [51]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 331.
-LaTeX Info: Redefining \% on input line 331.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
  [52]
-(./problemas/OMI-explorador.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 331.
+LaTeX Info: Redefining \% on input line 331.
+ [54]
+(./problemas/OMI-explorador.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
 Underfull \vbox (badness 3601) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
- [54])
+ [56])
 Underfull \vbox (badness 3815) has occurred while \output is active []
 
- [55]
+ [57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 393.
 LaTeX Info: Redefining \% on input line 393.
- [56]
+ [58]
 Overfull \vbox (31.77283pt too high) has occurred while \output is active []
 
 
-[57]
+[59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 415.
 LaTeX Info: Redefining \% on input line 415.
- [58])
+ [60])
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 
-[59]
+[61]
 \openout2 = `parte-2/estados/DFS.aux'.
 
  (./parte-2/estados/DFS.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [60
+ [62
 
 
 
@@ -1003,27 +1014,27 @@ Cap\'{\i }tulo 3.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61]
+ [63]
 Underfull \vbox (badness 3646) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 65.
 LaTeX Info: Redefining \% on input line 65.
- [62]
+ [64]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [65]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
- [64]
-<resources/images/exhaustivaDFS1.png, id=972, 749.04843pt x 487.8225pt>
+ [66]
+<resources/images/exhaustivaDFS1.png, id=985, 749.04843pt x 487.8225pt>
 File: resources/images/exhaustivaDFS1.png Graphic file (type png)
 <use resources/images/exhaustivaDFS1.png>
 Package pdftex.def Info: resources/images/exhaustivaDFS1.png  used on input lin
 e 116.
 (pdftex.def)             Requested size: 224.71626pt x 146.34787pt.
-<resources/images/exhaustivaDFS2.png, id=973, 749.04843pt x 487.8225pt>
+<resources/images/exhaustivaDFS2.png, id=986, 749.04843pt x 487.8225pt>
 File: resources/images/exhaustivaDFS2.png Graphic file (type png)
 <use resources/images/exhaustivaDFS2.png>
 Package pdftex.def Info: resources/images/exhaustivaDFS2.png  used on input lin
@@ -1032,28 +1043,28 @@ e 127.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65 <./resources/images/exhaustivaDFS1.png>]
+ [67 <./resources/images/exhaustivaDFS1.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
- [66 <./resources/images/exhaustivaDFS2.png>]
+ [68 <./resources/images/exhaustivaDFS2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
+ [69]
 LaTeX Info: Redefining \. on input line 195.
 LaTeX Info: Redefining \% on input line 195.
 
-[68])
+[70])
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
- [69]
+ [71]
 \openout2 = `parte-2/estados/BFS.aux'.
 
  (./parte-2/estados/BFS.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [70
+ [72
 
 
 
@@ -1063,13 +1074,13 @@ Cap\'{\i }tulo 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
-<resources/images/bfs1.png, id=1042, 606.76688pt x 392.96812pt>
+ [73]
+<resources/images/bfs1.png, id=1055, 606.76688pt x 392.96812pt>
 File: resources/images/bfs1.png Graphic file (type png)
 <use resources/images/bfs1.png>
 Package pdftex.def Info: resources/images/bfs1.png  used on input line 15.
 (pdftex.def)             Requested size: 212.37158pt x 137.5409pt.
-<resources/images/bfs2.png, id=1043, 606.76688pt x 392.96812pt>
+<resources/images/bfs2.png, id=1056, 606.76688pt x 392.96812pt>
 File: resources/images/bfs2.png Graphic file (type png)
 <use resources/images/bfs2.png>
 Package pdftex.def Info: resources/images/bfs2.png  used on input line 21.
@@ -1079,40 +1090,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [72 <./resources/images/bfs1.png> <./resources/images/bfs2.png>]
+ [74 <./resources/images/bfs1.png> <./resources/images/bfs2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73]
+ [75]
 Overfull \vbox (18.17282pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
 
-[74]
+[76]
 Underfull \vbox (badness 1931) has occurred while \output is active []
 
- [75]
+ [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 155.
 LaTeX Info: Redefining \% on input line 155.
- [76]
+ [78]
 Overfull \vbox (31.77283pt too high) has occurred while \output is active []
 
 
-[77]
+[79]
 Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 LaTeX Info: Redefining \. on input line 173.
 LaTeX Info: Redefining \% on input line 173.
-[78]
+[80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 206.
 LaTeX Info: Redefining \% on input line 206.
- [79]
+ [81]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
 16.
 
@@ -1126,16 +1137,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 253.
 LaTeX Info: Redefining \% on input line 253.
- [80]
+ [82]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 258.
 LaTeX Info: Redefining \% on input line 258.
- [81])
+ [83])
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 
-[82]
+[84]
 \openout2 = `parte-2/binaria/busqueda-binaria.aux'.
 
  (./parte-2/binaria/busqueda-binaria.tex
@@ -1143,7 +1154,7 @@ Cap\'{\i }tulo 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83
+ [85
 
 
 
@@ -1152,32 +1163,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 60.
 LaTeX Info: Redefining \% on input line 60.
 
-[84]
+[86]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
+ [87]
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
 
-[86] [87]
+[88] [89]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 166.
 LaTeX Info: Redefining \% on input line 166.
- [88]
+ [90]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89]
+ [91]
 LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
 
-[90] [91]
+[92] [93]
 LaTeX Info: Redefining \. on input line 295.
 LaTeX Info: Redefining \% on input line 295.
- [92])
+ [94])
 LaTeX Info: Redefining \. on input line 34.
 LaTeX Info: Redefining \% on input line 34.
- [93]
+ [95]
 \openout2 = `parte-2/binaria/busqueda-binaria-funcion.aux'.
 
  (./parte-2/binaria/busqueda-binaria-funcion.tex
@@ -1185,7 +1196,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
- [94
+ [96
 
 
 
@@ -1201,14 +1212,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--50
 
 LaTeX Info: Redefining \. on input line 55.
 LaTeX Info: Redefining \% on input line 55.
-[95]
+[97]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 60.
 LaTeX Info: Redefining \% on input line 60.
- [96]
+ [98]
 
-LaTeX Warning: Reference `bicicleta' on page 97 undefined on input line 61.
+LaTeX Warning: Reference `bicicleta' on page 99 undefined on input line 61.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 63--65
@@ -1220,8 +1231,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 94.
 LaTeX Info: Redefining \% on input line 94.
- [97]
-<resources/images/binprop.png, id=1365, 752.8125pt x 188.20313pt>
+ [99]
+<resources/images/binprop.png, id=1379, 752.8125pt x 188.20313pt>
 File: resources/images/binprop.png Graphic file (type png)
 <use resources/images/binprop.png>
 Package pdftex.def Info: resources/images/binprop.png  used on input line 105.
@@ -1231,52 +1242,54 @@ Underfull \vbox (badness 8132) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 132.
 LaTeX Info: Redefining \% on input line 132.
- [98 <./resources/images/binprop.png>])
+ [100 <./resources/images/binprop.png>])
 LaTeX Info: Redefining \. on input line 35.
 LaTeX Info: Redefining \% on input line 35.
- [99]
+ [101]
 \openout2 = `parte-2/binaria/busqueda-binaria-reales.aux'.
 
- (./parte-2/binaria/busqueda-binaria-reales.tex
+
+(./parte-2/binaria/busqueda-binaria-reales.tex
 LaTeX Info: Redefining \. on input line 35.
 LaTeX Info: Redefining \% on input line 35.
-[100
+ [102
 
 
 
 ]
 LaTeX Info: Redefining \. on input line 65.
 LaTeX Info: Redefining \% on input line 65.
- [101])
+ [103])
 LaTeX Info: Redefining \. on input line 36.
 LaTeX Info: Redefining \% on input line 36.
- [102]
+ [104]
 \openout2 = `parte-2/binaria/problemas-de-practica.aux'.
 
- (./parte-2/binaria/problemas-de-practica.tex)
+
+(./parte-2/binaria/problemas-de-practica.tex)
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
- [103
+ [105
 
 
 
 ]
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
- [104
+ [106
 
 
+
+] [107] [108] [109
 
 ]
-[105] [106] [107
-
-] [108] [109
-
-] [110] [111
+[110] [111
 
 ] [112] [113
 
-] [114] (./main.aux
+] [114] [115
+
+] [116] (./main.aux
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
 
@@ -1300,8 +1313,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7755F6FB8F93D39836888B5D650E002B;4762.
  ) 
 Here is how much of TeX's memory you used:
- 15521 strings out of 478037
- 252863 string characters out of 5843053
+ 15527 strings out of 478037
+ 252931 string characters out of 5843053
  783984 words of memory out of 5000000
  32722 multiletter control sequences out of 15000+600000
  480860 words of font info for 69 fonts, out of 8000000 for 9000
@@ -1329,10 +1342,10 @@ type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1
 200.pfb>
-Output written on main.pdf (118 pages, 717279 bytes).
+Output written on main.pdf (120 pages, 722534 bytes).
 PDF statistics:
- 1789 PDF objects out of 2073 (max. 8388607)
- 1587 compressed objects within 16 object streams
- 915 named destinations out of 1000 (max. 500000)
+ 1803 PDF objects out of 2073 (max. 8388607)
+ 1599 compressed objects within 16 object streams
+ 921 named destinations out of 1000 (max. 500000)
  291 words of extra memory for PDF output out of 10000 (max. 10000000)
 
