@@ -34,5 +34,32 @@
 \contentsline {part}{III\hspace {1em}Matemáticas olímpicas}{107}{part.3}%
 \contentsline {part}{IV\hspace {1em}STL y estructuras de datos}{109}{part.4}%
 \contentsline {part}{V\hspace {1em}Grafos}{111}{part.5}%
-\contentsline {part}{VI\hspace {1em}Técnicas de resolución de problemas}{113}{part.6}%
-\contentsline {part}{VII\hspace {1em}Problemas no estándar}{115}{part.7}%
+\contentsline {chapter}{\numberline {6}Introducción a grafos}{113}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Modelando grafos en la memoria}{116}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Matriz de adyacencia}{116}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Lista de adyacencia}{117}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Ejercicios de práctica}{119}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Exploración}{121}{chapter.7}%
+\contentsline {chapter}{\numberline {8}DFS}{123}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Complejidad}{126}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Problemas clásicos}{127}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Coloreando componentes}{127}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Componentes conexos}{129}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Bipartito}{130}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Problemas de práctica}{134}{section.8.3}%
+\contentsline {chapter}{\numberline {9}BFS}{135}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Complejidad}{137}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Problemas de práctica}{140}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Árboles}{141}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Árboles enraizados}{142}{section.10.1}%
+\contentsline {chapter}{\numberline {11}Grafos dirigidos}{143}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Grados}{144}{section.11.1}%
+\contentsline {paragraph}{Grado entrante:}{144}{section*.85}%
+\contentsline {paragraph}{Grado saliente:}{144}{section*.86}%
+\contentsline {section}{\numberline {11.2}Representación en memoria}{144}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Problemas de práctica}{148}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Grafo dirigido acíclico}{149}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Orden topológico}{149}{section.11.5}%
+\contentsline {chapter}{\numberline {12}Dijkstra}{151}{chapter.12}%
+\contentsline {part}{VI\hspace {1em}Técnicas de resolución de problemas}{153}{part.6}%
+\contentsline {part}{VII\hspace {1em}Problemas no estándar}{155}{part.7}%
