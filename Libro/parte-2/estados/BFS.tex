@@ -3,17 +3,19 @@ La BFS es similar a la DFS, en el sentido que explora todos los estados a los qu
 
 Pero la diferencia es que esto los explora un orden diferente.
 
-La DFS lo que hace es en un estado, explora totalmente lo que ofrezca una transición, y luego se regresa de esa exploración para ver la siguiente opción.
+La DFS lo que hace es en un estado, explora totalmente lo que ofrezca una transición lo más profundo que puede hasta ya no poder explorar más y luego  da vuelta atrás para ver transiciones que dejo pendiente.
 
-En cambio, la BFS lo que hace es llevar una lista de ``estados por explorar'' y procesarlos en orden. Para iniciar, revisamos todas las transiciones del estado inicial y los estados a los que nos lleven los agregamos en la lista.
+En cambio, la BFS lo que hace es que hace es primero explorar el estado inicial, luego todos los estados que fueron descubiertos desde el inicial, luego los que fueron descubiertos en el paso anterior y así seguir.
 
-Mostremos un diagrama del comportamiento de la BFS, en el diagrama los estados son representados por círculos y si han sido explorados los marcamos de gris, pero si están en la lista por explorar, los dejamos blancos. Las flechas representan las transiciones. Finalmente, los estados están enumerados en el orden que fueron alcanzados por la BFS.
+Mostremos un diagrama del comportamiento de la BFS, en el diagrama los estados son representados por círculos. Si han sido explorados los marcamos de gris, pero si están en la lista por explorar, los dejamos blancos. Las flechas representan las transiciones. Finalmente, los estados están enumerados en el orden que fueron alcanzados por la BFS.
+
+Iniciamos explorando el estado inicial, 1 y poniendo los estados que alcanza en la lista por explorar.
 
 \begin{center}
 	\includegraphics[scale=0.35]{bfs1}
 \end{center}
 
-Y luego para cada una de esos estados los exploramos también, es decir, expandimos las transiciones de esos estados y lo nuevo que encontremos lo ponemos en la lista de "estados por explorar". Importante: los visitamos en el orden que fueron agregados a la lista por explorar.
+Y luego para cada una de esos estados los exploramos también y los nuevos que encontremos los vamos poniendo en la lista de "estados por explorar". 
 
 \begin{center}
 	\includegraphics[scale=0.35]{bfs2}
@@ -21,44 +23,43 @@ Y luego para cada una de esos estados los exploramos también, es decir, expandi
 
 De esta forma, comenzamos visitando todos los lugares alcanzables con una transición, luego dos transiciones, después tres, cuatro, cinco y  así sucesivamente.
 
-Y precisamente, este orden en el que exploramos nos da una buena ventaja. A todo estado llegamos con la menor cantidad de transiciones posibles. Lo cual nos permite saber el mínimo número de transiciones necesarias para llegar e incluso lo podemos guardar en un arreglo o map para consultar después.
+Y precisamente, este orden en el que exploramos nos da una buena ventaja. A todo estado llegamos con la menor cantidad de transiciones posibles. Lo cual podemos guardar ya que esto llega a ser información útil para muchos problemas.
 
-Para lograr este comportamiento, es importante ver que la lista por explorar se comporta de la siguiente forma: los estados son procesados en el mismo orden en el que entran, de forma que el primer estado en entrar a la lista es el primero en ser atendido. Este comportamiento es similar a la cola del cine, donde se atiende en el orden que llegas.
-
-Para esto, podemos usar una estructura de datos de C++ llamada \verb|queue|, que significa cola en ingles. Si no sabes trabajar con ella, revisa la página \pageref{queue}.
-
-Entonces, una BFS lo que hace es:
-
-Tener una cola de la lista por explorar llamada \verb|explorar|, un arreglo de booleanos \verb|visitado| para marcar los estados que ya han sido descubiertos por la BFS y agregaremos un arreglo de enteros \verb|no_transiciones| para guardar cuantas transiciones requerimos para llegar a cada estado.
-
-Comenzamos agregando a la lista por explorar el estado inicial con un \verb|no_transiciones| de \(0\). Luego, mientras todavía allá estados por explorar, lo procesaremos. Lo sacaremos de la pila al ya ser explorado y agregaremos a \verb|explorar| todos los estados que no hayan sido visitados alcanzables desde el estado que estamos procesando.
-
-En código:
+Entonces, el pseudocódigo de una BFS se ve de la siguiente forma
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
 bool visitado[];
 int no_transiciones[];
+explorando[];
+porExplorar[];
+
 void BFS(inicio) {
-	queue<estados> explorar;
-	cola.push(inicio);
+	explorando[0]=inicio;
 	visitado[inicio]=true;
 	no_transiciones[inicio]=0;
-	while (explorar.empty()==false) {
-		actual = explorar.front();
-		cola.pop();
-		if (actual es solucion) {
-			registrar solucion actual;
-			break; //opcional, si solo nos interesa una solucion
-		}
-		for (transiciones de actual) {
-			if (!visitado[transicion]) {
-				visitado[transicion]=true;
-				no_transiciones[trancision]=
-				no_transiciones[actual]+1;
-				explorar.push(transicion);
+	int numExp=1;//No de elemntos en la lista explorando
+	int numPorExp=0;//No de elemntos en la lista porExplorar
+	//mientras explorando no este vacio
+	while (numExp>0) {
+		//Encontar los estados alcanzables desde explorando
+		for (int i =0; i < numExp; i++) {
+			estado= explorando[i];
+			for (transicion del estado) {
+				if (visitado[transicion]==false) {
+					no_transiciones[transicion]=
+						1+no_transiciones[estado];
+					visitado[transicion]=true;
+					porExplorar[numPorExp]=transicion;
+					numPorExp++;
+				}
 			}
 		}
+		//Pasar porExplorar a explorando para la siguiente iteracion
+		for (int i=0; i < numPorExp; i++) 
+			explorando[i]=porExplorar[i];
+		numExp=numPorExp;
+		numPorExp=0;
 	}
 }
 \end{lstlisting}
@@ -114,38 +115,40 @@ Esto se verá:
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
-	bool visitado[100005];
-	int no_transiciones[100005];
-	int bfs(int x, int y, int a, int b) {
-		queue<int> cola;
-		cola.push(x);
-		visitado[x]=true;
-		no_transiciones[x]=0;		
-		while (cola.empty()==false) {
-			int actual=cola.front();
-			cola.pop();
-			if (actual==y) {
-				return no_transiciones[y];
-			}	
-			//Primer boton
-			int siguiente = actual+a;
-			if (vistado[siguiente]==false){
+bool visitado[100005];
+int distancia[100005];
+int explorando[100005], porExplorar[100005];
+int bfs(int x, int y, int a, int b) {
+	explorando[0]=x;
+	visitado[x]=true;
+	distancia[x]=0;
+	int numExp=1, numPorExp=0;
+	while (numExp>0) {
+		for (int i=0;i<porExp; i++) {
+			int actual=explorando[i];
+			if (actual==y)
+				return distancia[x];
+			
+			int siguiente= actual+a;
+			if (siguiente <= y && visitado[siguiente]==false) {
 				visitado[siguiente]=true;
-				no_transiciones[siguiente]=
-				no_transiciones[actual]+1;
-				cola.push(siguiente);
+				distancia[siguiente]=1+distancia[actual];
+				porExplorar[numPorExp++]=siguiente;
 			}
-			//Segundo boton
-			siguiente = actual+actual/b;
-			if (actual%b == 0 && vistado[siguiente]==false){
+			siguiente=actual+actual/b;
+			if (siguiente <= y && actual%b ==0 && visitado[siguiente]==false) {				
 				visitado[siguiente]=true;
-				no_transiciones[siguiente]=
-				no_transiciones[actual]+1;
-				cola.push(siguiente);
+				distancia[siguiente]=1+distancia[actual];				
+				porExplorar[numPorExp++]=siguiente;
 			}
 		}
-		return -1;
+		for (int i=0; i<numPorExp; i++)
+			explorando[i]=porExplorar[i];
+		numExp=numPorExp; 
+		numPorExp=0;
 	}
+	return -1;
+}
 \end{lstlisting}
 \end{minipage}
 
@@ -158,6 +161,95 @@ Esto provoca que la complejidad de la BFS sea \(O(V+E)\), donde \(V\) es la cant
 
 En el ejemplo 5.1, la cantidad de estados son a lo más \(y\) y a lo más tenemos dos transiciones por estado, por lo que la complejidad es \(O(V+E)=O(y+2y)=O(y)\).\\
 
+\section*{Ejemplo: OMI-98 Explorador II}
+
+Un explorador tiene que decidir donde construir un camino para llegar de un punto \(A\) a un punto \(B\). 
+
+Para auxiliarse el explorador ha hecho un mapa con los obstáculos que existen. Cuadriculó su mapa y quiere un camino que pase por el menor número de cuadros. El camino sólo puede ir de un cuadro a otro si tienen un lado en común, es decir, no puede avanzar en diagonal, y no puede pasar por un cuadro que contenga un obstáculo. 
+
+Cada cuadro del mapa se identifica por sus coordenadas, primero la fila y después la columna. Las filas están numerados de arriba hacia abajo iniciando con el \(0\). Las columnas están numeradas de izquierda a derecha iniciando con el \(0\).
+
+Escribe un programa que dado un mapa con obstáculos encuentre el menor número de cuadros por los que debe pasar un camino que vaya del punto \(A\) al punto \(B\), incluyendo a los cuadros que contienen a \(A\) y a \(B\).
+
+\textbf{Entrada}\\
+En la primera línea los enteros \(N\) y \(M\) el número de filas y columnas del mapa. En cada una de las siguientes.
+
+En las siguientes \(N\) líneas hay \(M\) enteros que pueden ser \verb|0| ó \verb|1|. Es \verb|0| si no hay obstáculo en el cuadro correspondiente y \verb|1| si lo hay.
+
+En la siguiente línea (la penúltima) la fila y columna del punto \(A\).
+
+En la última línea la fila y columna del punto \(B\).
+
+\textbf{Salida}\\
+En la primera linea el número de cuadros por los que pasa un camino mínimo entre \(A\) y \(B\)
+
+\textbf{Ejemplo}\\
+\begin{casebox2}
+	\scase{
+		4 5\\
+		0 1 0 0 0\\
+		0 0 1 1 0\\
+		0 1 0 0 0\\
+		0 0 0 0 0\\
+		3 1\\
+		0 2	
+	}{9}
+\end{casebox2}
+
+\textbf{Límites}
+\begin{plimits}
+	\item \(1 \leq N, M\leq 750\)
+\end{plimits}
+
+ENLACE TODO
+
+\subsection*{Solución}
+Anteriormente vimos una solución con Podas para este problema con complejidad \(O((NM)^2)\), pero esto no es suficiente para este problema.
+
+Claramente, podemos hacer una BFS donde los estados sea cada punto de la cuadricula y que cuente cuantos pasos necesito para llegar a \(B\) iniciando desde \(A\).
+
+Entonces nuestros estados serán descritos con dos valores \(f\) y \(c\), la fila y columna. Pero hasta ahora la BFS que vimos usa solo un número como valor, piensa en como adaptarla para que se puedan usar estados que usen dos valores y trata de resolverlo antes.
+
+\subsubsection*{Usando dos valores}
+La forma de adaptar la BFS que vimos para funcionar con esto es bastante sencillo. Lo único que necesitamos hacer es que en vez de introducir un valor a la lista porExplorar, agregamos dos por cada estado.
+
+De forma que si en porExplorar tenemos tres casillas, esta lista se vería \{f1, c1, f2, c2, f3, c3\}
+
+Entonces, lo que podemos hacer es realizar la bfs. El código quedará aproximadamente:
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}
+bool visitado[755][755];
+int distancia[755][755];
+int BFS(int Afila, int Acolumna) {
+	explorar[0]=Afila; explorar[1]=Acolumna;
+	visitado[Afila][Acolumna]=true;
+	int numExp=2; int numPorExp=0;
+	int transicionesI[4]   ={1,-1,0,0};
+	int transicionesJ[4]={0,0,1,-1};
+	for (int c =0; c < numExp; c+=2) {
+		int i = explorando[c];
+		int j = explorando[c+1];
+		if (i==Bfila && j==Bcolumna) return distancia[i][j];
+		for (int tr =0; tr < 4; tr++) {
+			int ni= i+transicionesI[tr];
+			int nj= j+transicionesJ[tr];
+			if (0<=ni && ni < N && 0 <=nj && nj<M) {
+				if (mapa[ni][nj]==0 && !visitado[ni][nj]) {
+					visitado[ni][nj]=true;
+					distancia[ni][nj]=1+distancia[i][j];
+					porExplorar[numPorExp]=ni; //Agrega la coordenada ni
+					porExplorar[numPorExp+1]=nj; //Agrega la coordenada nj
+					numPorExp+=2;
+				}
+			}
+		}
+		[...]
+	}
+}
+\end{lstlisting}
+\end{minipage}
+
 \section*{Problemas de práctica}
 \addcontentsline{toc}{section}{Problemas de práctica}
 
@@ -167,14 +259,18 @@ En el ejemplo 5.1, la cantidad de estados son a lo más \(y\) y a lo más tenemo
 \end{exercise}
 
 \begin{exercise}
-	\problema{Required Length}{\codeforceslink{1681}{D}}
-	Traduccion: TODO
-\end{exercise}
-
-\begin{exercise}
 	\problema{Camino mas corto en matriz}{TODO}
 \end{exercise}
 
 \begin{exercise}
-\problema{IOI 1994 - Relojes}{\omegauplink{relojes}}
+	\problema{Volcan}{\omegauplink{Volcan}}
+\end{exercise} 
+
+\begin{exercise}
+	\problema{IOI 1994 - Relojes}{\omegauplink{relojes}}
 \end{exercise}
+
+\begin{exercise}
+	\problema{OMI 2020 - Ovejas}{\omegauplink{omi-2020-ovejas}}	
+\end{exercise}
+

@@ -1,6 +1,6 @@
 \chapter[Búsqueda con podas]{Búsqueda con podas\\ Backtracking}
 
-Sigamos con otra búsqueda que evita probar absolutamente todo el espacio de búsqueda, en este caso es la búsqueda de vuelta a atrás, o backtracking en inglés.
+Sigamos con una búsqueda que evita probar absolutamente todo el espacio de búsqueda, en este caso es la búsqueda de vuelta a atrás, o backtracking en inglés.
 
 Esta búsqueda es similar a la búsqueda exhaustiva, pero estando atentos a no explorar candidatos en los que nos demos cuenta que no encontraremos lo que buscamos.
 
@@ -328,7 +328,7 @@ Y esto produce el siguiente diagrama, donde marcamos con negritas las ramas poda
 ]	
 ]
 
-Esta poda nos pasa de 31 llamadas recursivas y 16 subconjuntos revisados, a solo usar 21 llamadas y revisar 7 subconjuntos.
+Esta poda nos pasa de 31 llamadas recursivas y 16 subconjuntos revisados, a solo usar 21 llamadas y revisar 8 subconjuntos.
 
 Esta poda en concreto nos reduce la complejidad a \(O(NK)\), esto es porque vamos a explorar solo cuando los argumentos aparecen por primera vez. Los valores de posición son de \(0\) a \(N\) y los la suma tiene rango de \(0\) a \(K\). Lo cual implica que en total tenemos \((N+1)(K+1)\) posibles pares de valores. 
 
@@ -429,9 +429,13 @@ void buscar(solucion) {
 \section*{Problemas de práctica}
 
 \begin{exercise}
-	\problema{Suma de digitos}{\omegauplink{Suma-de-digitos}}	
+	\problema{Suma de dígitos}{\omegauplink{Suma-de-digitos}}	
 \end{exercise}
 
 \begin{exercise}
 	\problema{8 Reinas}{\omegauplink{8Reinas}}
+\end{exercise}
+
+\begin{exercise}
+TODO: Dado K, R. Determina cuantos números hay menores o iguales que K con R bits  prendidos. Se garantiza que la respuesta es menor que \(10^5\).
 \end{exercise}

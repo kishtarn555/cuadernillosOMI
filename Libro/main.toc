@@ -4,41 +4,62 @@
 \contentsline {chapter}{\numberline {1}Búsqueda Exhaustiva}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Búsqueda lineal}{7}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Complejidad}{9}{subsection.1.1.1}%
-\contentsline {section}{Problemas de práctica}{11}{section*.14}%
 \contentsline {section}{\numberline {1.2}Búsqueda lineal con función de validación}{12}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Complejidad}{15}{subsection.1.2.1}%
-\contentsline {section}{Problemas de práctica}{15}{section*.22}%
-\contentsline {section}{\numberline {1.3}Parejas de elementos}{17}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Complejidad}{20}{subsection.1.3.1}%
-\contentsline {section}{Problemas de práctica}{20}{section*.29}%
-\contentsline {section}{\numberline {1.4}Ordenes o permutaciones}{22}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Subconjuntos}{23}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Conjuntos y subconjuntos}{23}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Complejidad}{29}{subsection.1.5.2}%
-\contentsline {section}{Problemas de práctica}{35}{section*.44}%
-\contentsline {section}{\numberline {1.6}Forma recursiva}{36}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Complejidad}{47}{subsection.1.6.1}%
-\contentsline {section}{Problemas de práctica}{47}{section*.51}%
-\contentsline {chapter}{\numberline {2}Búsqueda binaria}{49}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Dificultades}{58}{section.2.1}%
-\contentsline {section}{Problemas de práctica}{59}{section*.58}%
-\contentsline {section}{\numberline {2.2}Función de validación}{60}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Complejidad}{64}{section.2.3}%
-\contentsline {section}{Problemas de práctica}{64}{section*.65}%
-\contentsline {section}{\numberline {2.4}Búsqueda en los reales}{65}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Complejidad}{66}{subsection.2.4.1}%
-\contentsline {section}{Problemas de práctica}{67}{section*.68}%
-\contentsline {chapter}{\numberline {3}Búsqueda con podas}{69}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Código general}{82}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Búsqueda en profundidad (DFS)}{83}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Estados y transiciones}{90}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Complejidad}{91}{section.4.2}%
-\contentsline {section}{Problemas de práctica}{91}{section*.79}%
-\contentsline {chapter}{\numberline {5}Búsqueda en anchura (BFS)}{93}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Complejidad}{100}{section.5.1}%
-\contentsline {section}{Problemas de práctica}{100}{section*.82}%
-\contentsline {part}{III\hspace {1em}Matemáticas olímpicas}{101}{part.3}%
-\contentsline {part}{IV\hspace {1em}STL y estructura de datos}{103}{part.4}%
-\contentsline {part}{V\hspace {1em}Grafos}{105}{part.5}%
-\contentsline {part}{VI\hspace {1em}Técnicas de resolución de problemas}{107}{part.6}%
-\contentsline {part}{VII\hspace {1em}Problemas no estándar}{109}{part.7}%
+\contentsline {section}{\numberline {1.3}Parejas de elementos}{16}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Complejidad}{19}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Ordenes o permutaciones}{21}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Subconjuntos}{22}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Conjuntos y subconjuntos}{22}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Complejidad}{28}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Forma recursiva}{32}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Complejidad}{43}{subsection.1.6.1}%
+\contentsline {section}{Problemas de práctica}{44}{section*.39}%
+\contentsline {chapter}{\numberline {2}Búsqueda con podas}{47}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Código general}{61}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Búsqueda en profundidad (DFS)}{63}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Estados y transiciones}{70}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Complejidad}{71}{section.3.2}%
+\contentsline {section}{Problemas de práctica}{71}{section*.50}%
+\contentsline {chapter}{\numberline {4}Búsqueda en anchura (BFS)}{73}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Complejidad}{80}{section.4.1}%
+\contentsline {section}{Problemas de práctica}{84}{section*.56}%
+\contentsline {chapter}{\numberline {5}Búsqueda binaria}{85}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Dificultades}{94}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Función de validación}{96}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Complejidad}{101}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Búsqueda en los reales}{102}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Complejidad}{103}{subsection.5.4.1}%
+\contentsline {section}{Problemas de práctica}{105}{section*.71}%
+\contentsline {part}{III\hspace {1em}Matemáticas olímpicas}{107}{part.3}%
+\contentsline {part}{IV\hspace {1em}STL y estructuras de datos}{109}{part.4}%
+\contentsline {part}{V\hspace {1em}Grafos}{111}{part.5}%
+\contentsline {chapter}{\numberline {6}Introducción a grafos}{113}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Modelando grafos en la memoria}{116}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Matriz de adyacencia}{116}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Lista de adyacencia}{117}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Ejercicios de práctica}{119}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Exploración}{121}{chapter.7}%
+\contentsline {chapter}{\numberline {8}DFS}{123}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Complejidad}{126}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Problemas clásicos}{127}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Coloreando componentes}{127}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Componentes conexos}{129}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Bipartito}{130}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Problemas de práctica}{134}{section.8.3}%
+\contentsline {chapter}{\numberline {9}BFS}{135}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Complejidad}{137}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Problemas de práctica}{140}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Árboles}{141}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Árboles enraizados}{142}{section.10.1}%
+\contentsline {chapter}{\numberline {11}Grafos dirigidos}{143}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Grados}{144}{section.11.1}%
+\contentsline {paragraph}{Grado entrante:}{144}{section*.85}%
+\contentsline {paragraph}{Grado saliente:}{144}{section*.86}%
+\contentsline {section}{\numberline {11.2}Representación en memoria}{144}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Problemas de práctica}{148}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Grafo dirigido acíclico}{149}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Orden topológico}{149}{section.11.5}%
+\contentsline {chapter}{\numberline {12}Dijkstra}{151}{chapter.12}%
+\contentsline {part}{VI\hspace {1em}Técnicas de resolución de problemas}{153}{part.6}%
+\contentsline {part}{VII\hspace {1em}Problemas no estándar}{155}{part.7}%

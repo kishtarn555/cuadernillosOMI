@@ -52,6 +52,10 @@ Usamos las mismas observaciones que usamos para el ejemplo ``De área a perímet
 	}
 \end{lstlisting}
 
+\begin{exercise}
+	Edita el código para resolver el siguiente problema: Un prisma de altura \(x+1\), ancho \(2x+5\) y largo \(3x+1\) tiene volumen \(n\). Dado \(n\) imprime \(x\). (\(5\leq n \leq 10^{18}\)).
+\end{exercise}
+
 \subsection{Complejidad}
 La complejidad de este procedimiento sigue siendo \(O(log(Espacio))\), pero ahora debemos encontrar el tamaño del espacio de búsqueda. 
 
@@ -63,19 +67,5 @@ Por lo tanto, la complejidad del ejemplo anterior es:
 \[ = O(log(A)-log({10^{-5}}))\]
 \[ = O(log(A)+log({10^{5}}))\]
 
-Entonces, poner una precisión de \(10^-5\) solo nos aumenta un costo de \(log(10^5)=16.6\), o en otras palabras, 17 preguntas extra.
+Entonces, poner una precisión de \(10^{-5}\) solo nos aumenta un costo de \(log(10^5)\approx 16.6\), o en otras palabras, 17 preguntas extra.
 
-\section*{Problemas de práctica}
-\addcontentsline{toc}{section}{Problemas de práctica}
-
-\begin{exercise}
-	\problema{Carreras de la Formula \(\pi\) }{TODO}
-\end{exercise}
-
-\begin{exercise}
-	\problema{Planetas}{\omegauplink{planetas}}
-\end{exercise}
-
-\begin{exercise}
-\problema{Carretera}{\omegauplink{carretera}}
-\end{exercise}

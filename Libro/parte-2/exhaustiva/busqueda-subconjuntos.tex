@@ -25,13 +25,14 @@ Para esto, primero aprendamos a resolver el problema que trata de mostrar los su
 Karel tiene un conjunto formado por las primeras \(N\) letras del alfabeto. Ahora Karel que imprimas todos los subconjuntos, uno por cada línea. Puedes imprimirlos en cualquier orden.
 
 Cada subconjunto es representado por las letras en el de la A a la Z. El subconjunto vacío será representado por un asterisco '*'.
-\subsection*{Entrada}
+
+\textbf{Entrada}\\
 Un entero \(N\), indicando cuantas letras hay en el conjunto.
-\subsection*{Salida}
+
+\textbf{Salida}\\
 Todos los subconjuntos
 
-\subsection*{Ejemplos}
-
+\textbf{Ejemplos}\\
 \begin{casebox2}
 	
 	\scase{2}{
@@ -58,7 +59,7 @@ Todos los subconjuntos
 	\hline
 \end{casebox2}
 
-\subsection*{Límites}
+\textbf{Límites}
 \begin{plimits}
 	\item \(1\leq N \leq 20 \)
 \end{plimits}
@@ -69,7 +70,7 @@ Entonces, podemos resolver el problema si obtenemos todos los subconjuntos posib
 
 Esto se puede hacer de dos formas principales, una iterativa y otra recursiva. Comencemos viendo la forma con recursión.
 
-\subsection* {Subconjuntos usando recursión}
+\subsubsection* {Subconjuntos usando recursión}
 
 Digamos que \(S(conjunto)\) sean todos los subconjuntos del \(conjunto\). Por ejemplo:
 \[S(\{A,B,C\})=\]
@@ -168,15 +169,15 @@ Fernando quiere comprar unas cuantas cajas y obtener \textbf{exactamente} \(K\) 
 
 Conociendo las cajas que venden en la Ferretería, determina si Fernando puede comprar los \(K\).
 
-\subsection*{Entrada}
+\textbf{Entrada}\\
 Dos enteros \(N\) y \(K\), la cantidad de cajas en la Ferretería y cuantos tornillos quiere Fernando.
 
 En la siguiente línea vendrán la cantidad de tornillos en cada caja, los valores \(C_i\), separados por espacios.
 
-\subsection*{Salida}
+\textbf{Salida}\\
 Debes imprimir "SI" en caso de que Fernando pueda comprar exactamente \(K\) tornillos. Caso contrario, imprime "NO".
 
-\subsection*{Ejemplos}
+\textbf{Ejemplos}\\
 \begin{casebox3}
 	\ecase{
 		5 10\\
@@ -194,7 +195,8 @@ Debes imprimir "SI" en caso de que Fernando pueda comprar exactamente \(K\) torn
 	{NO}
 	{}
 \end{casebox3}
-\subsection*{Límites}
+
+\textbf{Límites}
 \begin{plimits}
 	\item \(1\leq N\leq 20 \)
 	\item \(1\leq C_i\leq 10^9 \)
@@ -211,9 +213,6 @@ Como ya vimos la forma de iterar por todos los subconjuntos en el ejemplo 3.1, u
 Lo que podemos hacer es ir construyendo todos los subconjuntos, esta vez en vez de representarlos como una cadena, lo representaremos como su suma. Esto en código se ve:
 \newpage
 \begin{lstlisting}
-	#include<iostream>
-	#include<stdlib.h>
-	using namespace std;
 	int Cajas[25];
 	int N;
 	long long K;
@@ -245,21 +244,3 @@ Lo que podemos hacer es ir construyendo todos los subconjuntos, esta vez en vez 
 	}
 \end{lstlisting}
 
-\pagebreak
-
-\section*{Problemas de práctica}
-\addcontentsline{toc}{section}{Problemas de práctica}
-
-\begin{exercise}
-	\problema[warel-roba-diamantes]{Warel roba diamantes}{\omegauplink{warel-roba-diamantes}}
-\end{exercise}
-
-\begin{exercise}
-\problema[imprime-binarios]{Imprime números binarios}{\omegauplink{Imprime-binario}}
-\end{exercise}
-\begin{exercise}	
-\problema[imprime-binarios]{Imprime números binarios}{\omegauplink{Imprime-binario}}
-\end{exercise}
-\begin{exercise}
-\problema[reverse-matrix]{Invirtiendo una matriz}{\omegauplink{reverse-matrix}}
-\end{exercise}
